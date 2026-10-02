@@ -1,0 +1,588 @@
+month,date,source,campaign,creative,impressions,clicks,installs,spend_usd
+2025-09,2025-09-01,Discovery Network,Discovery Rewarded,Playable Puzzle G,95,9,1,1.0
+2025-09,2025-09-01,Discovery Network,Discovery Rewarded,Progress Video G,65,5,1,1.1
+2025-09,2025-09-01,Discovery Network,Discovery Rewarded,Reward Story G,81,2,1,0.99
+2025-09,2025-09-01,Game Network,Playable Broad,Progress Video C,282,35,5,6.82
+2025-09,2025-09-01,Game Network,Playable Broad,Reward Story C,227,15,3,3.7699999999999996
+2025-09,2025-09-01,Game Network,Playable Premium,Playable Puzzle D,445,28,5,10.33
+2025-09,2025-09-01,Game Network,Playable Premium,Progress Video D,277,12,4,8.86
+2025-09,2025-09-01,Game Network,Playable Premium,Reward Story D,157,12,2,4.66
+2025-09,2025-09-01,Search Network,Search Value Global,Playable Puzzle A,73,8,1,1.14
+2025-09,2025-09-01,Search Network,Search Value Global,Progress Video A,172,10,2,2.07
+2025-09,2025-09-01,Search Network,Search Value Global,Reward Story A,300,26,4,4.12
+2025-09,2025-09-01,Search Network,Search Value North,Playable Puzzle B,191,12,3,4.55
+2025-09,2025-09-01,Search Network,Search Value North,Progress Video B,151,12,2,3.13
+2025-09,2025-09-01,Search Network,Search Value North,Reward Story B,86,6,1,1.63
+2025-09,2025-09-01,Social Network,Social Gameplay,Playable Puzzle E,107,5,1,1.63
+2025-09,2025-09-01,Social Network,Social Gameplay,Progress Video E,136,12,2,3.71
+2025-09,2025-09-01,Social Network,Social Gameplay,Reward Story E,235,23,4,6.78
+2025-09,2025-09-01,Social Network,Social Lifestyle,Playable Puzzle F,97,4,1,2.15
+2025-09,2025-09-01,Social Network,Social Lifestyle,Progress Video F,92,8,1,2.45
+2025-09,2025-09-01,Social Network,Social Lifestyle,Reward Story F,159,10,2,3.9799999999999995
+2025-09,2025-09-01,Store Search,Store Intent,Playable Puzzle H,409,24,6,15.27
+2025-09,2025-09-01,Store Search,Store Intent,Progress Video H,171,11,2,4.93
+2025-09,2025-09-01,Store Search,Store Intent,Reward Story H,143,13,2,5.4399999999999995
+2025-09,2025-09-02,Discovery Network,Discovery Rewarded,Playable Puzzle G,96,3,1,0.91
+2025-09,2025-09-02,Discovery Network,Discovery Rewarded,Progress Video G,74,3,1,1.04
+2025-09,2025-09-02,Discovery Network,Discovery Rewarded,Reward Story G,89,8,1,0.89
+2025-09,2025-09-02,Game Network,Playable Broad,Playable Puzzle C,340,26,4,5.75
+2025-09,2025-09-02,Game Network,Playable Broad,Progress Video C,70,2,1,1.5
+2025-09,2025-09-02,Game Network,Playable Broad,Reward Story C,101,11,2,2.6
+2025-09,2025-09-02,Game Network,Playable Premium,Playable Puzzle D,498,47,6,12.98
+2025-09,2025-09-02,Game Network,Playable Premium,Progress Video D,70,2,1,2.11
+2025-09,2025-09-02,Game Network,Playable Premium,Reward Story D,232,19,3,6.0
+2025-09,2025-09-02,Search Network,Search Value Global,Playable Puzzle A,159,10,2,2.2
+2025-09,2025-09-02,Search Network,Search Value Global,Progress Video A,175,13,2,2.05
+2025-09,2025-09-02,Search Network,Search Value Global,Reward Story A,208,18,3,3.69
+2025-09,2025-09-02,Search Network,Search Value North,Playable Puzzle B,296,16,4,6.470000000000001
+2025-09,2025-09-02,Search Network,Search Value North,Progress Video B,87,6,1,1.65
+2025-09,2025-09-02,Search Network,Search Value North,Reward Story B,98,8,1,1.33
+2025-09,2025-09-02,Social Network,Social Gameplay,Playable Puzzle E,362,34,5,8.68
+2025-09,2025-09-02,Social Network,Social Gameplay,Progress Video E,301,19,4,6.98
+2025-09,2025-09-02,Social Network,Social Lifestyle,Playable Puzzle F,81,8,1,2.13
+2025-09,2025-09-02,Social Network,Social Lifestyle,Reward Story F,256,20,3,6.48
+2025-09,2025-09-02,Store Search,Store Intent,Playable Puzzle H,260,18,3,6.779999999999999
+2025-09,2025-09-02,Store Search,Store Intent,Progress Video H,465,29,7,16.97
+2025-09,2025-09-02,Store Search,Store Intent,Reward Story H,64,9,1,2.21
+2025-09,2025-09-03,Discovery Network,Discovery Rewarded,Progress Video G,285,22,4,3.89
+2025-09,2025-09-03,Discovery Network,Discovery Rewarded,Reward Story G,84,13,2,2.05
+2025-09,2025-09-03,Game Network,Playable Broad,Playable Puzzle C,486,29,6,8.58
+2025-09,2025-09-03,Game Network,Playable Broad,Progress Video C,196,18,3,4.2
+2025-09,2025-09-03,Game Network,Playable Broad,Reward Story C,684,51,10,13.43
+2025-09,2025-09-03,Game Network,Playable Premium,Playable Puzzle D,316,29,5,10.52
+2025-09,2025-09-03,Game Network,Playable Premium,Progress Video D,261,29,4,8.719999999999999
+2025-09,2025-09-03,Game Network,Playable Premium,Reward Story D,186,17,3,6.62
+2025-09,2025-09-03,Search Network,Search Value Global,Playable Puzzle A,92,4,1,0.96
+2025-09,2025-09-03,Search Network,Search Value Global,Progress Video A,140,7,2,2.34
+2025-09,2025-09-03,Search Network,Search Value Global,Reward Story A,153,7,2,2.27
+2025-09,2025-09-03,Search Network,Search Value North,Playable Puzzle B,236,21,3,4.92
+2025-09,2025-09-03,Search Network,Search Value North,Progress Video B,325,24,5,8.26
+2025-09,2025-09-03,Search Network,Search Value North,Reward Story B,270,24,3,4.53
+2025-09,2025-09-03,Social Network,Social Gameplay,Playable Puzzle E,339,18,4,6.47
+2025-09,2025-09-03,Social Network,Social Gameplay,Progress Video E,393,29,5,8.75
+2025-09,2025-09-03,Social Network,Social Gameplay,Reward Story E,194,17,3,4.93
+2025-09,2025-09-03,Social Network,Social Lifestyle,Progress Video F,96,8,1,2.1
+2025-09,2025-09-03,Social Network,Social Lifestyle,Reward Story F,95,6,1,2.21
+2025-09,2025-09-03,Store Search,Store Intent,Playable Puzzle H,306,30,5,12.9
+2025-09,2025-09-03,Store Search,Store Intent,Progress Video H,360,27,5,12.62
+2025-09,2025-09-03,Store Search,Store Intent,Reward Story H,141,11,2,4.890000000000001
+2025-09,2025-09-04,Discovery Network,Discovery Rewarded,Progress Video G,148,18,2,1.87
+2025-09,2025-09-04,Discovery Network,Discovery Rewarded,Reward Story G,41,3,1,0.94
+2025-09,2025-09-04,Game Network,Playable Broad,Playable Puzzle C,87,3,1,1.4
+2025-09,2025-09-04,Game Network,Playable Broad,Progress Video C,364,34,6,8.34
+2025-09,2025-09-04,Game Network,Playable Broad,Reward Story C,425,40,5,6.93
+2025-09,2025-09-04,Game Network,Playable Premium,Playable Puzzle D,417,28,5,11.129999999999999
+2025-09,2025-09-04,Game Network,Playable Premium,Progress Video D,212,9,3,6.22
+2025-09,2025-09-04,Game Network,Playable Premium,Reward Story D,192,21,3,6.68
+2025-09,2025-09-04,Search Network,Search Value Global,Playable Puzzle A,180,5,2,1.95
+2025-09,2025-09-04,Search Network,Search Value Global,Reward Story A,55,3,1,0.93
+2025-09,2025-09-04,Search Network,Search Value North,Playable Puzzle B,178,12,2,3.52
+2025-09,2025-09-04,Search Network,Search Value North,Reward Story B,419,23,5,8.0
+2025-09,2025-09-04,Social Network,Social Gameplay,Playable Puzzle E,78,8,2,3.58
+2025-09,2025-09-04,Social Network,Social Gameplay,Progress Video E,386,35,5,8.53
+2025-09,2025-09-04,Social Network,Social Gameplay,Reward Story E,191,19,3,5.43
+2025-09,2025-09-04,Social Network,Social Lifestyle,Progress Video F,55,3,1,2.4
+2025-09,2025-09-04,Store Search,Store Intent,Playable Puzzle H,559,41,7,17.64
+2025-09,2025-09-04,Store Search,Store Intent,Progress Video H,99,2,1,2.49
+2025-09,2025-09-04,Store Search,Store Intent,Reward Story H,163,5,2,5.27
+2025-09,2025-09-05,Discovery Network,Discovery Rewarded,Playable Puzzle G,71,4,1,0.97
+2025-09,2025-09-05,Discovery Network,Discovery Rewarded,Progress Video G,316,19,4,4.11
+2025-09,2025-09-05,Discovery Network,Discovery Rewarded,Reward Story G,199,18,3,2.74
+2025-09,2025-09-05,Game Network,Playable Broad,Playable Puzzle C,488,26,7,9.26
+2025-09,2025-09-05,Game Network,Playable Broad,Progress Video C,321,19,4,5.41
+2025-09,2025-09-05,Game Network,Playable Broad,Reward Story C,223,23,4,5.72
+2025-09,2025-09-05,Game Network,Playable Premium,Playable Puzzle D,366,24,4,9.36
+2025-09,2025-09-05,Game Network,Playable Premium,Progress Video D,401,31,5,10.35
+2025-09,2025-09-05,Game Network,Playable Premium,Reward Story D,230,19,4,8.66
+2025-09,2025-09-05,Search Network,Search Value Global,Playable Puzzle A,178,7,2,1.98
+2025-09,2025-09-05,Search Network,Search Value Global,Progress Video A,238,21,3,3.29
+2025-09,2025-09-05,Search Network,Search Value Global,Reward Story A,277,23,4,4.04
+2025-09,2025-09-05,Search Network,Search Value North,Playable Puzzle B,96,10,2,3.23
+2025-09,2025-09-05,Search Network,Search Value North,Progress Video B,264,21,3,4.85
+2025-09,2025-09-05,Search Network,Search Value North,Reward Story B,94,4,1,1.52
+2025-09,2025-09-05,Social Network,Social Gameplay,Playable Puzzle E,248,29,4,6.83
+2025-09,2025-09-05,Social Network,Social Gameplay,Progress Video E,316,29,5,8.39
+2025-09,2025-09-05,Social Network,Social Gameplay,Reward Story E,743,48,9,15.37
+2025-09,2025-09-05,Social Network,Social Lifestyle,Playable Puzzle F,283,16,3,6.8100000000000005
+2025-09,2025-09-05,Social Network,Social Lifestyle,Progress Video F,150,9,2,4.609999999999999
+2025-09,2025-09-05,Social Network,Social Lifestyle,Reward Story F,298,17,4,9.54
+2025-09,2025-09-05,Store Search,Store Intent,Playable Puzzle H,416,40,5,11.59
+2025-09,2025-09-05,Store Search,Store Intent,Progress Video H,247,23,4,9.96
+2025-09,2025-09-05,Store Search,Store Intent,Reward Story H,41,5,1,2.14
+2025-09,2025-09-06,Discovery Network,Discovery Rewarded,Progress Video G,174,13,3,2.9
+2025-09,2025-09-06,Discovery Network,Discovery Rewarded,Reward Story G,109,9,1,1.09
+2025-09,2025-09-06,Game Network,Playable Broad,Playable Puzzle C,402,34,5,6.82
+2025-09,2025-09-06,Game Network,Playable Broad,Progress Video C,534,28,7,9.8
+2025-09,2025-09-06,Game Network,Playable Broad,Reward Story C,229,22,3,4.26
+2025-09,2025-09-06,Game Network,Playable Premium,Playable Puzzle D,224,20,3,6.21
+2025-09,2025-09-06,Game Network,Playable Premium,Progress Video D,362,20,4,8.91
+2025-09,2025-09-06,Game Network,Playable Premium,Reward Story D,236,19,3,6.29
+2025-09,2025-09-06,Search Network,Search Value Global,Playable Puzzle A,259,15,3,3.38
+2025-09,2025-09-06,Search Network,Search Value Global,Progress Video A,198,15,2,2.36
+2025-09,2025-09-06,Search Network,Search Value Global,Reward Story A,231,20,3,3.38
+2025-09,2025-09-06,Search Network,Search Value North,Playable Puzzle B,261,21,4,6.08
+2025-09,2025-09-06,Search Network,Search Value North,Progress Video B,250,13,3,4.68
+2025-09,2025-09-06,Search Network,Search Value North,Reward Story B,245,17,3,4.33
+2025-09,2025-09-06,Social Network,Social Gameplay,Playable Puzzle E,496,44,8,13.79
+2025-09,2025-09-06,Social Network,Social Gameplay,Progress Video E,317,31,5,8.06
+2025-09,2025-09-06,Social Network,Social Gameplay,Reward Story E,216,23,4,6.77
+2025-09,2025-09-06,Social Network,Social Lifestyle,Progress Video F,200,19,3,7.53
+2025-09,2025-09-06,Social Network,Social Lifestyle,Reward Story F,233,14,3,6.67
+2025-09,2025-09-06,Store Search,Store Intent,Playable Puzzle H,258,18,4,10.1
+2025-09,2025-09-06,Store Search,Store Intent,Progress Video H,588,51,8,20.29
+2025-09,2025-09-06,Store Search,Store Intent,Reward Story H,196,16,3,7.1
+2025-09,2025-09-07,Discovery Network,Discovery Rewarded,Playable Puzzle G,109,6,1,1.11
+2025-09,2025-09-07,Discovery Network,Discovery Rewarded,Progress Video G,268,27,4,3.79
+2025-09,2025-09-07,Game Network,Playable Broad,Playable Puzzle C,388,23,5,7.63
+2025-09,2025-09-07,Game Network,Playable Broad,Progress Video C,367,30,5,7.32
+2025-09,2025-09-07,Game Network,Playable Broad,Reward Story C,89,5,1,1.55
+2025-09,2025-09-07,Game Network,Playable Premium,Playable Puzzle D,278,34,5,10.54
+2025-09,2025-09-07,Game Network,Playable Premium,Progress Video D,324,26,4,8.65
+2025-09,2025-09-07,Game Network,Playable Premium,Reward Story D,310,19,4,9.42
+2025-09,2025-09-07,Search Network,Search Value Global,Playable Puzzle A,127,10,2,2.23
+2025-09,2025-09-07,Search Network,Search Value Global,Progress Video A,140,11,2,2.17
+2025-09,2025-09-07,Search Network,Search Value Global,Reward Story A,211,12,3,3.05
+2025-09,2025-09-07,Search Network,Search Value North,Playable Puzzle B,164,16,2,3.3499999999999996
+2025-09,2025-09-07,Search Network,Search Value North,Progress Video B,138,13,2,3.3499999999999996
+2025-09,2025-09-07,Search Network,Search Value North,Reward Story B,44,5,1,1.65
+2025-09,2025-09-07,Social Network,Social Gameplay,Playable Puzzle E,231,13,3,5.27
+2025-09,2025-09-07,Social Network,Social Gameplay,Progress Video E,85,13,2,3.1799999999999997
+2025-09,2025-09-07,Social Network,Social Gameplay,Reward Story E,229,17,3,5.18
+2025-09,2025-09-07,Social Network,Social Lifestyle,Playable Puzzle F,177,15,3,6.41
+2025-09,2025-09-07,Social Network,Social Lifestyle,Progress Video F,39,4,1,2.17
+2025-09,2025-09-07,Social Network,Social Lifestyle,Reward Story F,215,16,3,6.43
+2025-09,2025-09-07,Store Search,Store Intent,Playable Puzzle H,148,18,3,7.27
+2025-09,2025-09-07,Store Search,Store Intent,Progress Video H,223,17,3,7.01
+2025-09,2025-09-07,Store Search,Store Intent,Reward Story H,200,16,3,7.83
+2025-09,2025-09-08,Discovery Network,Discovery Rewarded,Playable Puzzle G,62,6,1,1.03
+2025-09,2025-09-08,Discovery Network,Discovery Rewarded,Progress Video G,168,10,3,2.78
+2025-09,2025-09-08,Discovery Network,Discovery Rewarded,Reward Story G,185,7,2,2.0300000000000002
+2025-09,2025-09-08,Game Network,Playable Broad,Playable Puzzle C,133,6,2,2.91
+2025-09,2025-09-08,Game Network,Playable Broad,Progress Video C,265,17,4,5.38
+2025-09,2025-09-08,Game Network,Playable Broad,Reward Story C,551,31,7,10.07
+2025-09,2025-09-08,Game Network,Playable Premium,Playable Puzzle D,82,6,2,4.15
+2025-09,2025-09-08,Game Network,Playable Premium,Progress Video D,257,15,3,6.02
+2025-09,2025-09-08,Game Network,Playable Premium,Reward Story D,307,36,5,11.13
+2025-09,2025-09-08,Search Network,Search Value Global,Playable Puzzle A,123,13,2,2.17
+2025-09,2025-09-08,Search Network,Search Value Global,Progress Video A,467,36,6,6.609999999999999
+2025-09,2025-09-08,Search Network,Search Value Global,Reward Story A,273,24,4,4.56
+2025-09,2025-09-08,Search Network,Search Value North,Playable Puzzle B,133,11,2,3.05
+2025-09,2025-09-08,Search Network,Search Value North,Progress Video B,440,30,5,7.16
+2025-09,2025-09-08,Search Network,Search Value North,Reward Story B,60,9,1,1.77
+2025-09,2025-09-08,Social Network,Social Gameplay,Playable Puzzle E,354,28,4,7.37
+2025-09,2025-09-08,Social Network,Social Gameplay,Progress Video E,246,16,4,6.8
+2025-09,2025-09-08,Social Network,Social Gameplay,Reward Story E,102,9,1,1.95
+2025-09,2025-09-08,Social Network,Social Lifestyle,Playable Puzzle F,147,12,2,4.5600000000000005
+2025-09,2025-09-08,Social Network,Social Lifestyle,Progress Video F,225,18,3,6.99
+2025-09,2025-09-08,Social Network,Social Lifestyle,Reward Story F,100,15,2,4.79
+2025-09,2025-09-08,Store Search,Store Intent,Playable Puzzle H,106,2,1,2.67
+2025-09,2025-09-08,Store Search,Store Intent,Progress Video H,592,52,9,21.689999999999998
+2025-09,2025-09-08,Store Search,Store Intent,Reward Story H,110,11,2,5.41
+2025-09,2025-09-09,Discovery Network,Discovery Rewarded,Reward Story G,151,11,2,1.9500000000000002
+2025-09,2025-09-09,Game Network,Playable Broad,Playable Puzzle C,277,17,4,5.39
+2025-09,2025-09-09,Game Network,Playable Broad,Progress Video C,367,31,5,6.72
+2025-09,2025-09-09,Game Network,Playable Broad,Reward Story C,279,14,3,4.16
+2025-09,2025-09-09,Game Network,Playable Premium,Playable Puzzle D,207,15,3,6.28
+2025-09,2025-09-09,Game Network,Playable Premium,Progress Video D,519,43,7,14.73
+2025-09,2025-09-09,Game Network,Playable Premium,Reward Story D,72,11,2,4.42
+2025-09,2025-09-09,Search Network,Search Value Global,Playable Puzzle A,232,12,3,3.3
+2025-09,2025-09-09,Search Network,Search Value Global,Progress Video A,107,10,2,2.2199999999999998
+2025-09,2025-09-09,Search Network,Search Value Global,Reward Story A,47,6,1,1.17
+2025-09,2025-09-09,Search Network,Search Value North,Playable Puzzle B,196,18,3,4.6899999999999995
+2025-09,2025-09-09,Search Network,Search Value North,Progress Video B,40,2,1,1.4
+2025-09,2025-09-09,Search Network,Search Value North,Reward Story B,180,16,2,3.08
+2025-09,2025-09-09,Social Network,Social Gameplay,Playable Puzzle E,157,5,2,3.43
+2025-09,2025-09-09,Social Network,Social Gameplay,Progress Video E,55,4,1,1.66
+2025-09,2025-09-09,Social Network,Social Gameplay,Reward Story E,219,15,3,4.78
+2025-09,2025-09-09,Social Network,Social Lifestyle,Playable Puzzle F,140,11,2,4.65
+2025-09,2025-09-09,Social Network,Social Lifestyle,Progress Video F,173,7,3,6.890000000000001
+2025-09,2025-09-09,Store Search,Store Intent,Playable Puzzle H,143,12,2,4.720000000000001
+2025-09,2025-09-09,Store Search,Store Intent,Progress Video H,212,13,3,7.31
+2025-09,2025-09-09,Store Search,Store Intent,Reward Story H,404,33,5,10.92
+2025-09,2025-09-10,Discovery Network,Discovery Rewarded,Playable Puzzle G,199,17,3,2.79
+2025-09,2025-09-10,Discovery Network,Discovery Rewarded,Reward Story G,108,8,1,1.03
+2025-09,2025-09-10,Game Network,Playable Broad,Playable Puzzle C,240,30,5,7.0
+2025-09,2025-09-10,Game Network,Playable Broad,Progress Video C,365,27,4,6.0
+2025-09,2025-09-10,Game Network,Playable Broad,Reward Story C,155,10,2,2.95
+2025-09,2025-09-10,Game Network,Playable Premium,Playable Puzzle D,126,10,2,3.69
+2025-09,2025-09-10,Game Network,Playable Premium,Progress Video D,147,16,2,4.16
+2025-09,2025-09-10,Game Network,Playable Premium,Reward Story D,164,10,2,4.37
+2025-09,2025-09-10,Search Network,Search Value Global,Playable Puzzle A,107,21,3,2.99
+2025-09,2025-09-10,Search Network,Search Value Global,Progress Video A,280,17,3,3.16
+2025-09,2025-09-10,Search Network,Search Value Global,Reward Story A,215,20,3,3.23
+2025-09,2025-09-10,Search Network,Search Value North,Playable Puzzle B,140,14,2,3.1900000000000004
+2025-09,2025-09-10,Search Network,Search Value North,Progress Video B,80,5,1,1.56
+2025-09,2025-09-10,Search Network,Search Value North,Reward Story B,130,11,2,2.8899999999999997
+2025-09,2025-09-10,Social Network,Social Gameplay,Playable Puzzle E,501,36,6,11.07
+2025-09,2025-09-10,Social Network,Social Gameplay,Progress Video E,178,15,3,5.03
+2025-09,2025-09-10,Social Network,Social Gameplay,Reward Story E,209,15,3,4.45
+2025-09,2025-09-10,Social Network,Social Lifestyle,Playable Puzzle F,39,6,1,2.48
+2025-09,2025-09-10,Social Network,Social Lifestyle,Reward Story F,137,13,2,4.82
+2025-09,2025-09-10,Store Search,Store Intent,Playable Puzzle H,289,27,4,10.709999999999999
+2025-09,2025-09-10,Store Search,Store Intent,Progress Video H,130,11,2,4.9
+2025-09,2025-09-11,Discovery Network,Discovery Rewarded,Playable Puzzle G,220,16,3,3.1
+2025-09,2025-09-11,Discovery Network,Discovery Rewarded,Progress Video G,44,2,1,0.98
+2025-09,2025-09-11,Discovery Network,Discovery Rewarded,Reward Story G,116,13,2,2.0300000000000002
+2025-09,2025-09-11,Game Network,Playable Broad,Playable Puzzle C,238,15,3,3.9
+2025-09,2025-09-11,Game Network,Playable Broad,Progress Video C,571,39,8,10.84
+2025-09,2025-09-11,Game Network,Playable Broad,Reward Story C,352,21,5,6.52
+2025-09,2025-09-11,Game Network,Playable Premium,Playable Puzzle D,342,33,4,8.42
+2025-09,2025-09-11,Game Network,Playable Premium,Progress Video D,278,26,5,10.6
+2025-09,2025-09-11,Game Network,Playable Premium,Reward Story D,108,9,2,3.92
+2025-09,2025-09-11,Search Network,Search Value Global,Playable Puzzle A,94,12,2,1.82
+2025-09,2025-09-11,Search Network,Search Value Global,Progress Video A,109,11,2,2.21
+2025-09,2025-09-11,Search Network,Search Value Global,Reward Story A,266,33,4,4.29
+2025-09,2025-09-11,Search Network,Search Value North,Playable Puzzle B,291,18,4,6.26
+2025-09,2025-09-11,Search Network,Search Value North,Progress Video B,64,2,1,1.36
+2025-09,2025-09-11,Search Network,Search Value North,Reward Story B,303,29,4,6.61
+2025-09,2025-09-11,Social Network,Social Gameplay,Playable Puzzle E,128,16,2,3.4400000000000004
+2025-09,2025-09-11,Social Network,Social Gameplay,Progress Video E,293,33,4,6.7299999999999995
+2025-09,2025-09-11,Social Network,Social Gameplay,Reward Story E,149,4,2,3.55
+2025-09,2025-09-11,Social Network,Social Lifestyle,Progress Video F,82,6,1,2.0
+2025-09,2025-09-11,Store Search,Store Intent,Playable Puzzle H,305,22,4,9.44
+2025-09,2025-09-11,Store Search,Store Intent,Progress Video H,274,26,4,9.81
+2025-09,2025-09-11,Store Search,Store Intent,Reward Story H,272,16,3,7.51
+2025-09,2025-09-12,Discovery Network,Discovery Rewarded,Playable Puzzle G,263,22,4,3.8200000000000003
+2025-09,2025-09-12,Discovery Network,Discovery Rewarded,Progress Video G,357,21,4,3.88
+2025-09,2025-09-12,Game Network,Playable Broad,Playable Puzzle C,439,35,6,8.040000000000001
+2025-09,2025-09-12,Game Network,Playable Broad,Progress Video C,423,36,6,8.06
+2025-09,2025-09-12,Game Network,Playable Broad,Reward Story C,331,25,5,6.62
+2025-09,2025-09-12,Game Network,Playable Premium,Progress Video D,245,17,4,9.59
+2025-09,2025-09-12,Game Network,Playable Premium,Reward Story D,107,14,2,3.81
+2025-09,2025-09-12,Search Network,Search Value Global,Playable Puzzle A,184,16,2,2.2
+2025-09,2025-09-12,Search Network,Search Value Global,Progress Video A,133,10,2,1.8900000000000001
+2025-09,2025-09-12,Search Network,Search Value Global,Reward Story A,85,9,1,1.05
+2025-09,2025-09-12,Search Network,Search Value North,Playable Puzzle B,213,13,2,3.56
+2025-09,2025-09-12,Search Network,Search Value North,Reward Story B,124,8,2,3.01
+2025-09,2025-09-12,Social Network,Social Gameplay,Playable Puzzle E,91,7,1,1.87
+2025-09,2025-09-12,Social Network,Social Gameplay,Progress Video E,132,11,2,3.4699999999999998
+2025-09,2025-09-12,Social Network,Social Lifestyle,Playable Puzzle F,200,14,3,7.04
+2025-09,2025-09-12,Social Network,Social Lifestyle,Progress Video F,130,14,2,4.83
+2025-09,2025-09-12,Social Network,Social Lifestyle,Reward Story F,181,18,2,4.88
+2025-09,2025-09-12,Store Search,Store Intent,Playable Puzzle H,76,5,1,2.47
+2025-09,2025-09-12,Store Search,Store Intent,Progress Video H,350,19,5,13.17
+2025-09,2025-09-12,Store Search,Store Intent,Reward Story H,297,16,4,9.709999999999999
+2025-09,2025-09-13,Discovery Network,Discovery Rewarded,Playable Puzzle G,119,9,2,1.98
+2025-09,2025-09-13,Discovery Network,Discovery Rewarded,Progress Video G,152,14,2,1.87
+2025-09,2025-09-13,Discovery Network,Discovery Rewarded,Reward Story G,79,9,1,1.05
+2025-09,2025-09-13,Game Network,Playable Broad,Playable Puzzle C,282,10,4,5.8
+2025-09,2025-09-13,Game Network,Playable Broad,Progress Video C,89,13,2,2.49
+2025-09,2025-09-13,Game Network,Playable Broad,Reward Story C,190,16,3,3.92
+2025-09,2025-09-13,Game Network,Playable Premium,Progress Video D,341,24,5,10.64
+2025-09,2025-09-13,Game Network,Playable Premium,Reward Story D,172,13,2,4.359999999999999
+2025-09,2025-09-13,Search Network,Search Value Global,Playable Puzzle A,277,18,4,4.22
+2025-09,2025-09-13,Search Network,Search Value Global,Progress Video A,109,3,1,1.09
+2025-09,2025-09-13,Search Network,Search Value Global,Reward Story A,96,5,1,1.15
+2025-09,2025-09-13,Search Network,Search Value North,Playable Puzzle B,458,33,6,8.66
+2025-09,2025-09-13,Search Network,Search Value North,Progress Video B,73,8,1,1.56
+2025-09,2025-09-13,Search Network,Search Value North,Reward Story B,306,16,5,8.18
+2025-09,2025-09-13,Social Network,Social Gameplay,Playable Puzzle E,499,29,6,10.08
+2025-09,2025-09-13,Social Network,Social Gameplay,Progress Video E,146,11,2,3.1500000000000004
+2025-09,2025-09-13,Social Network,Social Gameplay,Reward Story E,170,22,3,4.96
+2025-09,2025-09-13,Social Network,Social Lifestyle,Playable Puzzle F,61,5,1,2.0
+2025-09,2025-09-13,Social Network,Social Lifestyle,Progress Video F,62,6,1,2.26
+2025-09,2025-09-13,Social Network,Social Lifestyle,Reward Story F,65,2,1,2.53
+2025-09,2025-09-13,Store Search,Store Intent,Playable Puzzle H,381,30,5,11.92
+2025-09,2025-09-13,Store Search,Store Intent,Progress Video H,283,19,4,10.21
+2025-09,2025-09-13,Store Search,Store Intent,Reward Story H,161,5,2,5.0
+2025-09,2025-09-14,Discovery Network,Discovery Rewarded,Playable Puzzle G,57,3,1,0.99
+2025-09,2025-09-14,Discovery Network,Discovery Rewarded,Reward Story G,98,5,1,0.85
+2025-09,2025-09-14,Game Network,Playable Broad,Playable Puzzle C,403,40,6,8.04
+2025-09,2025-09-14,Game Network,Playable Broad,Progress Video C,631,44,8,10.54
+2025-09,2025-09-14,Game Network,Playable Broad,Reward Story C,175,10,2,2.69
+2025-09,2025-09-14,Game Network,Playable Premium,Playable Puzzle D,243,13,3,5.88
+2025-09,2025-09-14,Game Network,Playable Premium,Progress Video D,346,32,4,8.21
+2025-09,2025-09-14,Game Network,Playable Premium,Reward Story D,439,38,6,12.49
+2025-09,2025-09-14,Search Network,Search Value Global,Playable Puzzle A,334,19,4,4.4399999999999995
+2025-09,2025-09-14,Search Network,Search Value Global,Progress Video A,281,32,5,5.36
+2025-09,2025-09-14,Search Network,Search Value Global,Reward Story A,337,21,4,4.17
+2025-09,2025-09-14,Search Network,Search Value North,Playable Puzzle B,403,28,6,9.42
+2025-09,2025-09-14,Search Network,Search Value North,Progress Video B,452,35,6,10.03
+2025-09,2025-09-14,Search Network,Search Value North,Reward Story B,46,9,1,1.52
+2025-09,2025-09-14,Social Network,Social Gameplay,Playable Puzzle E,352,23,4,7.1
+2025-09,2025-09-14,Social Network,Social Gameplay,Progress Video E,173,23,3,5.53
+2025-09,2025-09-14,Social Network,Social Gameplay,Reward Story E,302,22,4,6.65
+2025-09,2025-09-14,Social Network,Social Lifestyle,Playable Puzzle F,195,15,2,4.85
+2025-09,2025-09-14,Social Network,Social Lifestyle,Reward Story F,250,15,3,6.76
+2025-09,2025-09-14,Store Search,Store Intent,Playable Puzzle H,81,5,1,2.55
+2025-09,2025-09-14,Store Search,Store Intent,Progress Video H,399,22,4,10.870000000000001
+2025-09,2025-09-14,Store Search,Store Intent,Reward Story H,362,33,6,15.559999999999999
+2025-09,2025-09-15,Discovery Network,Discovery Rewarded,Playable Puzzle G,108,6,1,0.91
+2025-09,2025-09-15,Discovery Network,Discovery Rewarded,Progress Video G,108,5,1,1.06
+2025-09,2025-09-15,Discovery Network,Discovery Rewarded,Reward Story G,177,10,2,2.1500000000000004
+2025-09,2025-09-15,Game Network,Playable Broad,Playable Puzzle C,361,25,4,5.11
+2025-09,2025-09-15,Game Network,Playable Broad,Progress Video C,381,20,5,6.69
+2025-09,2025-09-15,Game Network,Playable Broad,Reward Story C,295,19,3,4.42
+2025-09,2025-09-15,Game Network,Playable Premium,Playable Puzzle D,339,24,5,10.42
+2025-09,2025-09-15,Game Network,Playable Premium,Progress Video D,215,26,3,6.56
+2025-09,2025-09-15,Game Network,Playable Premium,Reward Story D,467,35,7,15.12
+2025-09,2025-09-15,Search Network,Search Value Global,Progress Video A,55,3,1,0.95
+2025-09,2025-09-15,Search Network,Search Value Global,Reward Story A,41,5,1,1.06
+2025-09,2025-09-15,Search Network,Search Value North,Progress Video B,270,22,4,5.98
+2025-09,2025-09-15,Search Network,Search Value North,Reward Story B,307,23,4,6.46
+2025-09,2025-09-15,Social Network,Social Gameplay,Playable Puzzle E,93,7,1,2.0
+2025-09,2025-09-15,Social Network,Social Gameplay,Progress Video E,212,20,3,5.02
+2025-09,2025-09-15,Social Network,Social Gameplay,Reward Story E,323,23,5,8.18
+2025-09,2025-09-15,Social Network,Social Lifestyle,Playable Puzzle F,126,9,2,4.58
+2025-09,2025-09-15,Social Network,Social Lifestyle,Progress Video F,196,17,3,6.6899999999999995
+2025-09,2025-09-15,Social Network,Social Lifestyle,Reward Story F,150,15,2,4.52
+2025-09,2025-09-15,Store Search,Store Intent,Playable Puzzle H,239,20,4,9.200000000000001
+2025-09,2025-09-15,Store Search,Store Intent,Progress Video H,467,26,5,12.45
+2025-09,2025-09-15,Store Search,Store Intent,Reward Story H,302,19,4,10.18
+2025-09,2025-09-16,Game Network,Playable Broad,Playable Puzzle C,446,33,6,8.39
+2025-09,2025-09-16,Game Network,Playable Broad,Progress Video C,304,24,5,7.02
+2025-09,2025-09-16,Game Network,Playable Broad,Reward Story C,594,32,7,9.49
+2025-09,2025-09-16,Game Network,Playable Premium,Playable Puzzle D,327,26,4,8.18
+2025-09,2025-09-16,Game Network,Playable Premium,Progress Video D,206,19,3,6.7299999999999995
+2025-09,2025-09-16,Game Network,Playable Premium,Reward Story D,347,33,5,10.83
+2025-09,2025-09-16,Search Network,Search Value Global,Playable Puzzle A,49,9,1,0.93
+2025-09,2025-09-16,Search Network,Search Value Global,Progress Video A,127,11,2,2.17
+2025-09,2025-09-16,Search Network,Search Value Global,Reward Story A,37,8,1,1.08
+2025-09,2025-09-16,Search Network,Search Value North,Playable Puzzle B,185,8,3,4.85
+2025-09,2025-09-16,Search Network,Search Value North,Reward Story B,83,8,1,1.6
+2025-09,2025-09-16,Social Network,Social Gameplay,Playable Puzzle E,349,28,4,6.38
+2025-09,2025-09-16,Social Network,Social Gameplay,Progress Video E,194,18,3,5.21
+2025-09,2025-09-16,Social Network,Social Gameplay,Reward Story E,40,5,1,1.94
+2025-09,2025-09-16,Store Search,Store Intent,Playable Puzzle H,161,20,3,6.98
+2025-09,2025-09-16,Store Search,Store Intent,Progress Video H,172,8,2,5.65
+2025-09,2025-09-16,Store Search,Store Intent,Reward Story H,206,16,3,7.9
+2025-09,2025-09-17,Game Network,Playable Broad,Playable Puzzle C,938,61,12,16.03
+2025-09,2025-09-17,Game Network,Playable Broad,Progress Video C,516,47,7,9.38
+2025-09,2025-09-17,Game Network,Playable Broad,Reward Story C,242,28,4,5.35
+2025-09,2025-09-17,Game Network,Playable Premium,Playable Puzzle D,414,37,6,12.18
+2025-09,2025-09-17,Game Network,Playable Premium,Progress Video D,591,41,7,15.11
+2025-09,2025-09-17,Game Network,Playable Premium,Reward Story D,205,17,3,6.1000000000000005
+2025-09,2025-09-17,Search Network,Search Value Global,Playable Puzzle A,146,9,2,2.13
+2025-09,2025-09-17,Search Network,Search Value Global,Progress Video A,74,9,1,0.99
+2025-09,2025-09-17,Search Network,Search Value Global,Reward Story A,351,24,5,4.91
+2025-09,2025-09-17,Search Network,Search Value North,Reward Story B,438,29,6,8.64
+2025-09,2025-09-17,Social Network,Social Gameplay,Playable Puzzle E,135,11,2,3.37
+2025-09,2025-09-17,Social Network,Social Gameplay,Progress Video E,241,15,3,4.63
+2025-09,2025-09-17,Social Network,Social Gameplay,Reward Story E,190,18,3,4.71
+2025-09,2025-09-17,Store Search,Store Intent,Playable Puzzle H,234,13,3,6.63
+2025-09,2025-09-17,Store Search,Store Intent,Progress Video H,255,21,3,6.94
+2025-09,2025-09-17,Store Search,Store Intent,Reward Story H,250,23,4,10.65
+2025-09,2025-09-18,Game Network,Playable Broad,Playable Puzzle C,143,10,2,3.0
+2025-09,2025-09-18,Game Network,Playable Broad,Progress Video C,315,27,4,5.74
+2025-09,2025-09-18,Game Network,Playable Broad,Reward Story C,147,9,2,2.79
+2025-09,2025-09-18,Game Network,Playable Premium,Playable Puzzle D,43,9,1,2.41
+2025-09,2025-09-18,Game Network,Playable Premium,Progress Video D,79,9,2,4.1
+2025-09,2025-09-18,Game Network,Playable Premium,Reward Story D,49,8,1,2.14
+2025-09,2025-09-18,Search Network,Search Value Global,Playable Puzzle A,244,11,3,2.99
+2025-09,2025-09-18,Search Network,Search Value Global,Progress Video A,240,23,3,3.25
+2025-09,2025-09-18,Search Network,Search Value Global,Reward Story A,244,13,3,2.89
+2025-09,2025-09-18,Search Network,Search Value North,Playable Puzzle B,113,7,2,3.05
+2025-09,2025-09-18,Search Network,Search Value North,Progress Video B,213,9,3,4.95
+2025-09,2025-09-18,Search Network,Search Value North,Reward Story B,332,28,5,8.42
+2025-09,2025-09-18,Social Network,Social Gameplay,Progress Video E,89,2,1,1.82
+2025-09,2025-09-18,Social Network,Social Gameplay,Reward Story E,109,2,1,1.73
+2025-09,2025-09-18,Store Search,Store Intent,Playable Puzzle H,169,11,2,5.119999999999999
+2025-09,2025-09-18,Store Search,Store Intent,Progress Video H,105,5,1,2.77
+2025-09,2025-09-18,Store Search,Store Intent,Reward Story H,369,24,5,11.71
+2025-09,2025-09-19,Game Network,Playable Broad,Playable Puzzle C,148,7,2,2.41
+2025-09,2025-09-19,Game Network,Playable Broad,Progress Video C,429,32,6,8.02
+2025-09,2025-09-19,Game Network,Playable Broad,Reward Story C,217,29,4,5.72
+2025-09,2025-09-19,Game Network,Playable Premium,Playable Puzzle D,421,19,5,11.16
+2025-09,2025-09-19,Game Network,Playable Premium,Progress Video D,490,37,6,12.87
+2025-09,2025-09-19,Game Network,Playable Premium,Reward Story D,297,21,4,7.640000000000001
+2025-09,2025-09-19,Search Network,Search Value Global,Playable Puzzle A,127,13,2,1.84
+2025-09,2025-09-19,Search Network,Search Value Global,Progress Video A,335,34,6,6.88
+2025-09,2025-09-19,Search Network,Search Value Global,Reward Story A,60,3,1,1.11
+2025-09,2025-09-19,Search Network,Search Value North,Playable Puzzle B,173,14,3,4.6
+2025-09,2025-09-19,Search Network,Search Value North,Progress Video B,156,6,2,3.1399999999999997
+2025-09,2025-09-19,Search Network,Search Value North,Reward Story B,283,23,4,6.09
+2025-09,2025-09-19,Social Network,Social Gameplay,Playable Puzzle E,93,9,1,1.48
+2025-09,2025-09-19,Social Network,Social Gameplay,Progress Video E,97,8,1,1.93
+2025-09,2025-09-19,Social Network,Social Gameplay,Reward Story E,242,20,3,5.23
+2025-09,2025-09-19,Store Search,Store Intent,Playable Puzzle H,107,7,2,4.949999999999999
+2025-09,2025-09-19,Store Search,Store Intent,Progress Video H,179,10,2,4.73
+2025-09,2025-09-19,Store Search,Store Intent,Reward Story H,250,16,4,10.12
+2025-09,2025-09-20,Game Network,Playable Broad,Playable Puzzle C,316,28,5,6.67
+2025-09,2025-09-20,Game Network,Playable Broad,Progress Video C,258,13,3,4.17
+2025-09,2025-09-20,Game Network,Playable Broad,Reward Story C,192,17,3,4.14
+2025-09,2025-09-20,Game Network,Playable Premium,Playable Puzzle D,361,28,6,13.29
+2025-09,2025-09-20,Game Network,Playable Premium,Progress Video D,295,17,4,8.549999999999999
+2025-09,2025-09-20,Game Network,Playable Premium,Reward Story D,105,5,1,2.19
+2025-09,2025-09-20,Search Network,Search Value Global,Playable Puzzle A,269,22,4,4.2
+2025-09,2025-09-20,Search Network,Search Value Global,Progress Video A,228,22,4,4.43
+2025-09,2025-09-20,Search Network,Search Value Global,Reward Story A,342,29,5,5.39
+2025-09,2025-09-20,Search Network,Search Value North,Playable Puzzle B,459,37,6,9.44
+2025-09,2025-09-20,Search Network,Search Value North,Progress Video B,72,7,1,1.65
+2025-09,2025-09-20,Search Network,Search Value North,Reward Story B,297,21,3,4.68
+2025-09,2025-09-20,Social Network,Social Gameplay,Playable Puzzle E,259,17,3,5.38
+2025-09,2025-09-20,Social Network,Social Gameplay,Progress Video E,386,37,6,10.17
+2025-09,2025-09-20,Social Network,Social Gameplay,Reward Story E,230,19,3,4.99
+2025-09,2025-09-20,Store Search,Store Intent,Playable Puzzle H,132,13,2,4.58
+2025-09,2025-09-20,Store Search,Store Intent,Progress Video H,184,24,3,7.04
+2025-09,2025-09-20,Store Search,Store Intent,Reward Story H,266,19,3,7.98
+2025-09,2025-09-21,Game Network,Playable Broad,Playable Puzzle C,379,23,6,8.13
+2025-09,2025-09-21,Game Network,Playable Broad,Progress Video C,220,21,3,3.71
+2025-09,2025-09-21,Game Network,Playable Broad,Reward Story C,258,19,4,5.49
+2025-09,2025-09-21,Game Network,Playable Premium,Playable Puzzle D,337,13,4,8.57
+2025-09,2025-09-21,Game Network,Playable Premium,Progress Video D,271,19,4,8.14
+2025-09,2025-09-21,Game Network,Playable Premium,Reward Story D,164,16,2,4.36
+2025-09,2025-09-21,Search Network,Search Value Global,Playable Puzzle A,332,24,4,4.62
+2025-09,2025-09-21,Search Network,Search Value Global,Progress Video A,66,3,1,1.23
+2025-09,2025-09-21,Search Network,Search Value Global,Reward Story A,252,23,5,5.44
+2025-09,2025-09-21,Search Network,Search Value North,Progress Video B,85,5,1,1.42
+2025-09,2025-09-21,Search Network,Search Value North,Reward Story B,175,20,3,4.84
+2025-09,2025-09-21,Social Network,Social Gameplay,Playable Puzzle E,260,20,3,5.2
+2025-09,2025-09-21,Social Network,Social Gameplay,Progress Video E,296,21,4,7.140000000000001
+2025-09,2025-09-21,Social Network,Social Gameplay,Reward Story E,338,18,4,6.57
+2025-09,2025-09-21,Store Search,Store Intent,Playable Puzzle H,58,4,1,2.18
+2025-09,2025-09-21,Store Search,Store Intent,Progress Video H,554,43,8,19.31
+2025-09,2025-09-21,Store Search,Store Intent,Reward Story H,73,5,1,2.41
+2025-09,2025-09-22,Game Network,Playable Broad,Playable Puzzle C,628,48,9,13.03
+2025-09,2025-09-22,Game Network,Playable Broad,Progress Video C,314,19,4,5.54
+2025-09,2025-09-22,Game Network,Playable Broad,Reward Story C,220,11,3,4.13
+2025-09,2025-09-22,Game Network,Playable Premium,Playable Puzzle D,134,14,2,4.3100000000000005
+2025-09,2025-09-22,Game Network,Playable Premium,Progress Video D,124,15,2,3.91
+2025-09,2025-09-22,Game Network,Playable Premium,Reward Story D,258,16,3,6.45
+2025-09,2025-09-22,Search Network,Search Value Global,Playable Puzzle A,184,17,3,3.14
+2025-09,2025-09-22,Search Network,Search Value Global,Progress Video A,121,10,2,2.0999999999999996
+2025-09,2025-09-22,Search Network,Search Value Global,Reward Story A,79,8,1,1.14
+2025-09,2025-09-22,Search Network,Search Value North,Playable Puzzle B,99,5,1,1.44
+2025-09,2025-09-22,Search Network,Search Value North,Progress Video B,100,10,2,2.81
+2025-09,2025-09-22,Search Network,Search Value North,Reward Story B,189,11,2,2.9
+2025-09,2025-09-22,Social Network,Social Gameplay,Playable Puzzle E,408,30,6,10.19
+2025-09,2025-09-22,Social Network,Social Gameplay,Progress Video E,191,19,4,6.859999999999999
+2025-09,2025-09-22,Social Network,Social Gameplay,Reward Story E,184,16,2,3.37
+2025-09,2025-09-22,Store Search,Store Intent,Playable Puzzle H,39,6,1,2.43
+2025-09,2025-09-22,Store Search,Store Intent,Progress Video H,146,12,2,5.13
+2025-09,2025-09-22,Store Search,Store Intent,Reward Story H,461,21,5,12.79
+2025-09,2025-09-23,Game Network,Playable Broad,Playable Puzzle C,141,16,2,2.8499999999999996
+2025-09,2025-09-23,Game Network,Playable Broad,Progress Video C,269,24,4,5.05
+2025-09,2025-09-23,Game Network,Playable Broad,Reward Story C,586,36,7,9.17
+2025-09,2025-09-23,Game Network,Playable Premium,Progress Video D,248,20,4,8.49
+2025-09,2025-09-23,Game Network,Playable Premium,Reward Story D,55,6,1,1.92
+2025-09,2025-09-23,Search Network,Search Value Global,Playable Puzzle A,80,6,2,1.92
+2025-09,2025-09-23,Search Network,Search Value Global,Progress Video A,282,13,4,4.43
+2025-09,2025-09-23,Search Network,Search Value Global,Reward Story A,345,27,5,5.33
+2025-09,2025-09-23,Search Network,Search Value North,Playable Puzzle B,41,6,1,1.37
+2025-09,2025-09-23,Search Network,Search Value North,Progress Video B,134,13,2,3.08
+2025-09,2025-09-23,Search Network,Search Value North,Reward Story B,74,3,1,1.71
+2025-09,2025-09-23,Social Network,Social Gameplay,Playable Puzzle E,532,53,8,14.32
+2025-09,2025-09-23,Social Network,Social Gameplay,Progress Video E,155,7,2,3.37
+2025-09,2025-09-23,Social Network,Social Gameplay,Reward Story E,424,44,6,10.19
+2025-09,2025-09-23,Store Search,Store Intent,Playable Puzzle H,38,6,1,2.57
+2025-09,2025-09-23,Store Search,Store Intent,Progress Video H,283,18,4,9.73
+2025-09,2025-09-23,Store Search,Store Intent,Reward Story H,55,9,1,2.64
+2025-09,2025-09-24,Game Network,Playable Broad,Playable Puzzle C,631,45,8,10.24
+2025-09,2025-09-24,Game Network,Playable Broad,Progress Video C,333,22,4,5.67
+2025-09,2025-09-24,Game Network,Playable Broad,Reward Story C,306,16,4,5.46
+2025-09,2025-09-24,Game Network,Playable Premium,Playable Puzzle D,177,8,2,4.68
+2025-09,2025-09-24,Game Network,Playable Premium,Progress Video D,81,14,2,4.59
+2025-09,2025-09-24,Game Network,Playable Premium,Reward Story D,225,21,3,6.88
+2025-09,2025-09-24,Search Network,Search Value Global,Playable Puzzle A,69,3,1,1.07
+2025-09,2025-09-24,Search Network,Search Value Global,Progress Video A,122,14,2,2.26
+2025-09,2025-09-24,Search Network,Search Value Global,Reward Story A,42,4,1,1.13
+2025-09,2025-09-24,Search Network,Search Value North,Playable Puzzle B,138,8,2,3.1799999999999997
+2025-09,2025-09-24,Search Network,Search Value North,Progress Video B,83,9,2,3.5700000000000003
+2025-09,2025-09-24,Social Network,Social Gameplay,Playable Puzzle E,326,19,4,6.61
+2025-09,2025-09-24,Social Network,Social Gameplay,Progress Video E,273,20,3,5.25
+2025-09,2025-09-24,Social Network,Social Gameplay,Reward Story E,90,14,2,3.3499999999999996
+2025-09,2025-09-24,Store Search,Store Intent,Playable Puzzle H,104,4,1,2.43
+2025-09,2025-09-24,Store Search,Store Intent,Progress Video H,246,18,3,7.37
+2025-09,2025-09-24,Store Search,Store Intent,Reward Story H,92,12,2,4.609999999999999
+2025-09,2025-09-25,Game Network,Playable Broad,Playable Puzzle C,427,32,5,7.2
+2025-09,2025-09-25,Game Network,Playable Broad,Progress Video C,227,19,4,5.59
+2025-09,2025-09-25,Game Network,Playable Broad,Reward Story C,602,44,8,11.540000000000001
+2025-09,2025-09-25,Game Network,Playable Premium,Playable Puzzle D,100,8,2,4.13
+2025-09,2025-09-25,Game Network,Playable Premium,Reward Story D,131,12,2,4.13
+2025-09,2025-09-25,Search Network,Search Value Global,Playable Puzzle A,201,17,3,3.27
+2025-09,2025-09-25,Search Network,Search Value Global,Progress Video A,73,9,1,0.99
+2025-09,2025-09-25,Search Network,Search Value Global,Reward Story A,277,12,3,3.37
+2025-09,2025-09-25,Search Network,Search Value North,Playable Puzzle B,223,21,3,4.32
+2025-09,2025-09-25,Search Network,Search Value North,Progress Video B,72,7,1,1.56
+2025-09,2025-09-25,Search Network,Search Value North,Reward Story B,214,22,4,6.45
+2025-09,2025-09-25,Social Network,Social Gameplay,Playable Puzzle E,296,31,4,6.91
+2025-09,2025-09-25,Social Network,Social Gameplay,Progress Video E,279,13,4,6.52
+2025-09,2025-09-25,Social Network,Social Gameplay,Reward Story E,190,9,2,3.3899999999999997
+2025-09,2025-09-25,Store Search,Store Intent,Playable Puzzle H,155,10,2,5.029999999999999
+2025-09,2025-09-25,Store Search,Store Intent,Progress Video H,216,10,3,7.1899999999999995
+2025-09,2025-09-25,Store Search,Store Intent,Reward Story H,361,38,6,14.73
+2025-09,2025-09-26,Game Network,Playable Broad,Playable Puzzle C,382,21,5,7.26
+2025-09,2025-09-26,Game Network,Playable Broad,Progress Video C,353,32,6,7.86
+2025-09,2025-09-26,Game Network,Playable Broad,Reward Story C,136,14,3,4.0
+2025-09,2025-09-26,Game Network,Playable Premium,Playable Puzzle D,147,5,2,4.38
+2025-09,2025-09-26,Game Network,Playable Premium,Progress Video D,144,13,2,3.95
+2025-09,2025-09-26,Game Network,Playable Premium,Reward Story D,172,13,2,3.9799999999999995
+2025-09,2025-09-26,Search Network,Search Value Global,Playable Puzzle A,248,22,3,3.3
+2025-09,2025-09-26,Search Network,Search Value Global,Progress Video A,167,11,2,2.1799999999999997
+2025-09,2025-09-26,Search Network,Search Value North,Playable Puzzle B,68,2,1,1.57
+2025-09,2025-09-26,Search Network,Search Value North,Progress Video B,72,9,1,1.82
+2025-09,2025-09-26,Search Network,Search Value North,Reward Story B,316,24,4,5.95
+2025-09,2025-09-26,Social Network,Social Gameplay,Playable Puzzle E,269,21,4,6.74
+2025-09,2025-09-26,Social Network,Social Gameplay,Progress Video E,82,7,1,1.99
+2025-09,2025-09-26,Social Network,Social Gameplay,Reward Story E,344,22,4,6.9399999999999995
+2025-09,2025-09-26,Store Search,Store Intent,Playable Puzzle H,63,5,1,2.12
+2025-09,2025-09-26,Store Search,Store Intent,Progress Video H,327,29,4,10.41
+2025-09,2025-09-26,Store Search,Store Intent,Reward Story H,238,10,3,7.24
+2025-09,2025-09-27,Game Network,Playable Broad,Playable Puzzle C,426,31,5,7.21
+2025-09,2025-09-27,Game Network,Playable Broad,Progress Video C,320,19,4,5.609999999999999
+2025-09,2025-09-27,Game Network,Playable Broad,Reward Story C,377,18,6,7.77
+2025-09,2025-09-27,Game Network,Playable Premium,Playable Puzzle D,126,17,2,3.96
+2025-09,2025-09-27,Game Network,Playable Premium,Progress Video D,176,12,2,3.9400000000000004
+2025-09,2025-09-27,Game Network,Playable Premium,Reward Story D,170,12,2,4.02
+2025-09,2025-09-27,Search Network,Search Value Global,Playable Puzzle A,85,9,1,1.22
+2025-09,2025-09-27,Search Network,Search Value Global,Progress Video A,152,14,2,1.85
+2025-09,2025-09-27,Search Network,Search Value Global,Reward Story A,437,38,6,6.2299999999999995
+2025-09,2025-09-27,Search Network,Search Value North,Playable Puzzle B,182,8,2,2.7300000000000004
+2025-09,2025-09-27,Search Network,Search Value North,Progress Video B,160,21,3,4.6899999999999995
+2025-09,2025-09-27,Search Network,Search Value North,Reward Story B,187,18,3,4.9
+2025-09,2025-09-27,Social Network,Social Gameplay,Playable Puzzle E,228,16,3,5.45
+2025-09,2025-09-27,Social Network,Social Gameplay,Progress Video E,365,30,5,9.34
+2025-09,2025-09-27,Social Network,Social Gameplay,Reward Story E,183,8,2,3.81
+2025-09,2025-09-27,Store Search,Store Intent,Playable Puzzle H,184,14,3,7.709999999999999
+2025-09,2025-09-27,Store Search,Store Intent,Progress Video H,181,19,3,7.380000000000001
+2025-09,2025-09-27,Store Search,Store Intent,Reward Story H,103,4,2,4.92
+2025-09,2025-09-28,Game Network,Playable Broad,Playable Puzzle C,113,16,2,2.89
+2025-09,2025-09-28,Game Network,Playable Broad,Progress Video C,482,32,6,8.05
+2025-09,2025-09-28,Game Network,Playable Broad,Reward Story C,143,9,2,2.6900000000000004
+2025-09,2025-09-28,Game Network,Playable Premium,Playable Puzzle D,293,21,3,6.26
+2025-09,2025-09-28,Game Network,Playable Premium,Progress Video D,127,6,2,4.13
+2025-09,2025-09-28,Search Network,Search Value Global,Playable Puzzle A,232,14,3,2.9699999999999998
+2025-09,2025-09-28,Search Network,Search Value Global,Progress Video A,191,20,3,3.05
+2025-09,2025-09-28,Search Network,Search Value Global,Reward Story A,93,14,2,2.09
+2025-09,2025-09-28,Search Network,Search Value North,Playable Puzzle B,183,11,2,3.2199999999999998
+2025-09,2025-09-28,Search Network,Search Value North,Progress Video B,129,7,2,3.13
+2025-09,2025-09-28,Search Network,Search Value North,Reward Story B,364,36,6,9.28
+2025-09,2025-09-28,Social Network,Social Gameplay,Playable Puzzle E,198,19,3,5.390000000000001
+2025-09,2025-09-28,Social Network,Social Gameplay,Progress Video E,313,39,5,8.89
+2025-09,2025-09-28,Social Network,Social Gameplay,Reward Story E,75,6,1,1.9
+2025-09,2025-09-28,Store Search,Store Intent,Playable Puzzle H,231,14,3,7.59
+2025-09,2025-09-28,Store Search,Store Intent,Progress Video H,347,27,4,10.18
+2025-09,2025-09-28,Store Search,Store Intent,Reward Story H,55,3,1,2.49
+2025-09,2025-09-29,Game Network,Playable Broad,Playable Puzzle C,368,30,5,6.779999999999999
+2025-09,2025-09-29,Game Network,Playable Broad,Progress Video C,314,27,5,6.76
+2025-09,2025-09-29,Game Network,Playable Broad,Reward Story C,126,25,3,4.05
+2025-09,2025-09-29,Game Network,Playable Premium,Playable Puzzle D,321,26,5,9.82
+2025-09,2025-09-29,Game Network,Playable Premium,Progress Video D,104,4,1,2.0
+2025-09,2025-09-29,Game Network,Playable Premium,Reward Story D,399,31,6,13.120000000000001
+2025-09,2025-09-29,Search Network,Search Value Global,Playable Puzzle A,123,12,2,2.03
+2025-09,2025-09-29,Search Network,Search Value Global,Reward Story A,246,22,3,3.34
+2025-09,2025-09-29,Search Network,Search Value North,Playable Puzzle B,61,5,1,1.56
+2025-09,2025-09-29,Search Network,Search Value North,Progress Video B,227,18,3,4.75
+2025-09,2025-09-29,Search Network,Search Value North,Reward Story B,151,15,2,3.34
+2025-09,2025-09-29,Social Network,Social Gameplay,Playable Puzzle E,302,27,4,6.8100000000000005
+2025-09,2025-09-29,Social Network,Social Gameplay,Progress Video E,450,36,7,11.76
+2025-09,2025-09-29,Social Network,Social Gameplay,Reward Story E,57,2,1,1.63
+2025-09,2025-09-29,Store Search,Store Intent,Playable Puzzle H,273,22,4,10.08
+2025-09,2025-09-29,Store Search,Store Intent,Progress Video H,373,23,4,9.649999999999999
+2025-09,2025-09-29,Store Search,Store Intent,Reward Story H,141,8,2,5.039999999999999
+2025-09,2025-09-30,Game Network,Playable Broad,Playable Puzzle C,467,34,6,8.280000000000001
+2025-09,2025-09-30,Game Network,Playable Broad,Progress Video C,393,26,5,6.890000000000001
+2025-09,2025-09-30,Game Network,Playable Broad,Reward Story C,210,20,4,5.57
+2025-09,2025-09-30,Game Network,Playable Premium,Playable Puzzle D,455,44,6,12.58
+2025-09,2025-09-30,Game Network,Playable Premium,Progress Video D,310,23,4,8.05
+2025-09,2025-09-30,Game Network,Playable Premium,Reward Story D,215,12,3,6.91
+2025-09,2025-09-30,Search Network,Search Value Global,Playable Puzzle A,46,8,1,1.08
+2025-09,2025-09-30,Search Network,Search Value Global,Progress Video A,216,21,3,3.16
+2025-09,2025-09-30,Search Network,Search Value Global,Reward Story A,43,6,1,0.95
+2025-09,2025-09-30,Search Network,Search Value North,Playable Puzzle B,69,6,1,1.4
+2025-09,2025-09-30,Search Network,Search Value North,Progress Video B,158,16,3,4.72
+2025-09,2025-09-30,Social Network,Social Gameplay,Playable Puzzle E,254,24,4,6.67
+2025-09,2025-09-30,Social Network,Social Gameplay,Progress Video E,149,17,2,3.25
+2025-09,2025-09-30,Social Network,Social Gameplay,Reward Story E,412,30,6,10.29
+2025-09,2025-09-30,Store Search,Store Intent,Playable Puzzle H,187,15,2,5.09
+2025-09,2025-09-30,Store Search,Store Intent,Reward Story H,41,3,1,2.4

@@ -1,0 +1,23 @@
+{
+  "month": "2025-09",
+  "acquired_players": 1786,
+  "tracked_players": 1688,
+  "tracking_rate": 0.9451287793952967,
+  "spend_usd": 6066.08,
+  "ad_revenue_usd": 273.2644,
+  "iap_revenue_usd": 933.8199999999999,
+  "total_revenue_usd": 1207.0844,
+  "roas": 0.19898919895550338,
+  "d1_eligible": 1734,
+  "d1_returned": 658,
+  "d1_retention": 0.37946943483275664,
+  "d3_eligible": 1629,
+  "d3_returned": 330,
+  "d3_retention": 0.20257826887661143,
+  "d7_eligible": 1431,
+  "d7_returned": 148,
+  "d7_retention": 0.103424178895877,
+  "d14_eligible": 1038,
+  "d14_returned": 56,
+  "d14_retention": 0.05394990366088632
+}
