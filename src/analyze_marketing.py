@@ -137,8 +137,14 @@ def _player_metrics(players: pd.DataFrame, events: pd.DataFrame) -> pd.DataFrame
     base["total_revenue_usd"] = base["ad_revenue_usd"] + base["iap_revenue_usd"]
     month_end = base["install_timestamp"].dt.to_period("M").dt.end_time.dt.normalize()
     session_days = events.loc[events["event_name"] == "session_start"].groupby("device_id")["day_since_install"].agg(set)
+    observed_until = events["event_timestamp"].max() if len(events) else None
+    in_progress = observed_until is not None and observed_until < month_end.max() + pd.Timedelta(days=14)
     for day in RETENTION_DAYS:
-        base[f"d{day}_eligible"] = ((month_end - base["install_timestamp"].dt.normalize()).dt.days >= day).astype(int)
+        if in_progress:
+            # Month still refreshed daily: a player counts for day N only once day N is fully observed.
+            base[f"d{day}_eligible"] = ((observed_until - base["install_timestamp"]) >= pd.Timedelta(days=day + 1)).astype(int)
+        else:
+            base[f"d{day}_eligible"] = ((month_end - base["install_timestamp"].dt.normalize()).dt.days >= day).astype(int)
         base[f"d{day}_returned"] = base["device_id"].map(lambda x: int(day in session_days.get(x, set()))) * base[f"d{day}_eligible"]
     return base
 
@@ -166,7 +172,8 @@ def main() -> None:
     parser.add_argument("--data", type=Path, default=Path("data/synthetic"))
     parser.add_argument("--output", type=Path, default=Path("outputs/analysis"))
     args = parser.parse_args()
-    results = [analyze_month(month, args.data, args.output) for month in ("2025-08", "2025-09")]
+    months = sorted(p.stem.split("_")[-1] for p in args.data.glob("players_*.csv"))
+    results = [analyze_month(month, args.data, args.output) for month in months]
     print(json.dumps(results, indent=2))
 
 

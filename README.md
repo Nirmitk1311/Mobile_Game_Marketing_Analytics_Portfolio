@@ -4,6 +4,10 @@ An end-to-end portfolio project that connects fictional paid-acquisition data wi
 
 > **Privacy note:** Every company name, campaign, creative, identifier, event record, financial value and finding in this repository is synthetic. No employer or client data is included.
 
+## Daily refresh (from October 2025)
+
+From October 2025 the repository is refreshed every weekday. A private production pipeline produces **pattern-only synthetic data**: it keeps the general shape of a live marketing dataset (campaign mix over time, retention decay, engagement, weekday rhythm) while volumes, costs, revenue and retention levels are rescaled by undisclosed factors, noise is added, all names are fictional, dates are moved to a demonstration period and no real identifier is copied. The repository's own pipeline then rebuilds the analysis and charts. [`data/synthetic/live_status.json`](data/synthetic/live_status.json) shows the latest demonstration date. A month's Word report is added once its first cohort reaches Day 7.
+
 ## What this project demonstrates
 
 - Deterministic synthetic data generation for two monthly cohorts

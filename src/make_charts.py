@@ -53,7 +53,9 @@ def _retention_chart(overall: dict, path: Path) -> None:
     image, draw = _canvas("Portfolio retention")
     left, top, right, bottom = 120, 130, 1320, 690
     days = [1, 3, 7, 14]
-    values = [overall[f"d{d}_retention"] * 100 for d in days]
+    # A month still in progress has no mature later days yet: plot only the days that are ready.
+    days = [d for d in days if overall.get(f"d{d}_retention") is not None] or [1]
+    values = [(overall.get(f"d{d}_retention") or 0) * 100 for d in days]
     ymax = max(10, max(values) * 1.25)
     for i in range(6):
         y = bottom - (bottom - top) * i / 5
@@ -62,7 +64,7 @@ def _retention_chart(overall: dict, path: Path) -> None:
         draw.text((25, y - 12), f"{val:.0f}%", fill=INK, font=_font(20))
     points = []
     for i, (day, val) in enumerate(zip(days, values)):
-        x = left + (right - left) * i / (len(days) - 1)
+        x = left + (right - left) * i / max(1, len(days) - 1)
         y = bottom - (bottom - top) * val / ymax
         points.append((x, y))
         draw.text((x - 16, bottom + 18), f"D{day}", fill=INK, font=_font(21))
@@ -95,9 +97,10 @@ def _horizontal_bars(df: pd.DataFrame, label_col: str, value_col: str, title: st
 
 def _scatter(df: pd.DataFrame, path: Path) -> None:
     image, draw = _canvas("Acquisition cost and return")
+    df = df.dropna(subset=["cpi_usd", "roas", "acquired_players"])  # campaigns without players yet are skipped
     left, top, right, bottom = 120, 130, 1320, 690
-    max_x = max(1, float(df["cpi_usd"].max()) * 1.2)
-    max_y = max(10, float(df["roas"].max()) * 120)
+    max_x = max(1, float(df["cpi_usd"].max() if len(df) else 0) * 1.2)
+    max_y = max(10, float(df["roas"].max() if len(df) else 0) * 120)
     for i in range(6):
         y = bottom - (bottom - top) * i / 5
         draw.line((left, y, right, y), fill=GRID, width=2)
@@ -120,7 +123,7 @@ def main() -> None:
     parser.add_argument("--analysis", type=Path, default=Path("outputs/analysis"))
     parser.add_argument("--output", type=Path, default=Path("outputs/charts"))
     args = parser.parse_args()
-    for month in ("2025-08", "2025-09"):
+    for month in sorted(p.name for p in args.analysis.iterdir() if p.is_dir()):
         create_charts(month, args.analysis, args.output)
     print(f"Charts written to {args.output.resolve()}")
 

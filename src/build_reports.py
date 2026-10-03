@@ -200,7 +200,11 @@ def main() -> None:
     parser.add_argument("--charts", type=Path, default=Path("outputs/charts"))
     parser.add_argument("--output", type=Path, default=Path("outputs/reports"))
     args = parser.parse_args()
-    for month in ("2025-08", "2025-09"):
+    for month in sorted(p.name for p in args.analysis.iterdir() if p.is_dir()):
+        overall = json.loads((args.analysis / month / "overall_summary.json").read_text(encoding="utf-8"))
+        if overall.get("d7_retention") is None:
+            print(f"{month}: report skipped until the first cohort reaches Day 7 (month still refreshing daily)")
+            continue
         path = build_report(month, args.analysis, args.charts, args.output)
         print(path)
 

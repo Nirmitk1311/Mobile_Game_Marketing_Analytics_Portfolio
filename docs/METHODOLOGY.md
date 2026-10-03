@@ -2,7 +2,7 @@
 
 ## Scope
 
-The project contains two fictional paid-acquisition cohorts: August 2025 and September 2025. Each month includes campaign delivery, creative delivery, acquired-player records and post-install events.
+The project contains two clean-room fictional paid-acquisition cohorts (August 2025 and September 2025) and, from October 2025, pattern-only synthetic months refreshed every weekday (see [PRIVACY.md](PRIVACY.md)). Each month includes campaign delivery, creative delivery, acquired-player records and post-install events.
 
 ## Cleaning
 
@@ -21,7 +21,7 @@ The pipeline:
 
 ## Cohort rules
 
-Retention uses `session_start` on the exact calendar day after installation. A player enters a day-specific denominator only when the reporting month contains enough observation time for that player to mature to the requested day.
+Retention uses `session_start` on the exact calendar day after installation. A player enters a day-specific denominator only when the reporting month contains enough observation time for that player to mature to the requested day. For a month that is still refreshing daily, a player counts for Day N only after Day N has been fully observed.
 
 ## Campaign analysis
 

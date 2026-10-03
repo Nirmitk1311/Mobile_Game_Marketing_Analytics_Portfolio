@@ -1,0 +1,14 @@
+{
+  "month": "2025-10",
+  "raw_players": 113,
+  "clean_players": 110,
+  "excluded_test_market_players": 3,
+  "raw_events": 2168,
+  "duplicate_events_removed": 0,
+  "preinstall_events_removed": 0,
+  "clean_events": 2109,
+  "duplicate_device_ids": 0,
+  "orphan_event_devices": 0,
+  "negative_spend_rows": 0,
+  "status": "PASS"
+}
