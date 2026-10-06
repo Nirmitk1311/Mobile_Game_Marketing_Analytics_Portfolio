@@ -18,6 +18,7 @@ From October 2025 the repository is refreshed every weekday. A private productio
 - Session, active-day, level and ad-engagement analysis
 - Campaign lifecycle and creative-quality comparison
 - Management-ready Word reports, Excel dashboards and charts
+- Weekly creative review: 14-day creative quality, a 7-day new-creative cost test based on first impressions, and traffic quality (tracking coverage and likely-fraud share by network)
 
 ## Repository structure
 
@@ -25,6 +26,7 @@ From October 2025 the repository is refreshed every weekday. A private productio
 data/synthetic/          Generated fictional campaign, creative, player and event data
 src/                     Data generation, cleaning, analysis, chart and report scripts
 outputs/analysis/        Clean data, campaign summaries and validation results
+outputs/weekly/          Weekly creative quality, new-creative test and traffic-quality tables
 outputs/charts/          Portfolio-ready PNG charts
 outputs/dashboards/      August and September Excel dashboards
 outputs/reports/         August and September management reports
@@ -72,6 +74,8 @@ Synthetic player/events ──┘                                      │
 - **Cost per D7 retained player:** spend divided by players returning on Day 7.
 
 ## Portfolio discussion points
+
+The weekly review adds an operating view. It shows which creatives are genuinely new this week, keeps decisions until a creative has a full week of delivery, and shows how much of each network's traffic actually reaches in-game tracking. Low tracking coverage on one network is a traffic-quality warning that cost metrics alone would hide.
 
 The project shows how acquisition efficiency can differ from downstream player quality. A low-cost campaign may produce weak retention, while a higher-cost campaign may create more valuable players. The reporting layer therefore combines acquisition, engagement, retention and monetization rather than ranking campaigns by installs alone.
 

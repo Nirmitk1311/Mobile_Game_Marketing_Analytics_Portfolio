@@ -1,0 +1,29 @@
+{
+  "week_end": "2025-10-01",
+  "quality_window": [
+    "2025-09-18",
+    "2025-10-01"
+  ],
+  "new_creative_window": [
+    "2025-09-25",
+    "2025-10-01"
+  ],
+  "data_through": "2025-10-06",
+  "complete": true,
+  "creatives_in_quality_window": 33,
+  "new_creatives": 1,
+  "unnamed_new_assets": {
+    "count": 1,
+    "impressions": 1,
+    "installs": 0,
+    "spend_usd": 0.03
+  },
+  "players": 37,
+  "tracking_coverage": 1.0,
+  "flagged_share": 0.05405405405405406,
+  "lowest_tracking_coverage": {
+    "source": "Game Network",
+    "platform": "iOS",
+    "tracking_coverage": 1.0
+  }
+}
