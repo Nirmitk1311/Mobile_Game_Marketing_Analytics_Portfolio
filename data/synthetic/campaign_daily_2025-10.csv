@@ -39,11 +39,11 @@ month,date,source,campaign,platform,lifecycle,impressions,clicks,reported_instal
 2025-10,2025-10-05,Search Network,Search Android E,Android,active,2078,57,6,10.65
 2025-10,2025-10-05,Social Network,Social iOS C,iOS,active,649,67,5,14.87
 2025-10,2025-10-05,Store Search,Store iOS A,iOS,active,21,2,1,7.52
-2025-10,2025-10-06,Game Network,Game Android C,Android,active,0,680,36,0.0
-2025-10,2025-10-06,Game Network,Game iOS A,iOS,active,0,284,9,0.0
-2025-10,2025-10-06,Game Network,Game iOS B,iOS,active,0,445,5,0.0
+2025-10,2025-10-06,Game Network,Game Android C,Android,active,0,802,39,0.0
+2025-10,2025-10-06,Game Network,Game iOS A,iOS,active,0,315,9,0.0
+2025-10,2025-10-06,Game Network,Game iOS B,iOS,active,0,499,5,0.0
 2025-10,2025-10-06,Search Network,Search Android A,Android,active,0,0,1,0.0
 2025-10,2025-10-06,Search Network,Search Android B,Android,stopped,0,0,0,0.0
-2025-10,2025-10-06,Search Network,Search Android E,Android,active,0,0,6,0.0
+2025-10,2025-10-06,Search Network,Search Android E,Android,active,0,0,7,0.0
 2025-10,2025-10-06,Social Network,Social iOS C,iOS,active,0,0,2,0.0
-2025-10,2025-10-06,Store Search,Store iOS A,iOS,active,0,0,2,0.0
+2025-10,2025-10-06,Store Search,Store iOS A,iOS,active,0,0,3,0.0
