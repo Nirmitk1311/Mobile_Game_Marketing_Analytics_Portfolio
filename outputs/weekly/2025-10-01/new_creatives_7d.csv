@@ -1,2 +1,2 @@
-source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,campaign_cpi_benchmark,status,decision,decision_detail
-Search Network,Search Android B,Concept 84,1,0,0,0.0,1,,0.0,0.0,2025-09-26,,final,Extend 1 week,"needs 50 installs and 10,000 impressions"
+source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,seen_on_first_history_day,has_name,campaign_cpi_benchmark,status,decision,decision_detail
+Search Network,Search Android B,Concept 84,1,0,0,0.0,1,,0.0,0.0,2025-09-26,False,True,,final,Extend 1 week,"needs 50 installs and 10,000 impressions"

@@ -268,7 +268,7 @@ month,device_id,person_id,install_timestamp,source,campaign,creative,platform,re
 2025-10,SYN-202510-DE49483B97AC1,SYN-202510-PE49483B97AC1,2025-10-05 16:50:50,Game Network,Game Android C,Concept 31,Android,APAC,False,active,False,
 2025-10,SYN-202510-D2136CDA18324,SYN-202510-P2136CDA18324,2025-10-05 17:07:49,Game Network,Game iOS B,Concept 136,iOS,North America,False,active,True,
 2025-10,SYN-202510-D708C6FAE99C6,SYN-202510-P708C6FAE99C6,2025-10-05 17:22:17,Social Network,Social iOS C,Concept 05,iOS,Western Europe,False,active,True,
-2025-10,SYN-202510-D8DE12D009E7D,SYN-202510-P8DE12D009E7D,2025-10-05 17:36:42,Game Network,Game Android C,Concept 32,Android,APAC,False,active,False,
+2025-10,SYN-202510-D8DE12D009E7D,SYN-202510-P8DE12D009E7D,2025-10-05 17:36:42,Game Network,Game Android C,Concept 32,Android,APAC,False,active,True,device_pattern
 2025-10,SYN-202510-DA8EADE1549FD,SYN-202510-PA8EADE1549FD,2025-10-05 17:44:50,Game Network,Game iOS B,Concept 136,iOS,APAC,False,active,True,
 2025-10,SYN-202510-DBAA7D0EDBBB7,SYN-202510-PBAA7D0EDBBB7,2025-10-05 18:02:32,Game Network,Game Android C,Concept 32,Android,North America,False,active,False,
 2025-10,SYN-202510-DFE997FAC4F59,SYN-202510-PFE997FAC4F59,2025-10-05 18:05:06,Game Network,Game Android C,Concept 30,Android,LATAM,False,active,False,
@@ -298,7 +298,7 @@ month,device_id,person_id,install_timestamp,source,campaign,creative,platform,re
 2025-10,SYN-202510-D8EA102EB6659,SYN-202510-P8EA102EB6659,2025-10-05 21:02:40,Store Search,Store iOS A,Campaign-level,iOS,APAC,False,active,True,
 2025-10,SYN-202510-DF9CC479B6751,SYN-202510-PF9CC479B6751,2025-10-05 21:39:04,Game Network,Game Android C,Concept 30,Android,North America,False,active,False,
 2025-10,SYN-202510-D361B6FB67958,SYN-202510-P361B6FB67958,2025-10-05 21:49:39,Game Network,Game iOS A,Concept 23,iOS,Western Europe,False,active,False,
-2025-10,SYN-202510-DF05CD720AED8,SYN-202510-PF05CD720AED8,2025-10-05 21:51:40,Game Network,Game Android C,Concept 32,Android,APAC,False,active,False,
+2025-10,SYN-202510-DF05CD720AED8,SYN-202510-PF05CD720AED8,2025-10-05 21:51:40,Game Network,Game Android C,Concept 32,Android,APAC,False,active,True,device_pattern
 2025-10,SYN-202510-DA354E1E29E1D,SYN-202510-PA354E1E29E1D,2025-10-05 21:52:11,Game Network,Game iOS A,Concept 23,iOS,North America,False,active,True,
 2025-10,SYN-202510-D24D15E62D024,SYN-202510-P24D15E62D024,2025-10-05 21:57:13,Search Network,Search Android E,Campaign-level,Android,North America,False,active,True,
 2025-10,SYN-202510-DB5A1D98C2A64,SYN-202510-PB5A1D98C2A64,2025-10-05 22:12:38,Game Network,Game Android C,Concept 30,Android,North America,False,active,True,
@@ -325,9 +325,9 @@ month,device_id,person_id,install_timestamp,source,campaign,creative,platform,re
 2025-10,SYN-202510-DF28B3B12AFC2,SYN-202510-PF28B3B12AFC2,2025-10-06 02:03:02,Social Network,Social iOS C,Concept 03,iOS,North America,False,active,True,
 2025-10,SYN-202510-D506D7DE4C5F5,SYN-202510-P506D7DE4C5F5,2025-10-06 02:37:30,Game Network,Game Android C,Concept 32,Android,APAC,False,active,False,
 2025-10,SYN-202510-D7F7BAD64E0DA,SYN-202510-P7F7BAD64E0DA,2025-10-06 02:39:00,Game Network,Game Android C,Concept 32,Android,North America,False,active,True,
-2025-10,SYN-202510-D0DFCD32BA1FA,SYN-202510-P0DFCD32BA1FA,2025-10-06 02:41:29,Game Network,Game Android C,Concept 32,Android,North America,False,active,False,
+2025-10,SYN-202510-D0DFCD32BA1FA,SYN-202510-P0DFCD32BA1FA,2025-10-06 02:41:29,Game Network,Game Android C,Concept 32,Android,North America,False,active,True,device_pattern
 2025-10,SYN-202510-D8B5725B646CA,SYN-202510-P8B5725B646CA,2025-10-06 02:51:42,Game Network,Game Android C,Concept 32,Android,North America,False,active,False,
-2025-10,SYN-202510-DE2A02DAA15B7,SYN-202510-PE2A02DAA15B7,2025-10-06 02:58:12,Game Network,Game Android C,Concept 32,Android,APAC,False,active,False,
+2025-10,SYN-202510-DE2A02DAA15B7,SYN-202510-PE2A02DAA15B7,2025-10-06 02:58:12,Game Network,Game Android C,Concept 32,Android,APAC,False,active,True,device_pattern
 2025-10,SYN-202510-D159DE46E155F,SYN-202510-P159DE46E155F,2025-10-06 03:00:11,Game Network,Game Android C,Concept 32,Android,APAC,False,active,False,
 2025-10,SYN-202510-DBA102CD3EE40,SYN-202510-PBA102CD3EE40,2025-10-06 03:07:11,Game Network,Game Android C,Concept 31,Android,Western Europe,False,active,False,
 2025-10,SYN-202510-D7C74353A0ABD,SYN-202510-P7C74353A0ABD,2025-10-06 03:21:17,Game Network,Game iOS A,Concept 19,iOS,Western Europe,False,active,True,
@@ -407,6 +407,31 @@ month,device_id,person_id,install_timestamp,source,campaign,creative,platform,re
 2025-10,SYN-202510-DE8CD20562F90,SYN-202510-PE8CD20562F90,2025-10-07 07:44:57,Game Network,Game Android C,Concept 32,Android,Western Europe,False,active,True,
 2025-10,SYN-202510-DA94D24987951,SYN-202510-PA94D24987951,2025-10-07 07:48:49,Game Network,Game Android C,Concept 31,Android,APAC,False,active,False,
 2025-10,SYN-202510-DCAD521EF4177,SYN-202510-PCAD521EF4177,2025-10-07 08:23:46,Search Network,Search Android E,Campaign-level,Android,APAC,False,active,False,
-2025-10,SYN-202510-D037E63E2A5FD,SYN-202510-P037E63E2A5FD,2025-10-07 08:36:53,Game Network,Game iOS A,Concept 23,iOS,Western Europe,False,active,False,
-2025-10,SYN-202510-DD8BE7201C2E1,SYN-202510-PD8BE7201C2E1,2025-10-07 08:36:53,Game Network,Game Android C,Concept 31,Android,North America,False,active,False,
-2025-10,SYN-202510-DDF8F35E2109A,SYN-202510-PDF8F35E2109A,2025-10-07 08:36:53,Game Network,Game Android C,Concept 32,Android,LATAM,False,active,False,
+2025-10,SYN-202510-DD8BE7201C2E1,SYN-202510-PD8BE7201C2E1,2025-10-07 08:39:06,Game Network,Game Android C,Concept 31,Android,North America,False,active,False,
+2025-10,SYN-202510-DDF8F35E2109A,SYN-202510-PDF8F35E2109A,2025-10-07 08:40:26,Game Network,Game Android C,Concept 32,Android,LATAM,False,active,False,
+2025-10,SYN-202510-D037E63E2A5FD,SYN-202510-P037E63E2A5FD,2025-10-07 08:57:12,Game Network,Game iOS A,Concept 23,iOS,Western Europe,False,active,True,
+2025-10,SYN-202510-D5C8B04C7B861,SYN-202510-P5C8B04C7B861,2025-10-07 19:09:45,Search Network,Search Android E,Campaign-level,Android,Western Europe,False,active,True,
+2025-10,SYN-202510-D5914508405B6,SYN-202510-P5914508405B6,2025-10-07 22:06:08,Search Network,Search Android E,Campaign-level,Android,Western Europe,False,active,True,
+2025-10,SYN-202510-D49A0E34A225B,SYN-202510-P49A0E34A225B,2025-10-08 00:12:59,Game Network,Game Android C,Concept 32,Android,North America,False,active,True,network_flag;device_pattern
+2025-10,SYN-202510-D9CB9B298D6FE,SYN-202510-P9CB9B298D6FE,2025-10-08 01:15:51,Game Network,Game Android C,Concept 30,Android,APAC,False,active,True,
+2025-10,SYN-202510-DE19ECC5DAF17,SYN-202510-PE19ECC5DAF17,2025-10-08 01:40:55,Game Network,Game Android C,Concept 30,Android,LATAM,False,active,False,
+2025-10,SYN-202510-D29B92AD83C64,SYN-202510-P29B92AD83C64,2025-10-08 01:51:49,Game Network,Game Android C,Concept 30,Android,APAC,False,active,False,
+2025-10,SYN-202510-DC485AB7C2D26,SYN-202510-PC485AB7C2D26,2025-10-08 02:12:02,Game Network,Game Android C,Concept 30,Android,North America,False,active,True,
+2025-10,SYN-202510-D4DE49C752A0F,SYN-202510-P4DE49C752A0F,2025-10-08 02:18:08,Game Network,Game Android C,Concept 32,Android,APAC,False,active,False,
+2025-10,SYN-202510-D021714D817C1,SYN-202510-P021714D817C1,2025-10-08 02:42:45,Game Network,Game Android C,Concept 32,Android,Western Europe,False,active,False,
+2025-10,SYN-202510-D7304D395B445,SYN-202510-P7304D395B445,2025-10-08 03:00:17,Game Network,Game Android C,Concept 31,Android,North America,False,active,False,
+2025-10,SYN-202510-D2A1055328DB7,SYN-202510-P2A1055328DB7,2025-10-08 03:21:12,Game Network,Game Android C,Concept 32,Android,North America,False,active,False,
+2025-10,SYN-202510-D5805780C7B6B,SYN-202510-P5805780C7B6B,2025-10-08 03:34:32,Game Network,Game Android C,Concept 32,Android,LATAM,False,active,False,
+2025-10,SYN-202510-DFC4D5C0C9C9A,SYN-202510-PFC4D5C0C9C9A,2025-10-08 03:41:02,Game Network,Game Android C,Concept 30,Android,North America,False,active,False,
+2025-10,SYN-202510-D9B40350B5B8C,SYN-202510-P9B40350B5B8C,2025-10-08 03:43:18,Game Network,Game Android C,Concept 32,Android,North America,False,active,False,network_flag
+2025-10,SYN-202510-DA9815173266B,SYN-202510-PA9815173266B,2025-10-08 03:48:37,Game Network,Game Android C,Concept 30,Android,APAC,False,active,False,
+2025-10,SYN-202510-D4AA97F534C69,SYN-202510-P4AA97F534C69,2025-10-08 03:54:31,Game Network,Game Android C,Concept 32,Android,North America,False,active,False,
+2025-10,SYN-202510-D8647315CC4EF,SYN-202510-P8647315CC4EF,2025-10-08 03:57:53,Game Network,Game Android C,Concept 30,Android,North America,False,active,False,
+2025-10,SYN-202510-DAF73C59FA039,SYN-202510-PAF73C59FA039,2025-10-08 04:00:47,Game Network,Game Android C,Concept 30,Android,APAC,False,active,False,
+2025-10,SYN-202510-DC00E506578A2,SYN-202510-PC00E506578A2,2025-10-08 04:10:12,Game Network,Game Android C,Concept 31,Android,LATAM,False,active,False,
+2025-10,SYN-202510-DE8C9314474D5,SYN-202510-PE8C9314474D5,2025-10-08 04:17:59,Game Network,Game Android C,Concept 32,Android,North America,False,active,False,network_flag
+2025-10,SYN-202510-DE9A4ABC5DCEE,SYN-202510-PE9A4ABC5DCEE,2025-10-08 04:38:56,Game Network,Game Android C,Concept 30,Android,APAC,False,active,False,network_flag
+2025-10,SYN-202510-D9840921D4EBA,SYN-202510-P9840921D4EBA,2025-10-08 05:40:11,Game Network,Game Android C,Concept 30,Android,APAC,False,active,False,
+2025-10,SYN-202510-D738686A4E4B2,SYN-202510-P738686A4E4B2,2025-10-08 06:17:51,Game Network,Game Android C,Concept 32,Android,Western Europe,False,active,False,
+2025-10,SYN-202510-DD8DB367962BC,SYN-202510-PD8DB367962BC,2025-10-08 07:10:48,Game Network,Game Android C,Concept 32,Android,APAC,False,active,False,
+2025-10,SYN-202510-D72E1E30BB117,SYN-202510-P72E1E30BB117,2025-10-08 07:21:28,Game Network,Game Android C,Concept 32,Android,APAC,False,active,True,network_flag;device_pattern

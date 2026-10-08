@@ -5,9 +5,12 @@ WEEK_END_WEEKDAY in the demonstration calendar and is named by that day:
 
 - creative quality (14 days ending on the week end): delivery and cost per creative, plus the quality of the players
   it acquired (D1/D7 retention for mature players only, levels, revenue).
-- new-creative test (7 days ending on the week end): a creative is NEW when its first impression (whole history of
-  that network, data/synthetic/creative_first_impressions.csv) falls inside the 7 days and it had no impressions in
-  the earlier days of the 14-day window. No list of creatives is used. Assets the network reports without a name
+- new-creative test (7 days ending on the week end): a creative is NEW when its first impression (whole history,
+  data/synthetic/creative_first_impressions.csv) falls inside the 7 days and it had no impressions IN THE SAME
+  CAMPAIGN in the earlier days of the 14-day window. A creative that ran in the same campaign before the week,
+  paused and came back is not new: it is listed in paused_resumed_7d.csv with its days without impressions and kept
+  out of every new-creative figure. Impressions in a different campaign do not block a creative: it counts as newly
+  activated in its new campaign and only its impressions inside the 7 days are used. No list of creatives is used. Assets the network reports without a name
   (for example search headline/description assets) are not listed; summary.json gives their count and totals.
   Keep/deactivate decisions are written only when the 7 days are complete; before that the row shows its progress.
 - traffic quality (14 days): by network and platform, the share of acquired players that sent any in-game event
@@ -110,11 +113,12 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     quality = quality[quality["impressions"] > 0].sort_values("spend_usd", ascending=False)
 
     new_ids = first[(first["first_impression_date"] >= ts(r2_start)) & (first["first_impression_date"] <= ts(end))]
-    before = c14[(c14["date"] < ts(r2_start)) & (c14["impressions"] > 0)][["source", "creative"]].drop_duplicates()
-    new_ids = new_ids.merge(before, on=["source", "creative"], how="left", indicator=True)
-    new_ids = new_ids[new_ids["_merge"] == "left_only"][["source", "creative", "first_impression_date"]]
+    before = c14[(c14["date"] < ts(r2_start)) & (c14["impressions"] > 0)][keys].drop_duplicates()
     c7 = creative[(creative["date"] >= ts(r2_start)) & (creative["date"] <= ts(end))]
     new = delivery(c7, keys).merge(new_ids, on=["source", "creative"], how="inner")
+    new = new.merge(before, on=keys, how="left", indicator=True).query("_merge == 'left_only'").drop(columns="_merge")
+    new_ids = new[["source", "creative", "first_impression_date"]].drop_duplicates()
+    resumed = paused_resumed(c14, r2_start, min(end, through), keys)
     others = delivery(c7.merge(new_ids[["source", "creative"]], how="left", indicator=True).query("_merge == 'left_only'"),
                       ["source", "campaign"])
     bench = {(r.source, r.campaign): (r.spend_usd / r.installs if r.installs >= MIN_BENCH_INSTALLS else np.nan)
@@ -142,7 +146,29 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
                                      .nsmallest(1, "tracking_coverage")[["source", "platform", "tracking_coverage"]]
                                      .to_dict("records") or [None])[0],
     }
-    return {"quality": quality, "new": new, "traffic": traffic, "summary": summary}
+    summary["paused_resumed_excluded"] = int(len(resumed))
+    return {"quality": quality, "new": new, "traffic": traffic, "summary": summary, "resumed": resumed}
+
+
+def paused_resumed(c14: pd.DataFrame, r2_start: date, last: date, keys: list[str]) -> pd.DataFrame:
+    """Creatives with impressions in the same campaign before the 7 days, at least one day without impressions,
+    and impressions again inside the 7 days. Not new; listed separately."""
+    live = c14[c14["impressions"] > 0]
+    rows = []
+    for k, g in live.groupby(keys):
+        days = set(g["date"].dt.date)
+        pre = sorted(d for d in days if d < r2_start)
+        post = sorted(d for d in days if r2_start <= d <= last)
+        if not pre or not post:
+            continue
+        gaps = [pre[0] + timedelta(days=i) for i in range((post[-1] - pre[0]).days + 1)]
+        gaps = [d for d in gaps if d not in days]
+        if gaps:
+            rows.append(dict(zip(keys, k), first_impression_before_week=pre[0], last_impression_before_week=pre[-1],
+                             days_without_impressions=len(gaps), first_impression_in_week=post[0],
+                             week_impressions=int(g[g["date"].dt.date >= r2_start]["impressions"].sum())))
+    return pd.DataFrame(rows, columns=keys + ["first_impression_before_week", "last_impression_before_week",
+                                              "days_without_impressions", "first_impression_in_week", "week_impressions"])
 
 
 def main() -> None:
@@ -168,6 +194,7 @@ def main() -> None:
         res["quality"].to_csv(d / "creative_quality_14d.csv", index=False)
         res["new"].to_csv(d / "new_creatives_7d.csv", index=False)
         res["traffic"].to_csv(d / "traffic_quality.csv", index=False)
+        res["resumed"].to_csv(d / "paused_resumed_7d.csv", index=False)
         (d / "summary.json").write_text(json.dumps(res["summary"], indent=2, default=str), encoding="utf-8")
         results.append(res["summary"])
     print(json.dumps(results, indent=2, default=str))
