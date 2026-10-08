@@ -18,13 +18,13 @@
     "installs": 1,
     "spend_usd": 4.45
   },
-  "players": 436,
-  "tracking_coverage": 0.6788990825688074,
-  "flagged_share": 0.052752293577981654,
+  "players": 447,
+  "tracking_coverage": 0.6845637583892618,
+  "flagged_share": 0.05145413870246085,
   "lowest_tracking_coverage": {
     "source": "Game Network",
     "platform": "Android",
-    "tracking_coverage": 0.32978723404255317
+    "tracking_coverage": 0.33157894736842103
   },
   "paused_resumed_excluded": 7
 }
