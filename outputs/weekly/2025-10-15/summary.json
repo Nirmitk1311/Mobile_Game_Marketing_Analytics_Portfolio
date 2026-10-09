@@ -1,0 +1,30 @@
+{
+  "week_end": "2025-10-15",
+  "quality_window": [
+    "2025-10-02",
+    "2025-10-15"
+  ],
+  "new_creative_window": [
+    "2025-10-09",
+    "2025-10-15"
+  ],
+  "data_through": "2025-10-09",
+  "complete": false,
+  "creatives_in_quality_window": 126,
+  "new_creatives": 0,
+  "unnamed_new_assets": {
+    "count": 0,
+    "impressions": 0,
+    "installs": 0,
+    "spend_usd": 0.0
+  },
+  "players": 459,
+  "tracking_coverage": 0.6688453159041394,
+  "flagged_share": 0.05010893246187364,
+  "lowest_tracking_coverage": {
+    "source": "Game Network",
+    "platform": "Android",
+    "tracking_coverage": 0.3333333333333333
+  },
+  "paused_resumed_excluded": 0
+}
