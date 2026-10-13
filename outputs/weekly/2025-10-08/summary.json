@@ -8,23 +8,23 @@
     "2025-10-02",
     "2025-10-08"
   ],
-  "data_through": "2025-10-09",
+  "data_through": "2025-10-13",
   "complete": true,
   "creatives_in_quality_window": 129,
   "new_creatives": 23,
   "unnamed_new_assets": {
     "count": 40,
-    "impressions": 1597,
+    "impressions": 1596,
     "installs": 1,
-    "spend_usd": 6.32
+    "spend_usd": 6.19
   },
-  "players": 485,
-  "tracking_coverage": 0.688659793814433,
-  "flagged_share": 0.04742268041237113,
+  "players": 486,
+  "tracking_coverage": 0.691358024691358,
+  "flagged_share": 0.047325102880658436,
   "lowest_tracking_coverage": {
     "source": "Game Network",
     "platform": "Android",
-    "tracking_coverage": 0.3230769230769231
+    "tracking_coverage": 0.3282051282051282
   },
   "paused_resumed_excluded": 8
 }

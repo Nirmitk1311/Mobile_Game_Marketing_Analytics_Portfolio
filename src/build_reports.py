@@ -83,10 +83,13 @@ def build_report(month: str, analysis_dir: Path, chart_dir: Path, output_dir: Pa
     doc.add_heading("Campaign economics and player quality", level=1)
     cols = ["Campaign", "Life cycle", "Players", "CPI", "D7 retention", "D7 retained cost", "ROAS"]
     rows = []
+    def _fmt(v, f):   # a campaign with delivery but no acquired players yet has empty (NaN) player metrics
+        return "n/a" if pd.isna(v) else format(v, f)
+
     for _, r in campaign.sort_values("d7_retention", ascending=False).iterrows():
         rows.append([
-            r["campaign"], r["lifecycle"].title(), f"{int(r['acquired_players']):,}", f"${r['cpi_usd']:.2f}",
-            f"{r['d7_retention']:.1%}", f"${r['cost_per_d7_retained']:.2f}", f"{r['roas']:.1%}",
+            r["campaign"], r["lifecycle"].title(), _fmt(r["acquired_players"], ",.0f"), "$" + _fmt(r["cpi_usd"], ".2f"),
+            _fmt(r["d7_retention"], ".1%"), "$" + _fmt(r["cost_per_d7_retained"], ".2f"), _fmt(r["roas"], ".1%"),
         ])
     _table(doc, cols, rows, [2.0, 0.75, 0.60, 0.65, 0.80, 0.90, 0.60])
 
