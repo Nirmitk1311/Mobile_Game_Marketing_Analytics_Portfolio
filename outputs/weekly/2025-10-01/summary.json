@@ -21,6 +21,7 @@
   "players": 37,
   "tracking_coverage": 1.0,
   "flagged_share": 0.05405405405405406,
+  "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Game Network",
     "platform": "iOS",

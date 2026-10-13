@@ -34,6 +34,8 @@ MIN_INSTALLS = 50               # new-creative decision needs at least this many
 MIN_IMPRESSIONS = 10_000        # ... and this many impressions; otherwise the test is extended by one week
 CPI_TOLERANCE = 1.30            # deactivate when CPI is more than 30% above the campaign's other creatives
 MIN_BENCH_INSTALLS = 10         # a campaign benchmark needs at least this many installs behind it
+GHOST_DISPUTE_SHARE = 0.40      # 40%+ installs without any in-game telemetry -> billing dispute with the network
+MIN_DISPUTE_PLAYERS = 20
 
 
 def _safe(a, b):
@@ -111,6 +113,7 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
 
     quality = delivery(c14, keys).merge(player_quality(p14, keys), on=keys, how="left")
     quality = quality[quality["impressions"] > 0].sort_values("spend_usd", ascending=False)
+    quality["roas"] = _safe(quality["total_revenue_usd"], quality["spend_usd"])   # creative ROAS (player revenue / ad spend)
 
     new_ids = first[(first["first_impression_date"] >= ts(r2_start)) & (first["first_impression_date"] <= ts(end))]
     before = c14[(c14["date"] < ts(r2_start)) & (c14["impressions"] > 0)][keys].drop_duplicates()
@@ -133,6 +136,10 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     new = new.sort_values(["first_impression_date", "impressions"], ascending=[True, False])
 
     traffic = player_quality(p14, ["source", "platform"]).sort_values("acquired_players", ascending=False)
+    # ghost installs = attributed installs with no in-game telemetry; 40%+ (with >= 20 installs) -> billing dispute
+    traffic["ghost_share"] = 1 - traffic["tracking_coverage"]
+    traffic["billing_action"] = np.where((traffic["ghost_share"] >= GHOST_DISPUTE_SHARE)
+                                         & (traffic["acquired_players"] >= MIN_DISPUTE_PLAYERS), "dispute with network", "")
     summary = {
         "week_end": end.isoformat(), "quality_window": [r1_start.isoformat(), end.isoformat()],
         "new_creative_window": [r2_start.isoformat(), end.isoformat()], "data_through": through.isoformat(),
@@ -142,6 +149,8 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
         "players": int(p14["device_id"].nunique()),
         "tracking_coverage": float(p14["tracked"].mean()) if len(p14) else None,
         "flagged_share": float((p14["quality_flag"] != "").mean()) if len(p14) else None,
+        "ghost_install_disputes": traffic[traffic["billing_action"] != ""][["source", "platform", "acquired_players", "ghost_share"]]
+                                  .to_dict("records"),
         "lowest_tracking_coverage": (traffic.dropna(subset=["tracking_coverage"]).query("acquired_players >= 20")
                                      .nsmallest(1, "tracking_coverage")[["source", "platform", "tracking_coverage"]]
                                      .to_dict("records") or [None])[0],

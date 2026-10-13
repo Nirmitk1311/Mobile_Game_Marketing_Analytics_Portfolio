@@ -2,7 +2,13 @@
 
 ## Project title
 
-Mobile Game Marketing Performance and Player Retention Analytics
+Mobile Game Marketing Analytics & UA Optimization
+
+## Resume line
+
+**Mobile Game Marketing Analytics & UA Optimization:** Unified Singular MMP ad spend with Mixpanel telemetry in Python/SQL to analyze mature D1–D14 cohort retention and creative ROAS. Enforced kill/scale benchmarks (>30% baseline CPI) to curb ad waste and isolated an ad network with 40%+ ghost installs for billing dispute reconciliations. Stack: Python, SQL, Playwright, Pandas, Singular, Mixpanel.
+
+Where to see each claim in this repository (fictional data): D1–D14 cohort retention and creative ROAS in `sql/` and `outputs/sql/`; the >30% baseline-CPI rule in `src/weekly_review.py` (`CPI_TOLERANCE = 1.30`); ghost installs in `outputs/sql/ghost_installs.csv` and `ghost_install_disputes` in each `outputs/weekly/<week>/summary.json`.
 
 ## Description
 

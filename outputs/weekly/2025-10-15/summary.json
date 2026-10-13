@@ -21,6 +21,14 @@
   "players": 620,
   "tracking_coverage": 0.75,
   "flagged_share": 0.037096774193548385,
+  "ghost_install_disputes": [
+    {
+      "source": "Game Network",
+      "platform": "Android",
+      "acquired_players": 209,
+      "ghost_share": 0.6267942583732058
+    }
+  ],
   "lowest_tracking_coverage": {
     "source": "Game Network",
     "platform": "Android",

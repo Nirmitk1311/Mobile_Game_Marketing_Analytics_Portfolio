@@ -36,6 +36,27 @@ class PortfolioOutputTests(unittest.TestCase):
 WEEKS = sorted(p for p in (ROOT / "outputs" / "weekly").glob("*") if p.is_dir()) if (ROOT / "outputs" / "weekly").exists() else []
 
 
+class SqlLayerTests(unittest.TestCase):
+    def test_sql_ghost_installs_match_python(self):
+        f = ROOT / "outputs" / "sql" / "ghost_installs.csv"
+        if not f.exists():
+            self.skipTest("SQL layer not run")
+        sql = pd.read_csv(f)
+        players = pd.concat(pd.read_csv(p) for p in (ROOT / "outputs" / "analysis").glob("*/player_metrics.csv"))
+        py = (1 - players.groupby(["source", "platform"])["tracked"].mean()).round(4)
+        for r in sql.itertuples():
+            self.assertAlmostEqual(r.ghost_share, py[(r.source, r.platform)], places=4)
+
+    def test_sql_creative_roas_is_revenue_over_spend(self):
+        f = ROOT / "outputs" / "sql" / "creative_roas.csv"
+        if not f.exists():
+            self.skipTest("SQL layer not run")
+        d = pd.read_csv(f)
+        d = d[d["spend_usd"] >= 10]   # revenue and spend are rounded to cents; tiny spends shift by rounding
+        rel = (d["roas"] - d["revenue_usd"] / d["spend_usd"]).abs() / (d["revenue_usd"] / d["spend_usd"]).clip(lower=0.01)
+        self.assertTrue((rel < 0.01).all())
+
+
 class WeeklyReviewTests(unittest.TestCase):
     def test_new_creatives_start_inside_the_week(self):
         first = pd.read_csv(ROOT / "data" / "synthetic" / "creative_first_impressions.csv") if WEEKS else None
