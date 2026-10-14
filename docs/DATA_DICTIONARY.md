@@ -58,6 +58,6 @@ Weekly outputs, in `outputs/weekly/<week_end>/` (see [METHODOLOGY.md](METHODOLOG
 | File | Contents |
 |---|---|
 | creative_quality_14d.csv | Per creative, 14 days: impressions, clicks, installs, spend, CPI, IPM, CTR, days live, acquired/tracked/flagged players, D1/D7 retention, levels and revenue per player |
-| new_creatives_7d.csv | Creatives whose first impression is inside the 7 days: first-impression date, days live, delivery and cost, campaign CPI benchmark, status, and the decision once the week is complete |
+| new_creatives_7d.csv | Creatives new in their campaign in the 7 days (impressions there in the 7 days, none in that campaign earlier in the 14-day window): first-impression date, days live, delivery and cost, campaign CPI benchmark, status, and the decision once the week is complete |
 | traffic_quality.csv | Per network and platform, 14 days: acquired players, tracking coverage, flagged share, D1/D7 retention, levels and revenue per player |
 | summary.json | Windows, completeness, counts, overall tracking coverage and flagged share, lowest-coverage network, unnamed new assets |

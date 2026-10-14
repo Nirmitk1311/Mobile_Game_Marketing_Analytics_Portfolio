@@ -3,14 +3,20 @@
 Runs on the daily-refreshed months (players files with a ``quality_flag`` column). Each reporting week ends on
 WEEK_END_WEEKDAY in the demonstration calendar and is named by that day:
 
-- creative quality (14 days ending on the week end): delivery and cost per creative, plus the quality of the players
-  it acquired (D1/D7 retention for mature players only, levels, revenue).
-- new-creative test (7 days ending on the week end): a creative is NEW when its first impression (whole history,
-  data/synthetic/creative_first_impressions.csv) falls inside the 7 days and it had no impressions IN THE SAME
-  CAMPAIGN in the earlier days of the 14-day window. A creative that ran in the same campaign before the week,
-  paused and came back is not new: it is listed in paused_resumed_7d.csv with its days without impressions and kept
-  out of every new-creative figure. Impressions in a different campaign do not block a creative: it counts as newly
-  activated in its new campaign and only its impressions inside the 7 days are used. No list of creatives is used. Assets the network reports without a name
+A campaign is identified by its campaign ID (a renamed campaign is the same campaign); in this demonstration data
+every campaign keeps one name, so the name stands for the ID.
+
+- creative quality (14 days ending on the week end): creatives running in the 14 days (also if they started earlier;
+  only their figures inside the window count), plus the quality of the players they acquired (D1/D7 retention for
+  mature players only, levels, revenue). Creatives that are new in the 7-day test are left out, and a creative moved
+  into a different campaign during the 7 days is left out completely (also its rows in the old campaign).
+- new-creative test (7 days ending on the week end): a creative is NEW in a campaign when it has impressions in that
+  campaign inside the 7 days and none in that campaign in the earlier days of the 14-day window. Older history and
+  other campaigns do not block it, so a creative moved into a different campaign is new there, and a creative whose
+  first impression comes later in the week (not on the first day) is still new. A creative that ran in the same
+  campaign before the week, paused and came back is not new: it is listed in paused_resumed_7d.csv with its days
+  without impressions and kept out of every new-creative figure. Only impressions inside the 7 days are used.
+  No list of creatives is used. Assets the network reports without a name
   (for example search headline/description assets) are not listed; summary.json gives their count and totals.
   Keep/deactivate decisions are written only when the 7 days are complete; before that the row shows its progress.
 - traffic quality (14 days): by network and platform, the share of acquired players that sent any in-game event
@@ -111,16 +117,33 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     p14 = players[(players["install_timestamp"] >= ts(r1_start)) & (players["install_timestamp"] < ts(end + timedelta(days=1)))]
     keys = ["source", "campaign", "creative"]
 
-    quality = delivery(c14, keys).merge(player_quality(p14, keys), on=keys, how="left")
-    quality = quality[quality["impressions"] > 0].sort_values("spend_usd", ascending=False)
-    quality["roas"] = _safe(quality["total_revenue_usd"], quality["spend_usd"])   # creative ROAS (player revenue / ad spend)
-
-    new_ids = first[(first["first_impression_date"] >= ts(r2_start)) & (first["first_impression_date"] <= ts(end))]
+    # New = impressions in that campaign inside the 7 days and none in that campaign in the earlier days of the
+    # 14-day window. Older history and other campaigns do not block it.
     before = c14[(c14["date"] < ts(r2_start)) & (c14["impressions"] > 0)][keys].drop_duplicates()
-    c7 = creative[(creative["date"] >= ts(r2_start)) & (creative["date"] <= ts(end))]
-    new = delivery(c7, keys).merge(new_ids, on=["source", "creative"], how="inner")
+    visible_from = creative["date"].min()
+    if visible_from > ts(r1_start):
+        # window days before the loaded data: a first impression on those days (creative_first_impressions.csv)
+        # also counts as running before the week, in the campaign(s) the creative runs in
+        hidden = first[(first["first_impression_date"] >= ts(r1_start))
+                       & (first["first_impression_date"] < min(ts(r2_start), visible_from))][["source", "creative"]]
+        before = pd.concat([before, creative[keys].drop_duplicates().merge(hidden, on=["source", "creative"])]).drop_duplicates()
+    c7 =creative[(creative["date"] >= ts(r2_start)) & (creative["date"] <= ts(end))]
+    live7 = c7[c7["impressions"] > 0]
+    new = delivery(c7, keys).merge(live7.groupby(keys, as_index=False)["date"].min()
+                                   .rename(columns={"date": "first_impression_date"}), on=keys)
     new = new.merge(before, on=keys, how="left", indicator=True).query("_merge == 'left_only'").drop(columns="_merge")
     new_ids = new[["source", "creative", "first_impression_date"]].drop_duplicates()
+    # moved = a new creative that ran before the 7 days in another campaign: it leaves the 14-day review entirely
+    ran_before = c14[(c14["date"] < ts(r2_start)) & (c14["impressions"] > 0)][keys].drop_duplicates()
+    moved = new[keys].merge(ran_before, on=["source", "creative"], suffixes=("", "_before"))
+    moved = moved[moved["campaign"] != moved["campaign_before"]][["source", "creative"]].drop_duplicates()
+
+    quality = delivery(c14, keys).merge(player_quality(p14, keys), on=keys, how="left")
+    quality = quality[quality["impressions"] > 0]
+    quality = quality.merge(new[keys], on=keys, how="left", indicator=True).query("_merge == 'left_only'").drop(columns="_merge")
+    quality = quality.merge(moved, on=["source", "creative"], how="left", indicator=True).query("_merge == 'left_only'").drop(columns="_merge")
+    quality = quality.sort_values("spend_usd", ascending=False)
+    quality["roas"] = _safe(quality["total_revenue_usd"], quality["spend_usd"])   # creative ROAS (player revenue / ad spend)
     resumed = paused_resumed(c14, r2_start, min(end, through), keys)
     others = delivery(c7.merge(new_ids[["source", "creative"]], how="left", indicator=True).query("_merge == 'left_only'"),
                       ["source", "campaign"])

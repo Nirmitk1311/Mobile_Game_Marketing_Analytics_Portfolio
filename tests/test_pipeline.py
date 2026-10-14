@@ -59,7 +59,6 @@ class SqlLayerTests(unittest.TestCase):
 
 class WeeklyReviewTests(unittest.TestCase):
     def test_new_creatives_start_inside_the_week(self):
-        first = pd.read_csv(ROOT / "data" / "synthetic" / "creative_first_impressions.csv") if WEEKS else None
         for week in WEEKS:
             summary = json.loads((week / "summary.json").read_text(encoding="utf-8"))
             start, end = summary["new_creative_window"]
@@ -67,8 +66,6 @@ class WeeklyReviewTests(unittest.TestCase):
             if new.empty:
                 continue
             self.assertTrue(new["first_impression_date"].between(start, end).all())
-            merged = new.merge(first, on=["source", "creative"], suffixes=("", "_catalog"))
-            self.assertTrue((merged["first_impression_date"] == merged["first_impression_date_catalog"]).all())
 
     def test_new_creatives_were_not_active_earlier_in_the_window(self):
         for week in WEEKS:
@@ -82,8 +79,26 @@ class WeeklyReviewTests(unittest.TestCase):
             daily = pd.concat(pd.read_csv(p) for m in months
                               for p in [ROOT / "data" / "synthetic" / f"creative_daily_{m}.csv"] if p.exists())
             earlier = daily[(daily["date"] >= q_start) & (daily["date"] < n_start) & (daily["impressions"] > 0)]
-            hits = new.merge(earlier[["source", "creative"]].drop_duplicates(), on=["source", "creative"])
-            self.assertTrue(hits.empty, f"{week.name}: new creatives active before the week")
+            keys = ["source", "campaign", "creative"]
+            hits = new.merge(earlier[keys].drop_duplicates(), on=keys)
+            self.assertTrue(hits.empty, f"{week.name}: new creatives active in the same campaign before the week")
+
+    def test_new_and_moved_creatives_left_out_of_quality_review(self):
+        for week in WEEKS:
+            new = pd.read_csv(week / "new_creatives_7d.csv")
+            quality = pd.read_csv(week / "creative_quality_14d.csv")
+            keys = ["source", "campaign", "creative"]
+            self.assertTrue(new.merge(quality[keys], on=keys).empty, f"{week.name}: new creative in quality review")
+            summary = json.loads((week / "summary.json").read_text(encoding="utf-8"))
+            q_start, _ = summary["quality_window"]
+            n_start, _ = summary["new_creative_window"]
+            months = sorted({q_start[:7], n_start[:7]})
+            daily = pd.concat(pd.read_csv(p) for m in months
+                              for p in [ROOT / "data" / "synthetic" / f"creative_daily_{m}.csv"] if p.exists())
+            earlier = daily[(daily["date"] >= q_start) & (daily["date"] < n_start) & (daily["impressions"] > 0)]
+            moved = new.merge(earlier[keys].drop_duplicates(), on=["source", "creative"], suffixes=("", "_before"))
+            moved = moved[moved["campaign"] != moved["campaign_before"]][["source", "creative"]].drop_duplicates()
+            self.assertTrue(quality.merge(moved, on=["source", "creative"]).empty, f"{week.name}: moved creative in quality review")
 
     def test_quality_shares_are_bounded(self):
         for week in WEEKS:

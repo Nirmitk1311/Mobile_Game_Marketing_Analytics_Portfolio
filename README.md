@@ -18,7 +18,7 @@ From October 2025 the repository is refreshed every weekday. A private productio
 - Session, active-day, level and ad-engagement analysis
 - Campaign lifecycle and creative-quality comparison
 - Management-ready Word reports, Excel dashboards and charts
-- Weekly creative review: 14-day creative quality with creative ROAS, a 7-day new-creative cost test based on first impressions, and traffic quality (tracking coverage and likely-fraud share by network)
+- Weekly creative review: 14-day creative quality with creative ROAS, a 7-day new-creative cost test based on first impressions per campaign, and traffic quality (tracking coverage and likely-fraud share by network)
 - Kill/scale benchmarks: a new creative is deactivated when its CPI is more than 30% above the baseline CPI of the campaign's other creatives
 - Ghost-install detection: networks where 40%+ of attributed installs never send any in-game telemetry are flagged for billing-dispute reconciliation
 - SQL layer (SQLite): cohort retention D1–D14, creative ROAS and ghost installs by network ([`sql/`](sql/), results in `outputs/sql/`)
