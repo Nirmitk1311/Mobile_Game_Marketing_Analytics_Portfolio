@@ -54,7 +54,10 @@ class SqlLayerTests(unittest.TestCase):
         d = pd.read_csv(f)
         d = d[d["spend_usd"] >= 10]   # revenue and spend are rounded to cents; tiny spends shift by rounding
         rel = (d["roas"] - d["revenue_usd"] / d["spend_usd"]).abs() / (d["revenue_usd"] / d["spend_usd"]).clip(lower=0.01)
-        self.assertTrue((rel < 0.01).all())
+        # roas has 4 decimals and revenue is rounded to cents, so tiny ROAS values (e.g. 0.0046 on $0.20 revenue) can differ
+        # by up to 0.00005 + 0.005 / spend from rounding alone
+        absdiff = (d["roas"] - d["revenue_usd"] / d["spend_usd"]).abs()
+        self.assertTrue(((rel < 0.01) | (absdiff <= 0.00005 + 0.005 / d["spend_usd"] + 1e-9)).all())
 
 
 class WeeklyReviewTests(unittest.TestCase):
