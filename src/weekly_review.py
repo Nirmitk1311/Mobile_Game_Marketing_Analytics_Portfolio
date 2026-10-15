@@ -37,7 +37,7 @@ import pandas as pd
 
 WEEK_END_WEEKDAY = 2            # Wednesday in the demonstration calendar
 MIN_INSTALLS = 50               # new-creative decision needs at least this many installs ...
-MIN_IMPRESSIONS = 10_000        # ... and this many impressions; otherwise the test is extended by one week
+MIN_IMPRESSIONS = 5_000         # ... and this many impressions; otherwise the test is extended by one week
 CPI_TOLERANCE = 1.30            # deactivate when CPI is more than 30% above the campaign's other creatives
 MIN_BENCH_INSTALLS = 10         # a campaign benchmark needs at least this many installs behind it
 GHOST_DISPUTE_SHARE = 0.40      # 40%+ installs without any in-game telemetry -> billing dispute with the network
