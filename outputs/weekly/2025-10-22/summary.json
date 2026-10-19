@@ -8,24 +8,24 @@
     "2025-10-16",
     "2025-10-22"
   ],
-  "data_through": "2025-10-16",
+  "data_through": "2025-10-19",
   "complete": false,
-  "creatives_in_quality_window": 161,
-  "new_creatives": 0,
+  "creatives_in_quality_window": 160,
+  "new_creatives": 3,
   "unnamed_new_assets": {
-    "count": 0,
-    "impressions": 0,
+    "count": 5,
+    "impressions": 6,
     "installs": 0,
-    "spend_usd": 0.0
+    "spend_usd": 0.39
   },
-  "players": 278,
-  "tracking_coverage": 0.9748201438848921,
-  "flagged_share": 0.007194244604316547,
+  "players": 366,
+  "tracking_coverage": 0.9672131147540983,
+  "flagged_share": 0.00546448087431694,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Social Network",
     "platform": "iOS",
-    "tracking_coverage": 0.94
+    "tracking_coverage": 0.9333333333333333
   },
-  "paused_resumed_excluded": 0
+  "paused_resumed_excluded": 36
 }
