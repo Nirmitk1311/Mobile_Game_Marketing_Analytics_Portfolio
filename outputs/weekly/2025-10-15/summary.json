@@ -8,7 +8,7 @@
     "2025-10-09",
     "2025-10-15"
   ],
-  "data_through": "2025-10-19",
+  "data_through": "2025-10-21",
   "complete": true,
   "creatives_in_quality_window": 124,
   "new_creatives": 34,
@@ -34,5 +34,9 @@
     "platform": "Android",
     "tracking_coverage": 0.4072398190045249
   },
-  "paused_resumed_excluded": 30
+  "paused_resumed_excluded": 30,
+  "d30_roas": {
+    "window": null,
+    "note": "no install day is 30 days old yet"
+  }
 }

@@ -8,7 +8,8 @@ every campaign keeps one name, so the name stands for the ID.
 
 - creative quality (14 days ending on the week end): creatives running in the 14 days (also if they started earlier;
   only their figures inside the window count), plus the quality of the players they acquired (D1/D7 retention for
-  mature players only, levels, revenue). Creatives that are new in the 7-day test are left out, and a creative moved
+  mature players only, levels, revenue). When the week is complete each creative gets a decision; none is made under
+  10,000 impressions in the 14 days ("Too early to judge"). Creatives that are new in the 7-day test are left out, and a creative moved
   into a different campaign during the 7 days is left out completely (also its rows in the old campaign).
 - new-creative test (7 days ending on the week end): a creative is NEW in a campaign when it has impressions in that
   campaign inside the 7 days and none in that campaign in the earlier days of the 14-day window. Older history and
@@ -19,6 +20,8 @@ every campaign keeps one name, so the name stands for the ID.
   No list of creatives is used. Assets the network reports without a name
   (for example search headline/description assets) are not listed; summary.json gives their count and totals.
   Keep/deactivate decisions are written only when the 7 days are complete; before that the row shows its progress.
+- D30 ROAS: revenue in each player's first 30 days / spend for the latest 14 install days that are 30+ days old
+  (an older group of installs than the 14-day window), per campaign (d30_roas.csv); empty until such days exist.
 - traffic quality (14 days): by network and platform, the share of acquired players that sent any in-game event
   (tracking coverage) and the share flagged as likely fraud. Flagged players stay in every metric; they are counted
   and listed separately, never removed.
@@ -40,6 +43,10 @@ MIN_INSTALLS = 50               # new-creative decision needs at least this many
 MIN_IMPRESSIONS = 5_000         # ... and this many impressions; otherwise the test is extended by one week
 CPI_TOLERANCE = 1.30            # deactivate when CPI is more than 30% above the campaign's other creatives
 MIN_BENCH_INSTALLS = 10         # a campaign benchmark needs at least this many installs behind it
+QUALITY_MIN_IMPRESSIONS = 10_000  # 14-day review: no decision for a creative under this many impressions in the window
+QUALITY_MIN_IPM = 3             # ... deactivate below this many installs per 1,000 impressions
+D30_MIN_AGE = 30                # D30 ROAS only for install days whose players are at least 30 days old ...
+D30_INSTALL_DAYS = 14           # ... using the latest 14 such install days
 GHOST_DISPUTE_SHARE = 0.40      # 40%+ installs without any in-game telemetry -> billing dispute with the network
 MIN_DISPUTE_PLAYERS = 20
 
@@ -109,6 +116,46 @@ def decide(row, bench) -> tuple[str, str]:
     return "Keep", f"CPI {row['cpi_usd']:.2f} vs campaign benchmark {bench:.2f}"
 
 
+def decide_quality(row, avg_roas) -> tuple[str, str]:
+    """14-day creative decision: nothing under QUALITY_MIN_IMPRESSIONS impressions in the window."""
+    if row["impressions"] < QUALITY_MIN_IMPRESSIONS:
+        return "Too early to judge", f"only {int(row['impressions']):,} impressions (needs {QUALITY_MIN_IMPRESSIONS:,})"
+    if not row["installs"]:
+        return "Deactivate", f"no installs from {int(row['impressions']):,} impressions"
+    if row["ipm"] < QUALITY_MIN_IPM:
+        return "Deactivate", f"only {row['ipm']:.1f} installs per 1,000 impressions"
+    if pd.notna(row["roas"]) and pd.notna(avg_roas) and row["roas"] < 0.5 * avg_roas:
+        return "Deactivate", f"ROAS {row['roas']:.1%} is below half the average ({avg_roas:.1%})"
+    return "Keep", "enough impressions and no deactivation signal"
+
+
+def d30_roas(campaign_daily: pd.DataFrame, players: pd.DataFrame, events: pd.DataFrame, through: date) -> tuple[pd.DataFrame, dict]:
+    """D30 ROAS = revenue in each player's first 30 days / spend, for the latest D30_INSTALL_DAYS install days that are
+    at least D30_MIN_AGE days old (an older group of installs than the 14-day window). Empty until such days exist."""
+    last = pd.Timestamp(through - timedelta(days=D30_MIN_AGE))
+    days = sorted(d for d in campaign_daily["date"].unique() if d <= last)[-D30_INSTALL_DAYS:]
+    cols = ["source", "campaign", "installs", "spend_usd", "revenue_7d_usd", "revenue_30d_usd", "d7_roas", "d30_roas"]
+    if not days:
+        return pd.DataFrame(columns=cols), {"window": None, "note": f"no install day is {D30_MIN_AGE} days old yet"}
+    lo, hi = pd.Timestamp(days[0]), pd.Timestamp(days[-1]) + pd.Timedelta(days=1)
+    spend = campaign_daily[campaign_daily["date"].isin(days)].groupby(["source", "campaign"], as_index=False)["spend_usd"].sum()
+    p = players[(players["install_timestamp"] >= lo) & (players["install_timestamp"] < hi)]
+    ev = events.merge(p[["device_id", "source", "campaign"]], on="device_id")
+    age = ev["event_timestamp"] - ev["install_timestamp"]
+    ev = ev.assign(r7=np.where(age < pd.Timedelta(days=7), ev["revenue_usd"], 0.0),
+                   r30=np.where(age < pd.Timedelta(days=30), ev["revenue_usd"], 0.0))
+    rev = ev.groupby(["source", "campaign"], as_index=False).agg(revenue_7d_usd=("r7", "sum"), revenue_30d_usd=("r30", "sum"))
+    inst = p.groupby(["source", "campaign"], as_index=False).agg(installs=("device_id", "nunique"))
+    out = spend.merge(inst, how="left").merge(rev, how="left").fillna({"installs": 0, "revenue_7d_usd": 0.0, "revenue_30d_usd": 0.0})
+    out["d7_roas"] = _safe(out["revenue_7d_usd"], out["spend_usd"])
+    out["d30_roas"] = _safe(out["revenue_30d_usd"], out["spend_usd"])
+    tot = out[["spend_usd", "revenue_7d_usd", "revenue_30d_usd"]].sum()
+    return out[cols].sort_values("spend_usd", ascending=False), {
+        "window": [pd.Timestamp(days[0]).date().isoformat(), pd.Timestamp(days[-1]).date().isoformat()],
+        "d7_roas": float(tot["revenue_7d_usd"] / tot["spend_usd"]) if tot["spend_usd"] else None,
+        "d30_roas": float(tot["revenue_30d_usd"] / tot["spend_usd"]) if tot["spend_usd"] else None}
+
+
 def review_week(end: date, through: date, creative, players, first) -> dict:
     r1_start, r2_start = end - timedelta(days=13), end - timedelta(days=6)
     complete = through >= end
@@ -144,6 +191,9 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     quality = quality.merge(moved, on=["source", "creative"], how="left", indicator=True).query("_merge == 'left_only'").drop(columns="_merge")
     quality = quality.sort_values("spend_usd", ascending=False)
     quality["roas"] = _safe(quality["total_revenue_usd"], quality["spend_usd"])   # creative ROAS (player revenue / ad spend)
+    avg_roas = quality["total_revenue_usd"].sum() / quality["spend_usd"].sum() if quality["spend_usd"].sum() else np.nan
+    quality["decision"], quality["decision_detail"] = (zip(*[decide_quality(r, avg_roas) if complete else ("", "")
+                                                            for _, r in quality.iterrows()]) if len(quality) else ([], []))
     resumed = paused_resumed(c14, r2_start, min(end, through), keys)
     others = delivery(c7.merge(new_ids[["source", "creative"]], how="left", indicator=True).query("_merge == 'left_only'"),
                       ["source", "campaign"])
@@ -215,14 +265,20 @@ def main() -> None:
         return
     months, creative, players, first, status = loaded
     through = date.fromisoformat(status["data_through_demo_date"])
+    campaign_daily = pd.concat([pd.read_csv(args.data / f"campaign_daily_{m}.csv", parse_dates=["date"]) for m in months])
+    events = pd.concat([pd.read_csv(args.data / f"events_{m}.csv", usecols=["device_id", "event_timestamp", "install_timestamp", "revenue_usd"],
+                                    parse_dates=["event_timestamp", "install_timestamp"]) for m in months])
     out_root = args.output
     shutil.rmtree(out_root, ignore_errors=True)
     weeks = week_ends(creative["date"].min().date(), through)
     results = []
     for end in weeks:
         res = review_week(end, through, creative, players, first)
+        d30, d30_sum = d30_roas(campaign_daily, players, events, min(end, through))
+        res["summary"]["d30_roas"] = d30_sum
         d = out_root / end.isoformat()
         d.mkdir(parents=True, exist_ok=True)
+        d30.to_csv(d / "d30_roas.csv", index=False)
         res["quality"].to_csv(d / "creative_quality_14d.csv", index=False)
         res["new"].to_csv(d / "new_creatives_7d.csv", index=False)
         res["traffic"].to_csv(d / "traffic_quality.csv", index=False)

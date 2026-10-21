@@ -116,6 +116,20 @@ class WeeklyReviewTests(unittest.TestCase):
             if not summary["complete"] and len(new):
                 self.assertTrue((new["decision"] == "").all())
 
+    def test_no_quality_decision_under_min_impressions(self):
+        for week in WEEKS:
+            q = pd.read_csv(week / "creative_quality_14d.csv", keep_default_na=False)
+            if len(q) and "decision" in q:
+                low = q[(q["impressions"].astype(float) < 10_000) & (q["decision"] != "")]
+                self.assertTrue((low["decision"] == "Too early to judge").all())
+
+    def test_d30_roas_is_revenue_over_spend(self):
+        for week in WEEKS:
+            d = pd.read_csv(week / "d30_roas.csv")
+            for r in d[d["spend_usd"] > 0].itertuples():
+                self.assertAlmostEqual(r.d30_roas, r.revenue_30d_usd / r.spend_usd, places=6)
+                self.assertGreaterEqual(r.revenue_30d_usd + 1e-9, r.revenue_7d_usd)
+
 
 if __name__ == "__main__":
     unittest.main()

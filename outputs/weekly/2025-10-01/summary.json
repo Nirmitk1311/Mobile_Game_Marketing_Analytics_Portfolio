@@ -8,7 +8,7 @@
     "2025-09-25",
     "2025-10-01"
   ],
-  "data_through": "2025-10-19",
+  "data_through": "2025-10-21",
   "complete": true,
   "creatives_in_quality_window": 31,
   "new_creatives": 1,
@@ -27,5 +27,9 @@
     "platform": "iOS",
     "tracking_coverage": 1.0
   },
-  "paused_resumed_excluded": 0
+  "paused_resumed_excluded": 0,
+  "d30_roas": {
+    "window": null,
+    "note": "no install day is 30 days old yet"
+  }
 }
