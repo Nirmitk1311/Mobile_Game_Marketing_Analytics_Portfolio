@@ -14,20 +14,20 @@
   "new_creatives": 3,
   "unnamed_new_assets": {
     "count": 5,
-    "impressions": 7,
+    "impressions": 8,
     "installs": 0,
     "spend_usd": 0.39
   },
-  "players": 405,
-  "tracking_coverage": 0.9703703703703703,
-  "flagged_share": 0.007407407407407408,
+  "players": 452,
+  "tracking_coverage": 0.9668141592920354,
+  "flagged_share": 0.00663716814159292,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Social Network",
     "platform": "iOS",
-    "tracking_coverage": 0.9397590361445783
+    "tracking_coverage": 0.925531914893617
   },
-  "paused_resumed_excluded": 40,
+  "paused_resumed_excluded": 42,
   "d30_roas": {
     "window": null,
     "note": "no install day is 30 days old yet"
