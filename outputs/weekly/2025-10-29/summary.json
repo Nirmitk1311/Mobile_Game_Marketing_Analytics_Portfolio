@@ -1,0 +1,35 @@
+{
+  "week_end": "2025-10-29",
+  "quality_window": [
+    "2025-10-16",
+    "2025-10-29"
+  ],
+  "new_creative_window": [
+    "2025-10-23",
+    "2025-10-29"
+  ],
+  "data_through": "2025-10-23",
+  "complete": false,
+  "creatives_in_quality_window": 72,
+  "new_creatives": 0,
+  "unnamed_new_assets": {
+    "count": 0,
+    "impressions": 0,
+    "installs": 0,
+    "spend_usd": 0.0
+  },
+  "players": 196,
+  "tracking_coverage": 0.9540816326530612,
+  "flagged_share": 0.00510204081632653,
+  "ghost_install_disputes": [],
+  "lowest_tracking_coverage": {
+    "source": "Social Network",
+    "platform": "iOS",
+    "tracking_coverage": 0.8936170212765957
+  },
+  "paused_resumed_excluded": 0,
+  "d30_roas": {
+    "window": null,
+    "note": "no install day is 30 days old yet"
+  }
+}
