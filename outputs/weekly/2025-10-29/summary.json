@@ -18,9 +18,9 @@
     "installs": 0,
     "spend_usd": 0.0
   },
-  "players": 196,
-  "tracking_coverage": 0.9540816326530612,
-  "flagged_share": 0.00510204081632653,
+  "players": 198,
+  "tracking_coverage": 0.9545454545454546,
+  "flagged_share": 0.005050505050505051,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Social Network",
