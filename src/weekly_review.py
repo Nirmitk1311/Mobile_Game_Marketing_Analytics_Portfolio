@@ -20,6 +20,9 @@ every campaign keeps one name, so the name stands for the ID.
   No list of creatives is used. Assets the network reports without a name
   (for example search headline/description assets) are not listed; summary.json gives their count and totals.
   Keep/deactivate decisions are written only when the 7 days are complete; before that the row shows its progress.
+- incomplete last day: networks report a day's spend and impressions about one day late, and the latest day is still
+  running in the players' time zone, so spend, installs, impressions, CPI, ROAS and every decision use days up to
+  data_through - SPEND_LAG_DAYS. Installs of the later (partial) day are an early signal only (latest_day_installs).
 - D30 ROAS: revenue in each player's first 30 days / spend for the latest 14 install days that are 30+ days old
   (an older group of installs than the 14-day window), per campaign (d30_roas.csv); empty until such days exist.
 - traffic quality (14 days): by network and platform, the share of acquired players that sent any in-game event
@@ -47,6 +50,7 @@ QUALITY_MIN_IMPRESSIONS = 10_000  # 14-day review: no decision for a creative un
 QUALITY_MIN_IPM = 3             # ... deactivate below this many installs per 1,000 impressions
 D30_MIN_AGE = 30                # D30 ROAS only for install days whose players are at least 30 days old ...
 D30_INSTALL_DAYS = 14           # ... using the latest 14 such install days
+SPEND_LAG_DAYS = 1              # the latest day has installs but no reported spend yet: figures end the day before
 GHOST_DISPUTE_SHARE = 0.40      # 40%+ installs without any in-game telemetry -> billing dispute with the network
 MIN_DISPUTE_PLAYERS = 20
 
@@ -159,10 +163,14 @@ def d30_roas(campaign_daily: pd.DataFrame, players: pd.DataFrame, events: pd.Dat
 def review_week(end: date, through: date, creative, players, first) -> dict:
     r1_start, r2_start = end - timedelta(days=13), end - timedelta(days=6)
     complete = through >= end
+    last = min(end, through - timedelta(days=SPEND_LAG_DAYS))   # last day with reported spend
     ts = lambda d: pd.Timestamp(d)
-    c14 = creative[(creative["date"] >= ts(r1_start)) & (creative["date"] <= ts(end))]
-    p14 = players[(players["install_timestamp"] >= ts(r1_start)) & (players["install_timestamp"] < ts(end + timedelta(days=1)))]
+    c14 = creative[(creative["date"] >= ts(r1_start)) & (creative["date"] <= ts(last))]
+    p14 = players[(players["install_timestamp"] >= ts(r1_start)) & (players["install_timestamp"] < ts(last + timedelta(days=1)))]
     keys = ["source", "campaign", "creative"]
+    # early signal: installs of the days after `last` inside the week (spend not reported yet); never used in a decision
+    latest = (creative[(creative["date"] > ts(last)) & (creative["date"] <= ts(end))].groupby(keys, as_index=False)["installs"]
+              .sum().rename(columns={"installs": "latest_day_installs"}))
 
     # New = impressions in that campaign inside the 7 days and none in that campaign in the earlier days of the
     # 14-day window. Older history and other campaigns do not block it.
@@ -174,7 +182,7 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
         hidden = first[(first["first_impression_date"] >= ts(r1_start))
                        & (first["first_impression_date"] < min(ts(r2_start), visible_from))][["source", "creative"]]
         before = pd.concat([before, creative[keys].drop_duplicates().merge(hidden, on=["source", "creative"])]).drop_duplicates()
-    c7 =creative[(creative["date"] >= ts(r2_start)) & (creative["date"] <= ts(end))]
+    c7 = creative[(creative["date"] >= ts(r2_start)) & (creative["date"] <= ts(last))]
     live7 = c7[c7["impressions"] > 0]
     new = delivery(c7, keys).merge(live7.groupby(keys, as_index=False)["date"].min()
                                    .rename(columns={"date": "first_impression_date"}), on=keys)
@@ -189,17 +197,19 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     quality = quality[quality["impressions"] > 0]
     quality = quality.merge(new[keys], on=keys, how="left", indicator=True).query("_merge == 'left_only'").drop(columns="_merge")
     quality = quality.merge(moved, on=["source", "creative"], how="left", indicator=True).query("_merge == 'left_only'").drop(columns="_merge")
+    quality = quality.merge(latest, on=keys, how="left").fillna({"latest_day_installs": 0})
     quality = quality.sort_values("spend_usd", ascending=False)
     quality["roas"] = _safe(quality["total_revenue_usd"], quality["spend_usd"])   # creative ROAS (player revenue / ad spend)
     avg_roas = quality["total_revenue_usd"].sum() / quality["spend_usd"].sum() if quality["spend_usd"].sum() else np.nan
     quality["decision"], quality["decision_detail"] = (zip(*[decide_quality(r, avg_roas) if complete else ("", "")
                                                             for _, r in quality.iterrows()]) if len(quality) else ([], []))
-    resumed = paused_resumed(c14, r2_start, min(end, through), keys)
+    resumed = paused_resumed(c14, r2_start, last, keys)
     others = delivery(c7.merge(new_ids[["source", "creative"]], how="left", indicator=True).query("_merge == 'left_only'"),
                       ["source", "campaign"])
     bench = {(r.source, r.campaign): (r.spend_usd / r.installs if r.installs >= MIN_BENCH_INSTALLS else np.nan)
              for r in others.itertuples()}
-    day_n = min(7, (through - r2_start).days + 1)
+    day_n = max(1, min(7, (last - r2_start).days + 1))
+    new = new.merge(latest, on=keys, how="left").fillna({"latest_day_installs": 0})
     new["campaign_cpi_benchmark"] = [bench.get((r.source, r.campaign), np.nan) for r in new.itertuples()]
     new["status"] = "final" if complete else f"in progress (day {day_n} of 7)"
     new["decision"], new["decision_detail"] = zip(*[decide(r, r["campaign_cpi_benchmark"]) if complete else ("", "")
@@ -216,6 +226,7 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     summary = {
         "week_end": end.isoformat(), "quality_window": [r1_start.isoformat(), end.isoformat()],
         "new_creative_window": [r2_start.isoformat(), end.isoformat()], "data_through": through.isoformat(),
+        "spend_data_through": last.isoformat(), "latest_day_installs": int(latest["latest_day_installs"].sum()),
         "complete": complete, "creatives_in_quality_window": int(len(quality)), "new_creatives": int(new["creative"].nunique()),
         "unnamed_new_assets": {"count": int(unnamed["creative"].nunique()), "impressions": int(unnamed["impressions"].sum()),
                                "installs": int(unnamed["installs"].sum()), "spend_usd": round(float(unnamed["spend_usd"].sum()), 2)},

@@ -1,8 +1,8 @@
-source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,campaign_cpi_benchmark,status,decision,decision_detail
-Social Network,Social iOS C,Concept 245,483,38,2,9.74,3,4.87,4.140786749482402,0.07867494824016563,2025-10-23,2.6326666666666667,in progress (day 4 of 7),,
-Game Network,Game iOS B,Concept 254,276,267,3,4.17,3,1.39,10.869565217391305,0.967391304347826,2025-10-23,1.242,in progress (day 4 of 7),,
-Game Network,Game iOS A,Concept 253,81,81,0,3.6,3,,0.0,1.0,2025-10-23,2.7225,in progress (day 4 of 7),,
-Game Network,Game Android E,Concept 255,79,65,0,1.98,3,,0.0,0.8227848101265823,2025-10-23,,in progress (day 4 of 7),,
-Game Network,Game Android E,Concept 256,63,54,1,1.88,3,1.88,15.873015873015873,0.8571428571428571,2025-10-23,,in progress (day 4 of 7),,
-Game Network,Game Android E,Concept 257,44,33,0,0.0,3,,0.0,0.75,2025-10-23,,in progress (day 4 of 7),,
-Search Network,Search Android A,Concept 50,2,0,0,0.15,1,,0.0,0.0,2025-10-24,,in progress (day 4 of 7),,
+source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,latest_day_installs,campaign_cpi_benchmark,status,decision,decision_detail
+Social Network,Social iOS C,Concept 245,483,38,2,9.74,3,4.87,4.140786749482402,0.07867494824016563,2025-10-23,0.0,2.6326666666666667,in progress (day 3 of 7),,
+Game Network,Game iOS B,Concept 254,276,267,3,4.17,3,1.39,10.869565217391305,0.967391304347826,2025-10-23,0.0,1.242,in progress (day 3 of 7),,
+Game Network,Game iOS A,Concept 253,81,81,0,3.6,3,,0.0,1.0,2025-10-23,0.0,2.7225,in progress (day 3 of 7),,
+Game Network,Game Android E,Concept 255,79,65,0,1.98,3,,0.0,0.8227848101265823,2025-10-23,0.0,,in progress (day 3 of 7),,
+Game Network,Game Android E,Concept 256,63,54,1,1.88,3,1.88,15.873015873015873,0.8571428571428571,2025-10-23,0.0,,in progress (day 3 of 7),,
+Game Network,Game Android E,Concept 257,44,33,0,0.0,3,,0.0,0.75,2025-10-23,0.0,,in progress (day 3 of 7),,
+Search Network,Search Android A,Concept 50,2,0,0,0.15,1,,0.0,0.0,2025-10-24,0.0,,in progress (day 3 of 7),,
