@@ -123,13 +123,18 @@ class WeeklyReviewTests(unittest.TestCase):
                 low = q[(q["impressions"].astype(float) < 10_000) & (q["decision"] != "")]
                 self.assertTrue((low["decision"] == "Too early to judge").all())
 
-    def test_figures_end_before_the_incomplete_last_day(self):
+    def test_incomplete_last_day_is_estimated_and_labelled(self):
         for week in WEEKS:
             summary = json.loads((week / "summary.json").read_text(encoding="utf-8"))
-            self.assertLess(summary["spend_data_through"], summary["data_through"]) if summary["data_through"] <= summary["week_end"]                 else self.assertEqual(summary["spend_data_through"], summary["week_end"])
-            new = pd.read_csv(week / "new_creatives_7d.csv")
-            if len(new):
-                self.assertTrue((new["first_impression_date"] <= summary["spend_data_through"]).all())
+            if summary["data_through"] <= summary["week_end"]:
+                self.assertLess(summary["spend_data_through"], summary["data_through"])
+            else:
+                self.assertEqual(summary["spend_data_through"], summary["week_end"])
+                self.assertEqual(summary["estimated_installs"], 0)
+            q = pd.read_csv(week / "creative_quality_14d.csv")
+            if len(q):
+                self.assertTrue((q["est_installs"] <= q["installs"] + 1e-9).all())
+                self.assertTrue((q["actual_spend_usd"] <= q["spend_usd"] + 1e-6).all())
 
     def test_d30_roas_is_revenue_over_spend(self):
         for week in WEEKS:

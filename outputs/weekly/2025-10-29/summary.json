@@ -10,15 +10,16 @@
   ],
   "data_through": "2025-10-26",
   "spend_data_through": "2025-10-25",
-  "latest_day_installs": 0,
+  "estimated_installs": 15,
+  "estimated_spend_usd": 36.77,
   "complete": false,
   "creatives_in_quality_window": 72,
   "new_creatives": 7,
   "unnamed_new_assets": {
     "count": 7,
-    "impressions": 17,
+    "impressions": 21,
     "installs": 0,
-    "spend_usd": 0.11
+    "spend_usd": 0.15
   },
   "players": 257,
   "tracking_coverage": 0.9610894941634242,

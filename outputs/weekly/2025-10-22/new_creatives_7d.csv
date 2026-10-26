@@ -1,4 +1,4 @@
-source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,latest_day_installs,campaign_cpi_benchmark,status,decision,decision_detail
-Social Network,Social iOS C,Concept 238,1765,98,19,35.62,7,1.874736842105263,10.76487252124646,0.055524079320113315,2025-10-16,0.0,1.898095238095238,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS A,Concept 241,798,750,14,42.11,7,3.007857142857143,17.54385964912281,0.9398496240601504,2025-10-16,0.0,2.9599999999999995,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Search Network,Search Android A,Concept 129,3,0,0,0.01,3,,0.0,0.0,2025-10-16,0.0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,est_installs,est_spend_usd,campaign_cpi_benchmark,status,decision,decision_detail
+Social Network,Social iOS C,Concept 238,1765,98,19,35.62,7,1.874736842105263,10.76487252124646,0.055524079320113315,2025-10-16,0,0,1.898095238095238,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS A,Concept 241,798,750,14,42.11,7,3.007857142857143,17.54385964912281,0.9398496240601504,2025-10-16,0,0,2.959999999999999,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Search Network,Search Android A,Concept 129,3,0,0,0.01,3,,0.0,0.0,2025-10-16,0,0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
