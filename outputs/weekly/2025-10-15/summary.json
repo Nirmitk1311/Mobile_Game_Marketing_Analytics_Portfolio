@@ -8,7 +8,7 @@
     "2025-10-09",
     "2025-10-15"
   ],
-  "data_through": "2025-10-23",
+  "data_through": "2025-10-26",
   "complete": true,
   "creatives_in_quality_window": 124,
   "new_creatives": 34,
@@ -20,7 +20,7 @@
   },
   "players": 713,
   "tracking_coverage": 0.7798036465638148,
-  "flagged_share": 0.03927068723702665,
+  "flagged_share": 0.0967741935483871,
   "ghost_install_disputes": [
     {
       "source": "Game Network",

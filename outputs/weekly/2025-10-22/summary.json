@@ -8,7 +8,7 @@
     "2025-10-16",
     "2025-10-22"
   ],
-  "data_through": "2025-10-23",
+  "data_through": "2025-10-26",
   "complete": true,
   "creatives_in_quality_window": 160,
   "new_creatives": 3,
@@ -19,8 +19,8 @@
     "spend_usd": 0.39
   },
   "players": 452,
-  "tracking_coverage": 0.9668141592920354,
-  "flagged_share": 0.008849557522123894,
+  "tracking_coverage": 0.9690265486725663,
+  "flagged_share": 0.061946902654867256,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Social Network",
