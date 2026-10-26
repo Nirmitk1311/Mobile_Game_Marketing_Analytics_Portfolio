@@ -22,8 +22,9 @@ every campaign keeps one name, so the name stands for the ID.
   Keep/deactivate decisions are written only when the 7 days are complete; before that the row shows its progress.
 - incomplete last day: networks report a day's spend and impressions about one day late, and the latest day is still
   running in the players' time zone. Its full-day impressions, clicks, installs and spend are ESTIMATED per creative from
-  the average of its days with impressions among the 3 complete days before it (never below what is already reported),
-  and included in delivery, CPI and every decision (est_* columns show the estimated part). Player quality and ROAS use
+  its own average per day this week, and included in delivery, CPI and every decision (est_* columns show the estimated
+  part). The estimate never boosts a creative: its CPI is never lower and its install rate never higher than the
+  creative's real days. Player quality and ROAS use
   complete days only (spend_data_through).
 - D30 ROAS: revenue in each player's first 30 days / spend for the latest 14 install days that are 30+ days old
   (an older group of installs than the 14-day window), per campaign (d30_roas.csv); empty until such days exist.
@@ -162,21 +163,35 @@ def d30_roas(campaign_daily: pd.DataFrame, players: pd.DataFrame, events: pd.Dat
         "d30_roas": float(tot["revenue_30d_usd"] / tot["spend_usd"]) if tot["spend_usd"] else None}
 
 
-def estimate_rows(creative: pd.DataFrame, keys: list[str], last: date, upto: date) -> pd.DataFrame:
-    """Full-day estimate for the days after `last` (up to `upto`): per key still live on `last` (or already delivering),
-    the average of its days with impressions among the 3 days up to `last`, never below what is already reported."""
+def estimate_rows(creative: pd.DataFrame, keys: list[str], last: date, upto: date, week_start: date,
+                  window_start: date) -> pd.DataFrame:
+    """Full-day estimate for the days after `last` (up to `upto`), per key still live on `last` (or already delivering):
+    its own average per day with impressions this week (week_start..last; the 7 days up to `last` when the week has no
+    complete day). No boost: partial installs reported so far are not used, and the estimated day's CPI is never lower
+    and its installs per 1,000 impressions never higher than the key's own complete days in the window."""
     cols = ["impressions", "clicks", "installs", "spend_usd"]
     ts = pd.Timestamp
-    out = []
-    for day in pd.date_range(ts(last) + pd.Timedelta(days=1), ts(upto)):
-        prev = creative[(creative["date"] > ts(last) - pd.Timedelta(days=3)) & (creative["date"] <= ts(last))]
-        prev = prev[prev["impressions"] > 0]
-        avg = prev.groupby(keys)[cols].sum().div(prev.groupby(keys)["date"].nunique(), axis=0)
-        now = creative[creative["date"] == day].groupby(keys)[cols].sum()
-        live = set(prev[prev["date"] == ts(last)].set_index(keys).index) | set(now[(now["impressions"] > 0) | (now["installs"] > 0)].index)
-        est = avg.reindex(sorted(live)).fillna(0.0).combine(now.reindex(sorted(live)).fillna(0.0), np.maximum)
-        out.append(est.reset_index().assign(date=day))
-    return pd.concat(out, ignore_index=True) if out else pd.DataFrame(columns=keys + cols + ["date"])
+    days = pd.date_range(ts(last) + pd.Timedelta(days=1), ts(upto))
+    if not len(days):
+        return pd.DataFrame(columns=keys + cols + ["date"])
+    done = creative[(creative["date"] <= ts(last)) & (creative["impressions"] > 0)]
+    week = done[done["date"] >= ts(week_start)]
+    recent = done[done["date"] > ts(last) - pd.Timedelta(days=7)]
+    avg_w = week.groupby(keys)[cols].sum().div(week.groupby(keys)["date"].nunique(), axis=0)
+    avg_r = recent.groupby(keys)[cols].sum().div(recent.groupby(keys)["date"].nunique(), axis=0)
+    now = creative[creative["date"].isin(days)].groupby(keys)[cols].sum()
+    live = sorted(set(done[done["date"] == ts(last)].set_index(keys).index)
+                  | set(now[(now["impressions"] > 0) | (now["installs"] > 0)].index))
+    avg = avg_w.combine_first(avg_r).reindex(live).dropna(how="all").fillna(0.0)
+    real = creative[(creative["date"] >= ts(window_start)) & (creative["date"] <= ts(last))].groupby(keys)[cols].sum()
+    real = real.reindex(avg.index).fillna(0.0)
+    cap_cpi = np.where((real["installs"] > 0) & (real["spend_usd"] > 0),
+                       avg["spend_usd"] * real["installs"] / real["spend_usd"].where(real["spend_usd"] > 0, 1), np.inf)
+    cap_ipm = np.where(real["impressions"] > 0,
+                       avg["impressions"] * real["installs"] / real["impressions"].where(real["impressions"] > 0, 1), np.inf)
+    avg["installs"] = np.minimum(avg["installs"], np.minimum(cap_cpi, cap_ipm))
+    est = avg * len(days)
+    return est.reset_index().assign(date=days[-1])
 
 
 def review_week(end: date, through: date, creative, players, first) -> dict:
@@ -187,7 +202,7 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     p14 = players[(players["install_timestamp"] >= ts(r1_start)) & (players["install_timestamp"] < ts(last + timedelta(days=1)))]
     keys = ["source", "campaign", "creative"]
     actual14 = creative[(creative["date"] >= ts(r1_start)) & (creative["date"] <= ts(last))]
-    est = estimate_rows(creative, keys, last, min(end, through))          # the incomplete day(s), estimated in full
+    est = estimate_rows(creative, keys, last, min(end, through), r2_start, r1_start)   # incomplete day(s), estimated in full
     c14 = pd.concat([actual14, est], ignore_index=True)
     est_sum = (est.groupby(keys, as_index=False)[["installs", "spend_usd"]].sum()
                .rename(columns={"installs": "est_installs", "spend_usd": "est_spend_usd"}))
