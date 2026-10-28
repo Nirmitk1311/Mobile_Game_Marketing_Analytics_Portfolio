@@ -8,7 +8,7 @@
     "2025-10-16",
     "2025-10-22"
   ],
-  "data_through": "2025-10-27",
+  "data_through": "2025-10-28",
   "spend_data_through": "2025-10-22",
   "estimated_installs": 0,
   "estimated_spend_usd": 0.0,
@@ -22,7 +22,7 @@
     "spend_usd": 0.39
   },
   "players": 452,
-  "tracking_coverage": 0.9690265486725663,
+  "tracking_coverage": 0.9712389380530974,
   "flagged_share": 0.061946902654867256,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
