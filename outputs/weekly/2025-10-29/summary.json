@@ -8,29 +8,29 @@
     "2025-10-23",
     "2025-10-29"
   ],
-  "data_through": "2025-10-28",
-  "spend_data_through": "2025-10-27",
-  "estimated_installs": 17,
-  "estimated_spend_usd": 40.35,
-  "complete": false,
+  "data_through": "2025-10-29",
+  "spend_data_through": "2025-10-28",
+  "estimated_installs": 19,
+  "estimated_spend_usd": 43.67,
+  "complete": true,
   "creatives_in_quality_window": 72,
-  "new_creatives": 7,
+  "new_creatives": 9,
   "unnamed_new_assets": {
-    "count": 8,
-    "impressions": 40,
+    "count": 10,
+    "impressions": 58,
     "installs": 0,
-    "spend_usd": 0.46
+    "spend_usd": 0.83
   },
-  "players": 311,
-  "tracking_coverage": 0.9646302250803859,
-  "flagged_share": 0.04823151125401929,
+  "players": 353,
+  "tracking_coverage": 0.9660056657223796,
+  "flagged_share": 0.053824362606232294,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Social Network",
     "platform": "iOS",
-    "tracking_coverage": 0.92
+    "tracking_coverage": 0.9135802469135802
   },
-  "paused_resumed_excluded": 28,
+  "paused_resumed_excluded": 31,
   "d30_roas": {
     "window": null,
     "note": "no install day is 30 days old yet"
