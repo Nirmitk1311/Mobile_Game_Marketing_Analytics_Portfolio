@@ -9,7 +9,7 @@ every campaign keeps one name, so the name stands for the ID.
 - creative quality (14 days ending on the week end): creatives running in the 14 days (also if they started earlier;
   only their figures inside the window count), plus the quality of the players they acquired (D1/D7 retention for
   mature players only, levels, revenue). When the week is complete each creative gets a decision; none is made under
-  10,000 impressions in the 14 days ("Too early to judge"). Creatives that are new in the 7-day test are left out, and a creative moved
+  7,000 impressions in the 14 days ("Too early to judge"). Creatives that are new in the 7-day test are left out, and a creative moved
   into a different campaign during the 7 days is left out completely (also its rows in the old campaign).
 - new-creative test (7 days ending on the week end): a creative is NEW in a campaign when it has impressions in that
   campaign inside the 7 days and none in that campaign in the earlier days of the 14-day window. Older history and
@@ -49,7 +49,7 @@ MIN_INSTALLS = 50               # new-creative decision needs at least this many
 MIN_IMPRESSIONS = 5_000         # ... and this many impressions; otherwise the test is extended by one week
 CPI_TOLERANCE = 1.30            # deactivate when CPI is more than 30% above the campaign's other creatives
 MIN_BENCH_INSTALLS = 10         # a campaign benchmark needs at least this many installs behind it
-QUALITY_MIN_IMPRESSIONS = 10_000  # 14-day review: no decision for a creative under this many impressions in the window
+QUALITY_MIN_IMPRESSIONS = 7_000  # 14-day review (7,000 from 2026-10-29): no decision for a creative under this many impressions in the window
 QUALITY_MIN_IPM = 3             # ... deactivate below this many installs per 1,000 impressions
 D30_MIN_AGE = 30                # D30 ROAS only for install days whose players are at least 30 days old ...
 D30_INSTALL_DAYS = 14           # ... using the latest 14 such install days

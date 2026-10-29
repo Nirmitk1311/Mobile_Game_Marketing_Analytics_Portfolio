@@ -120,7 +120,7 @@ class WeeklyReviewTests(unittest.TestCase):
         for week in WEEKS:
             q = pd.read_csv(week / "creative_quality_14d.csv", keep_default_na=False)
             if len(q) and "decision" in q:
-                low = q[(q["impressions"].astype(float) < 10_000) & (q["decision"] != "")]
+                low = q[(q["impressions"].astype(float) < 7_000) & (q["decision"] != "")]
                 self.assertTrue((low["decision"] == "Too early to judge").all())
 
     def test_incomplete_last_day_is_estimated_and_labelled(self):
