@@ -1,7 +1,7 @@
 source,platform,acquired_players,ghost_installs,ghost_share,billing_action
 Game Network,Android,267,131,0.4906,dispute with network
 Discovery Network,Android,167,14,0.0838,
-Search Network,Android,964,69,0.0716,
+Search Network,Android,965,68,0.0705,
 Store Search,iOS,490,31,0.0633,
-Social Network,iOS,910,54,0.0593,
-Game Network,iOS,1675,69,0.0412,
+Social Network,iOS,911,54,0.0593,
+Game Network,iOS,1678,70,0.0417,
