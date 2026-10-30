@@ -1,4 +1,4 @@
 source,platform,acquired_players,tracked_players,flagged_players,d1_eligible,d1_returned,d7_eligible,d7_returned,levels_completed,total_revenue_usd,d1_retention,d7_retention,levels_per_player,revenue_per_player_usd,tracking_coverage,flagged_share,ghost_share,billing_action
-Game Network,iOS,25,25,2,25,6,25,2,670.0,6.2353,0.24,0.08,26.8,0.249412,1.0,0.08,0.0,
-Search Network,Android,11,11,1,11,3,11,3,741.0,5.1447,0.2727272727272727,0.2727272727272727,67.36363636363636,0.4677,1.0,0.09090909090909091,0.0,
+Game Network,iOS,25,25,2,25,6,25,2,670.0,6.0626999999999995,0.24,0.08,26.8,0.24250799999999997,1.0,0.08,0.0,
+Search Network,Android,11,11,1,11,3,11,3,741.0,5.0166,0.2727272727272727,0.2727272727272727,67.36363636363636,0.4560545454545455,1.0,0.09090909090909091,0.0,
 Game Network,Android,1,1,0,1,0,1,0,4.0,0.0,0.0,0.0,4.0,0.0,1.0,0.0,0.0,
