@@ -8,28 +8,24 @@
     "2025-09-25",
     "2025-10-01"
   ],
-  "data_through": "2025-10-30",
+  "data_through": "2025-11-02",
   "spend_data_through": "2025-10-01",
   "estimated_installs": 0,
   "estimated_spend_usd": 0.0,
   "complete": true,
-  "creatives_in_quality_window": 31,
-  "new_creatives": 1,
+  "creatives_in_quality_window": 0,
+  "new_creatives": 20,
   "unnamed_new_assets": {
-    "count": 1,
-    "impressions": 1,
-    "installs": 0,
-    "spend_usd": 0.03
+    "count": 13,
+    "impressions": 20,
+    "installs": 1,
+    "spend_usd": 1.46
   },
-  "players": 37,
+  "players": 8,
   "tracking_coverage": 1.0,
-  "flagged_share": 0.08108108108108109,
+  "flagged_share": 0.125,
   "ghost_install_disputes": [],
-  "lowest_tracking_coverage": {
-    "source": "Game Network",
-    "platform": "iOS",
-    "tracking_coverage": 1.0
-  },
+  "lowest_tracking_coverage": null,
   "paused_resumed_excluded": 0,
   "d30_roas": {
     "window": null,

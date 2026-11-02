@@ -1,0 +1,9 @@
+month,date,source,campaign,platform,lifecycle,impressions,clicks,reported_installs,spend_usd
+2025-11,2025-11-01,Game Network,Game Android E,Android,active,69,89,1,1.05
+2025-11,2025-11-01,Game Network,Game iOS A,iOS,active,161,265,5,6.01
+2025-11,2025-11-01,Game Network,Game iOS B,iOS,active,552,820,18,14.27
+2025-11,2025-11-01,Search Network,Search Android A,Android,active,1008,27,7,13.53
+2025-11,2025-11-02,Game Network,Game Android E,Android,active,0,56,1,0.0
+2025-11,2025-11-02,Game Network,Game iOS A,iOS,active,0,213,5,0.0
+2025-11,2025-11-02,Game Network,Game iOS B,iOS,active,0,322,7,0.0
+2025-11,2025-11-02,Search Network,Search Android A,Android,active,0,0,4,0.0
