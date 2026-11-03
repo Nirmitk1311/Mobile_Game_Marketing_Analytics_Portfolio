@@ -8,35 +8,35 @@
     "2025-10-30",
     "2025-11-05"
   ],
-  "data_through": "2025-11-02",
-  "spend_data_through": "2025-11-01",
-  "estimated_installs": 20,
-  "estimated_spend_usd": 45.39,
+  "data_through": "2025-11-03",
+  "spend_data_through": "2025-11-02",
+  "estimated_installs": 22,
+  "estimated_spend_usd": 47.45,
   "complete": false,
   "creatives_in_quality_window": 69,
   "new_creatives": 9,
   "unnamed_new_assets": {
-    "count": 15,
-    "impressions": 90,
+    "count": 19,
+    "impressions": 115,
     "installs": 0,
-    "spend_usd": 0.52
+    "spend_usd": 0.62
   },
-  "players": 292,
-  "tracking_coverage": 0.9657534246575342,
-  "flagged_share": 0.07876712328767123,
+  "players": 333,
+  "tracking_coverage": 0.9669669669669669,
+  "flagged_share": 0.08408408408408409,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Social Network",
     "platform": "iOS",
-    "tracking_coverage": 0.9069767441860465
+    "tracking_coverage": 0.9111111111111111
   },
   "paused_resumed_excluded": 30,
   "d30_roas": {
     "window": [
       "2025-10-01",
-      "2025-10-03"
+      "2025-10-04"
     ],
-    "d7_roas": 0.10812366737739872,
-    "d30_roas": 0.10930759735158793
+    "d7_roas": 0.10855001065189603,
+    "d30_roas": 0.11397688538559864
   }
 }
