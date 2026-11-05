@@ -50,7 +50,7 @@ Creative reporting uses the creative assigned to each synthetic acquisition. It 
 
 Two patterns from the live data are kept in the synthetic months:
 - One network's Android traffic has much lower tracking coverage than every other network. Many of its attributed installs never send a single in-game event, a common sign of non-human installs, so it is worth investigating with the network.
-- A small group of flagged installs shares one implausible hardware profile across several phone brands, plays one short session and completes no level, which is a device-farm pattern.
+- A small group of flagged installs shares one implausible hardware profile across several phone brands, plays one short session and completes no level, which is a device-farm pattern. One signal alone never makes an install fake. A device-pattern flag (shared hardware profile, emulator graphics, pre-granted permissions) counts only together with farm behaviour: no level completed and no ad or purchase revenue in the first 7 days. A network fraud flag counts unless the player clearly plays like a real one (10+ levels completed, or levels completed plus ad or purchase revenue). Popular budget chips are sold to many brands, so a shared hardware profile by itself is normal.
 
 ## Limitations
 

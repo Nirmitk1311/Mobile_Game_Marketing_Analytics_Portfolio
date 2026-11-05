@@ -26,7 +26,7 @@
 | region_group | Broad fictional region grouping |
 | is_test_market | Exclusion flag used by cleaning |
 | tracking_available | Whether qualifying events were generated |
-| quality_flag | Daily-refreshed months only. Empty = not flagged; `network_flag` = the network's fraud check marked the install suspicious; `device_pattern` = implausible hardware profile; both are joined by `;`. Flagged players stay in all metrics |
+| quality_flag | Daily-refreshed months only. Empty = not flagged; `network_flag` = the network's fraud check marked the install suspicious; `device_pattern` = device signal (shared hardware profile, emulator, pre-granted permissions) plus no level completed and no ad or purchase revenue in 7 days; both are joined by `;`. Flagged players stay in all metrics |
 
 ## Creative first impressions
 

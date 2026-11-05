@@ -23,7 +23,7 @@
   },
   "players": 390,
   "tracking_coverage": 0.9666666666666667,
-  "flagged_share": 0.07692307692307693,
+  "flagged_share": 0.0,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Social Network",
@@ -36,7 +36,7 @@
       "2025-10-01",
       "2025-10-06"
     ],
-    "d7_roas": 0.09911973961825944,
-    "d30_roas": 0.10361475932680199
+    "d7_roas": 0.0990418867862809,
+    "d30_roas": 0.10355293501905433
   }
 }

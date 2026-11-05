@@ -23,7 +23,7 @@
   },
   "players": 8,
   "tracking_coverage": 1.0,
-  "flagged_share": 0.125,
+  "flagged_share": 0.0,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": null,
   "paused_resumed_excluded": 0,
