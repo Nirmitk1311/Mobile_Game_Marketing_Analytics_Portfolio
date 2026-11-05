@@ -5,15 +5,15 @@ Store Search,Store Intent,Playable Puzzle H,11475,161,396.69,155,141.08,2.46,0.3
 Game Network,Playable Premium,Progress Video D,13310,185,393.7,177,177.06,2.13,0.4497
 Game Network,Playable Premium,Reward Story D,12714,180,386.01,172,83.93,2.14,0.2174
 Store Search,Store Intent,Reward Story H,10482,150,373.18,147,130.22,2.49,0.349
+Game Network,Game iOS A,Concept 23,6219,133,365.59,122,59.69,2.75,0.1633
 Social Network,Social Gameplay,Progress Video E,14188,211,365.58,202,121.62,1.73,0.3327
-Game Network,Game iOS A,Concept 23,6215,132,364.75,122,59.69,2.76,0.1636
 Social Network,Social Gameplay,Playable Puzzle E,15719,209,361.44,202,127.05,1.73,0.3515
 Game Network,Playable Broad,Playable Puzzle C,18483,248,340.78,241,181.02,1.37,0.5312
 Game Network,Playable Broad,Progress Video C,17686,246,336.73,234,136.8,1.37,0.4063
 Game Network,Playable Broad,Reward Story C,16273,220,301.89,208,132.23,1.37,0.438
 Social Network,Social Gameplay,Reward Story E,11334,164,281.08,161,43.16,1.71,0.1535
 Search Network,Search Value North,Reward Story B,9479,134,210.16,124,64.05,1.57,0.3048
-Game Network,Game iOS A,Concept 241,5160,69,187.66,59,22.59,2.72,0.1204
+Game Network,Game iOS A,Concept 241,5163,69,187.66,59,22.59,2.72,0.1204
 Search Network,Search Value North,Playable Puzzle B,8776,118,183.25,112,47.04,1.55,0.2567
 Search Network,Search Value North,Progress Video B,8145,116,181.77,112,44.03,1.57,0.2422
 Social Network,Social iOS C,Concept 177,9548,89,175.15,81,34.6,1.97,0.1976
@@ -23,24 +23,24 @@ Social Network,Social Lifestyle,Playable Puzzle F,4346,59,136.74,56,6.21,2.32,0.
 Social Network,Social Lifestyle,Reward Story F,4352,58,131.19,56,20.76,2.26,0.1583
 Search Network,Search Value Global,Playable Puzzle A,8525,119,125.75,114,81.26,1.06,0.6462
 Social Network,Social Lifestyle,Progress Video F,3884,54,123.98,53,4.25,2.3,0.0343
-Game Network,Game iOS B,Concept 24,6004,80,114.1,84,16.25,1.43,0.1424
+Game Network,Game iOS B,Concept 24,6009,81,115.16,84,16.35,1.42,0.142
 Social Network,Social iOS C,Concept 05,5355,60,91.7,39,11.73,1.53,0.128
 Game Network,Game Android C,Concept 32,2778,93,88.48,83,0.23,0.95,0.0025
 Game Network,Game iOS A,Concept 219,1879,34,86.13,37,13.9,2.53,0.1614
-Game Network,Game iOS B,Concept 254,5893,86,83.21,76,13.6,0.97,0.1634
+Game Network,Game iOS B,Concept 254,5941,86,83.87,76,13.76,0.98,0.1641
 Game Network,Game Android E,Concept 224,1890,38,81.69,33,10.38,2.15,0.127
 Discovery Network,Discovery Rewarded,Progress Video G,4710,68,64.98,63,15.23,0.96,0.2344
 Game Network,Game Android C,Concept 30,2582,64,62.73,77,0.25,0.98,0.004
 Game Network,Game iOS A,Concept 20,1208,19,53.87,19,5.07,2.84,0.0942
 Discovery Network,Discovery Rewarded,Playable Puzzle G,4130,55,53.55,52,45.79,0.97,0.855
-Game Network,Game iOS B,Concept 136,4030,48,52.27,43,7.15,1.09,0.1368
+Game Network,Game iOS B,Concept 136,4035,49,52.53,43,7.06,1.07,0.1343
 Discovery Network,Discovery Rewarded,Reward Story G,3899,53,50.97,52,17.76,0.96,0.3485
-Game Network,Game Android E,Concept 256,706,24,46.8,28,7.96,1.95,0.1701
+Game Network,Game Android E,Concept 256,708,24,46.8,28,8.52,1.95,0.1821
 Social Network,Social iOS C,Concept 238,2239,20,45.09,20,3.52,2.25,0.078
 Game Network,Game Android C,Concept 31,2493,45,42.94,39,0.2,0.95,0.0046
 Game Network,Game Android E,Concept 227,787,15,39.96,20,7.58,2.66,0.1898
-Game Network,Game iOS A,Concept 253,1011,13,36.61,14,4.86,2.82,0.1329
-Game Network,Game iOS B,Concept 222,2940,30,36.14,36,15.45,1.2,0.4275
+Game Network,Game iOS A,Concept 253,1015,13,36.61,14,4.86,2.82,0.1329
+Game Network,Game iOS B,Concept 222,2943,30,36.14,36,15.45,1.2,0.4275
 Game Network,Game iOS A,Concept 19,467,6,32.01,4,2.15,5.33,0.0673
 Social Network,Social iOS C,Concept 04,984,15,26.01,14,2.94,1.73,0.1132
 Game Network,Game iOS A,Concept 21,201,4,20.71,6,1.7,5.18,0.0821
@@ -56,13 +56,13 @@ Social Network,Social iOS C,Concept 02,320,6,9.91,5,0.65,1.65,0.0656
 Social Network,Social iOS C,Concept 03,214,3,9.73,5,2.4,3.24,0.2463
 Game Network,Game Android E,Concept 255,309,3,9.72,2,0.0,3.24,0.0
 Social Network,Social iOS C,Concept 176,336,2,7.37,3,0.79,3.69,0.1078
-Search Network,Search Android A,Concept 239,77,4,6.2,0,0.0,1.55,0.0
+Search Network,Search Android A,Concept 239,76,4,6.2,0,0.0,1.55,0.0
 Game Network,Game iOS B,Concept 26,413,6,6.14,6,2.16,1.02,0.3511
 Search Network,Search Android A,Concept 35,127,3,5.84,0,0.0,1.95,0.0
 Social Network,Social iOS C,Concept 175,217,1,4.54,3,0.38,4.54,0.0836
 Search Network,Search Android A,Concept 285,54,1,3.96,0,0.0,3.96,0.0
 Game Network,Game iOS B,Concept 27,271,5,3.83,7,1.05,0.77,0.275
-Search Network,Search Android A,Concept 149,320,2,3.59,0,0.0,1.79,0.0
+Search Network,Search Android A,Concept 149,319,2,3.59,0,0.0,1.79,0.0
 Search Network,Search Android A,Concept 36,46,0,3.01,0,0.0,,0.0
 Game Network,Game Android E,Concept 226,152,0,2.82,1,0.0,,0.0
 Game Network,Game Android E,Concept 223,125,0,2.8,0,0.0,,0.0
@@ -71,7 +71,7 @@ Game Network,Game iOS B,Concept 28,287,4,2.63,3,0.88,0.66,0.3353
 Search Network,Search Android A,Concept 64,43,0,2.4,0,0.0,,0.0
 Search Network,Search Android A,Concept 283,64,1,2.28,0,0.0,2.28,0.0
 Search Network,Search Android A,Concept 185,95,1,2.17,0,0.0,2.17,0.0
-Search Network,Search Android A,Concept 148,108,1,1.98,0,0.0,1.98,0.0
+Search Network,Search Android A,Concept 148,107,1,1.98,0,0.0,1.98,0.0
 Search Network,Search Android A,Concept 276,51,1,1.87,0,0.0,1.87,0.0
 Game Network,Game Android E,Concept 225,112,0,1.75,1,0.79,,0.4539
 Game Network,Game iOS A,Concept 22,182,0,1.72,1,0.6,,0.3515
@@ -93,7 +93,7 @@ Search Network,Search Android A,Concept 190,17,0,0.76,0,0.0,,0.0
 Search Network,Search Android E,Concept 141,120,0,0.76,0,0.0,,0.0
 Search Network,Search Android E,Concept 203,92,0,0.75,0,0.0,,0.0
 Game Network,Game Android A,Concept 29,0,1,0.74,0,0.0,0.74,0.0
-Search Network,Search Android A,Concept 261,8,0,0.74,0,0.0,,0.0
+Search Network,Search Android A,Concept 261,7,0,0.74,0,0.0,,0.0
 Search Network,Search Android A,Concept 196,31,0,0.73,0,0.0,,0.0
 Search Network,Search Android E,Concept 102,96,0,0.71,0,0.0,,0.0
 Search Network,Search Android E,Concept 97,143,0,0.66,0,0.0,,0.0
