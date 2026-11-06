@@ -73,7 +73,7 @@ month,device_id,person_id,install_timestamp,source,campaign,creative,platform,re
 2025-11,SYN-202511-DC6EBD3299EE0,SYN-202511-PC6EBD3299EE0,2025-11-03T02:52:43,Search Network,Search Android A,Campaign-level,Android,Western Europe,False,active,True,
 2025-11,SYN-202511-D797700E898B2,SYN-202511-P797700E898B2,2025-11-03T04:25:46,Game Network,Game iOS A,Concept 241,iOS,APAC,False,active,True,
 2025-11,SYN-202511-D5411919E5D36,SYN-202511-P5411919E5D36,2025-11-03T04:43:42,Game Network,Game iOS B,Concept 254,iOS,Western Europe,False,active,True,
-2025-11,SYN-202511-D86C166BC76AA,SYN-202511-P86C166BC76AA,2025-11-03T04:46:01,Game Network,Game Android E,Concept 256,Android,Western Europe,False,active,False,
+2025-11,SYN-202511-D86C166BC76AA,SYN-202511-P86C166BC76AA,2025-11-03T04:46:01,Game Network,Game Android E,Concept 256,Android,Western Europe,False,active,True,
 2025-11,SYN-202511-DDB00C169C5B9,SYN-202511-PDB00C169C5B9,2025-11-03T08:48:39,Game Network,Game iOS B,Concept 254,iOS,North America,False,active,True,
 2025-11,SYN-202511-DA67B7E628506,SYN-202511-PA67B7E628506,2025-11-03T08:57:46,Game Network,Game iOS B,Concept 24,iOS,North America,False,active,True,
 2025-11,SYN-202511-D0DD3AA65F1A1,SYN-202511-P0DD3AA65F1A1,2025-11-03T09:16:34,Game Network,Game iOS B,Concept 254,iOS,North America,False,active,True,
