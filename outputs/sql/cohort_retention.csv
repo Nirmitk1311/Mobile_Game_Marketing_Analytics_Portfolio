@@ -5,15 +5,15 @@ Game Network,Playable Premium,543,515,0.4311,477,0.2369,427,0.1358,290,0.0655
 Store Search,Store Intent,472,464,0.4612,431,0.2251,373,0.1233,280,0.0536
 Search Network,Search Value Global,370,355,0.3127,332,0.1145,290,0.0586,184,0.0163
 Search Network,Search Value North,348,339,0.3451,314,0.2038,277,0.0939,193,0.057
-Game Network,Game iOS B,279,264,0.3409,234,0.2009,179,0.1117,136,0.0956
-Game Network,Game iOS A,269,260,0.3115,249,0.2249,214,0.1308,171,0.0702
+Game Network,Game iOS B,326,313,0.3291,289,0.1938,253,0.1146,162,0.0988
+Game Network,Game iOS A,322,295,0.3186,275,0.2109,257,0.1323,197,0.0812
 Game Network,Game Android C,199,199,0.0905,199,0.0251,199,0.0151,199,0.0101
-Social Network,Social iOS C,179,179,0.2458,178,0.1629,169,0.071,130,0.0462
+Search Network,Search Android A,193,178,0.2921,170,0.2294,153,0.1046,98,0.1122
+Social Network,Social iOS C,180,179,0.2458,179,0.162,179,0.067,155,0.0387
 Discovery Network,Discovery Rewarded,167,167,0.2515,167,0.0838,167,0.0359,162,0.0185
-Search Network,Search Android A,165,159,0.2956,144,0.2292,115,0.1304,71,0.1268
 Social Network,Social Lifestyle,165,165,0.2909,165,0.103,165,0.0667,162,0.0123
 Search Network,Search Android E,103,103,0.1165,103,0.0971,103,0.1165,103,0.0583
-Game Network,Game Android E,85,84,0.3214,77,0.2078,66,0.0606,50,0.1
-Store Search,Store iOS A,18,18,0.2778,18,0.1111,18,0.0556,17,0.0588
+Game Network,Game Android E,94,91,0.3187,88,0.2045,82,0.0732,61,0.0984
+Store Search,Store iOS A,18,18,0.2778,18,0.1111,18,0.0556,18,0.0556
 Search Network,Search Android B,8,8,0.25,8,0.25,8,0.25,8,0.25
 Social Network,Social iOS B,4,4,0.5,4,0.5,4,0.25,4,0.0

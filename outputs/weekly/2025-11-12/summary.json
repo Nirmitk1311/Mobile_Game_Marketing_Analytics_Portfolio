@@ -1,0 +1,42 @@
+{
+  "week_end": "2025-11-12",
+  "quality_window": [
+    "2025-10-30",
+    "2025-11-12"
+  ],
+  "new_creative_window": [
+    "2025-11-06",
+    "2025-11-12"
+  ],
+  "data_through": "2025-11-11",
+  "spend_data_through": "2025-11-10",
+  "estimated_installs": 21,
+  "estimated_spend_usd": 37.58,
+  "complete": false,
+  "creatives_in_quality_window": 82,
+  "new_creatives": 13,
+  "unnamed_new_assets": {
+    "count": 8,
+    "impressions": 27,
+    "installs": 0,
+    "spend_usd": 1.86
+  },
+  "players": 324,
+  "tracking_coverage": 0.9753086419753086,
+  "flagged_share": 0.0,
+  "ghost_install_disputes": [],
+  "lowest_tracking_coverage": {
+    "source": "Search Network",
+    "platform": "Android",
+    "tracking_coverage": 0.9393939393939394
+  },
+  "paused_resumed_excluded": 25,
+  "d30_roas": {
+    "window": [
+      "2025-10-01",
+      "2025-10-12"
+    ],
+    "d7_roas": 0.1235835744378458,
+    "d30_roas": 0.1271199431500939
+  }
+}
