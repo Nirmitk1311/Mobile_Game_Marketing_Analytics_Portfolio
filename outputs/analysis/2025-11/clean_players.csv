@@ -297,3 +297,6 @@ month,device_id,person_id,install_timestamp,source,campaign,creative,platform,re
 2025-11,SYN-202511-DE932826325B3,SYN-202511-PE932826325B3,2025-11-12 04:01:49,Game Network,Game iOS B,Concept 309,iOS,LATAM,False,active,True,
 2025-11,SYN-202511-D3416541710F4,SYN-202511-P3416541710F4,2025-11-12 04:45:01,Game Network,Game iOS A,Concept 307,iOS,North America,False,active,True,
 2025-11,SYN-202511-D4DFB15FA0D66,SYN-202511-P4DFB15FA0D66,2025-11-12 05:06:24,Game Network,Game iOS A,Concept 307,iOS,North America,False,active,True,
+2025-11,SYN-202511-D0624F8553A85,SYN-202511-P0624F8553A85,2025-11-12 05:48:05,Game Network,Game iOS A,Concept 307,iOS,APAC,False,active,True,
+2025-11,SYN-202511-D8EC14AB6FCFD,SYN-202511-P8EC14AB6FCFD,2025-11-12 06:36:43,Game Network,Game iOS A,Concept 241,iOS,North America,False,active,True,
+2025-11,SYN-202511-DBB0FC3B15394,SYN-202511-PBB0FC3B15394,2025-11-12 06:59:55,Game Network,Game iOS A,Concept 307,iOS,North America,False,active,True,
