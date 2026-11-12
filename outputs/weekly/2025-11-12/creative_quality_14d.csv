@@ -1,83 +1,83 @@
 source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,acquired_players,tracked_players,flagged_players,d1_eligible,d1_returned,d7_eligible,d7_returned,levels_completed,total_revenue_usd,d1_retention,d7_retention,levels_per_player,revenue_per_player_usd,tracking_coverage,flagged_share,est_installs,est_spend_usd,actual_spend_usd,roas,decision,decision_detail
-Game Network,Game iOS A,Concept 23,1417.0,1326.2,41.2935938094634,83.46600000000001,13,2.0212820512820513,29.141562321427948,0.9359209597741708,31.0,31.0,0.0,27.0,11.0,11.0,3.0,888.0,12.4767,0.4074074074074074,0.2727272727272727,28.64516129032258,0.4024741935483871,1.0,0.0,2.2935938094634025,4.636,78.83,0.15827349993657236,,
-Game Network,Game iOS B,Concept 254,4890.0,4731.0,76.0,79.28999999999999,8,1.0432894736842104,15.541922290388548,0.9674846625766871,59.0,57.0,0.0,59.0,21.0,35.0,3.0,2302.0,12.8833,0.3559322033898305,0.08571428571428572,39.016949152542374,0.21836101694915255,0.9661016949152542,0.0,0.0,0.0,79.28999999999999,0.16248328919157526,,
-Game Network,Game iOS A,Concept 241,1511.8,1434.2,27.862525597269624,76.61,13,2.749571273880045,18.430034129692835,0.9486704590554307,23.0,23.0,0.0,20.0,6.0,13.0,0.0,787.0,8.9518,0.3,0.0,34.21739130434783,0.3892086956521739,1.0,0.0,0.8625255972696245,4.12,72.49,0.12349013657056147,,
-Game Network,Game Android E,Concept 256,583.0,466.0,20.0,38.42,8,1.921,34.305317324185246,0.7993138936535163,22.0,22.0,0.0,22.0,6.0,16.0,2.0,773.0,9.592,0.2727272727272727,0.125,35.13636363636363,0.436,1.0,0.0,0.0,0.0,38.42,0.24966163456533055,,
-Game Network,Game iOS A,Concept 253,731.0,721.0,14.0,35.57,8,2.540714285714286,19.151846785225718,0.9863201094391245,13.0,13.0,0.0,13.0,3.0,8.0,0.0,258.0,4.5748999999999995,0.23076923076923078,0.0,19.846153846153847,0.3519153846153846,1.0,0.0,0.0,0.0,35.57,0.12861681192015742,,
-Game Network,Game iOS B,Concept 24,1904.6,1741.0,24.79105829088851,33.618,13,1.3560534449776058,13.016411997736277,0.9141026987293921,26.0,26.0,0.0,22.0,7.0,11.0,1.0,752.0,4.8013,0.3181818181818182,0.09090909090909091,28.923076923076923,0.18466538461538462,1.0,0.0,1.7910582908885115,2.848,30.77,0.15603834904127398,,
-Game Network,Game iOS B,Concept 222,1170.4,1133.4,16.4,25.154,13,1.5337804878048782,14.012303485987696,0.9683868762816131,15.0,15.0,0.0,14.0,3.0,7.0,1.0,432.0,2.6376,0.21428571428571427,0.14285714285714285,28.8,0.17584,1.0,0.0,1.4,2.314,22.84,0.1154816112084063,,
-Game Network,Game iOS B,Concept 136,720.0,681.0,11.0,9.86,8,0.8963636363636364,15.277777777777779,0.9458333333333333,8.0,8.0,0.0,8.0,0.0,6.0,1.0,271.0,1.3604,0.0,0.16666666666666666,33.875,0.17005,1.0,0.0,0.0,0.0,9.86,0.1379716024340771,,
-Search Network,Search Android A,Concept 58,28.0,5.0,1.0,7.268,12,7.268,35.714285714285715,0.17857142857142858,,,,,,,,,,,,,,,,0.0,0.098,7.17,,,
-Search Network,Search Android A,Concept 35,65.8,9.0,2.1933333333333334,7.222,13,3.2927051671732523,33.333333333333336,0.13677811550151978,,,,,,,,,,,,,,,,0.19333333333333333,0.882,6.34,,,
-Search Network,Search Android A,Concept 239,87.0,8.6,3.0,6.446,13,2.1486666666666667,34.48275862068966,0.09885057471264368,,,,,,,,,,,,,,,,0.0,0.466,5.9799999999999995,,,
-Social Network,Social iOS C,Concept 177,321.0,29.0,2.0,5.87,1,2.935,6.230529595015576,0.09034267912772585,4.0,4.0,0.0,4.0,2.0,4.0,0.0,104.0,1.1944,0.5,0.0,26.0,0.2986,1.0,0.0,0.0,0.0,5.87,0.2034752981260647,,
-Search Network,Search Android A,Concept 184,65.0,0.0,2.0,4.02,1,2.01,30.76923076923077,0.0,,,,,,,,,,,,,,,,0.0,0.0,4.02,,,
-Search Network,Search Android A,Concept 285,55.0,0.0,1.0,3.96,7,3.96,18.181818181818183,0.0,,,,,,,,,,,,,,,,0.0,0.0,3.96,,,
-Search Network,Search Android A,Concept 276,127.0,0.0,1.0,3.91,13,3.91,7.874015748031496,0.0,,,,,,,,,,,,,,,,0.0,0.32999999999999996,3.58,,,
-Social Network,Social iOS C,Concept 05,164.0,25.0,2.0,3.4,1,1.7,12.195121951219512,0.1524390243902439,2.0,2.0,0.0,1.0,1.0,1.0,0.0,36.0,0.5628,1.0,0.0,18.0,0.2814,1.0,0.0,0.0,0.0,3.4,0.16552941176470587,,
-Search Network,Search Android A,Concept 283,82.0,2.0,1.0,2.78,8,2.78,12.195121951219512,0.024390243902439025,,,,,,,,,,,,,,,,0.0,0.0,2.78,,,
-Game Network,Game Android E,Concept 255,74.0,63.0,1.0,2.3,8,2.3,13.513513513513514,0.8513513513513513,,,,,,,,,,,,,,,,0.0,0.0,2.3,,,
-Search Network,Search Android A,Concept 45,122.2,1.2,0.0,2.164,13,,0.0,0.009819967266775777,,,,,,,,,,,,,,,,0.0,0.334,1.83,,,
-Search Network,Search Android A,Concept 73,39.0,4.6,1.0833333333333333,2.12,12,1.9569230769230772,27.777777777777775,0.11794871794871795,,,,,,,,,,,,,,,,0.08333333333333333,0.25,1.87,,,
-Search Network,Search Android A,Concept 277,47.0,0.0,1.119047619047619,2.0549999999999997,10,1.836382978723404,23.80952380952381,0.0,,,,,,,,,,,,,,,,0.11904761904761904,0.225,1.8299999999999998,,,
-Search Network,Search Android A,Concept 267,77.4,1.2,0.0,1.8780000000000001,13,,0.0,0.015503875968992246,,,,,,,,,,,,,,,,0.0,0.158,1.7200000000000002,,,
-Search Network,Search Android A,Concept 148,50.2,0.0,0.0,1.774,13,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.274,1.5,,,
-Search Network,Search Android A,Concept 149,132.6,4.4,0.0,1.128,13,,0.0,0.03318250377073907,,,,,,,,,,,,,,,,0.0,0.10800000000000001,1.02,,,
-Search Network,Search Android A,Concept 66,4.0,0.0,0.0,0.9,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.45,0.45,,,
-Social Network,Social iOS C,Concept 238,40.0,5.0,0.0,0.78,1,,0.0,0.125,1.0,1.0,0.0,1.0,0.0,1.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,0.0,0.0,0.78,0.0,,
-Search Network,Search Android A,Concept 252,8.0,0.0,0.0,0.34,7,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.34,,,
-Search Network,Search Android A,Concept 36,8.0,0.0,0.0,0.28,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.28,,,
-Search Network,Search Android A,Concept 266,11.5,0.0,0.0,0.26,8,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.02,0.24,,,
-Search Network,Search Android A,Concept 240,1.0,0.0,0.0,0.23,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.23,,,
-Game Network,Game Android E,Concept 257,34.0,25.0,0.0,0.19,8,,0.0,0.7352941176470589,,,,,,,,,,,,,,,,0.0,0.0,0.19,,,
-Search Network,Search Android A,Concept 249,4.0,0.0,0.0,0.17,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.17,,,
-Search Network,Search Android A,Concept 202,3.0,0.0,0.0,0.17,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.17,,,
-Search Network,Search Android A,Concept 248,13.0,0.0,0.0,0.16,6,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.16,,,
-Search Network,Search Android A,Concept 246,12.666666666666666,0.0,0.0,0.15000000000000002,7,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.15000000000000002,,,
-Search Network,Search Android A,Concept 292,7.5,0.0,0.0,0.15,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.04,0.11,,,
-Search Network,Search Android A,Concept 190,9.2,0.0,0.0,0.10600000000000001,8,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.016,0.09,,,
-Search Network,Search Android A,Concept 281,22.25,0.0,0.0,0.10500000000000001,9,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.005,0.1,,,
-Search Network,Search Android A,Concept 280,13.5,0.0,0.0,0.085,7,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.015,0.07,,,
-Social Network,Social iOS C,Concept 245,4.0,0.0,0.0,0.07,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.07,,,
-Search Network,Search Android A,Concept 279,9.5,0.0,0.0,0.05,6,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.05,,,
-Search Network,Search Android A,Concept 261,4.0,0.0,0.0,0.04,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.04,,,
-Search Network,Search Android A,Concept 185,8.0,0.0,0.0,0.04,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.04,,,
-Search Network,Search Android A,Concept 269,12.0,0.0,0.0,0.04,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.04,,,
-Search Network,Search Android A,Concept 193,9.0,0.0,0.0,0.04,7,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.04,,,
-Search Network,Search Android A,Concept 250,8.0,0.0,0.0,0.030000000000000002,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.030000000000000002,,,
-Search Network,Search Android A,Concept 47,6.0,0.0,0.0,0.03,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.03,,,
-Search Network,Search Android A,Concept 275,10.5,0.0,0.0,0.025,6,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.005,0.02,,,
-Search Network,Search Android A,Concept 282,14.5,0.0,0.0,0.02,11,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.02,,,
-Search Network,Search Android A,Concept 251,8.0,0.0,0.0,0.02,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.02,,,
-Search Network,Search Android A,Concept 270,12.0,0.0,0.0,0.02,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.02,,,
-Search Network,Search Android A,Concept 180,3.0,0.0,0.0,0.01,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.01,,,
-Search Network,Search Android A,Concept 198,2.0,0.0,0.0,0.01,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.01,,,
-Search Network,Search Android A,Concept 284,4.0,0.0,0.0,0.01,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.01,,,
-Search Network,Search Android A,Concept 50,1.0,0.0,0.0,0.01,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.01,,,
-Search Network,Search Android A,Concept 135,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 130,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 169,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 179,3.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 178,2.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 172,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 192,6.0,0.0,0.0,0.0,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 196,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 229,5.0,0.0,0.0,0.0,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 188,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 247,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 272,14.0,0.0,0.0,0.0,6,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 271,16.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 263,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 268,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 260,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 262,2.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 243,2.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 274,3.0,0.0,0.0,0.0,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 293,3.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 288,7.666666666666667,0.0,0.0,0.0,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 273,11.0,0.0,0.0,0.0,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 278,4.0,0.0,0.0,0.0,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 49,2.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 44,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 64,4.0,0.0,0.0,0.0,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
-Search Network,Search Android A,Concept 65,2.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,,
+Game Network,Game iOS A,Concept 23,1551.3333333333333,1453.5,44.377906976744185,89.05166666666666,14,2.0066666666666664,28.60630015690429,0.9369359690588741,34.0,33.0,0.0,30.0,12.0,12.0,3.0,938.0,15.0411,0.4,0.25,27.58823529411765,0.44238529411764704,0.9705882352941176,0.0,2.3779069767441863,4.771666666666667,84.28,0.1784658281917418,Too early to judge,"only 1,551 impressions (needs 7,000)"
+Game Network,Game iOS A,Concept 241,1575.1666666666667,1496.5,28.902140672782874,79.48166666666667,14,2.7500269812718234,18.348623853211006,0.9500581949000105,25.0,25.0,0.0,22.0,7.0,13.0,0.0,898.0,10.425,0.3181818181818182,0.0,35.92,0.41700000000000004,1.0,0.0,0.9021406727828745,3.9416666666666664,75.54,0.1380063542494043,Too early to judge,"only 1,575 impressions (needs 7,000)"
+Game Network,Game iOS B,Concept 254,4890.0,4731.0,76.0,79.28999999999999,8,1.0432894736842104,15.541922290388548,0.9674846625766871,59.0,57.0,0.0,59.0,21.0,40.0,4.0,2304.0,13.4688,0.3559322033898305,0.1,39.05084745762712,0.22828474576271185,0.9661016949152542,0.0,0.0,0.0,79.28999999999999,0.16986757472569053,Too early to judge,"only 4,890 impressions (needs 7,000)"
+Game Network,Game Android E,Concept 256,583.0,466.0,20.0,38.42,8,1.921,34.305317324185246,0.7993138936535163,22.0,22.0,0.0,22.0,6.0,18.0,2.0,774.0,9.0211,0.2727272727272727,0.1111111111111111,35.18181818181818,0.41005,1.0,0.0,0.0,0.0,38.42,0.23480218636127018,Too early to judge,"only 583 impressions (needs 7,000)"
+Game Network,Game iOS A,Concept 253,731.0,721.0,14.0,35.57,8,2.540714285714286,19.151846785225718,0.9863201094391245,13.0,13.0,0.0,13.0,3.0,9.0,1.0,259.0,4.8507,0.23076923076923078,0.1111111111111111,19.923076923076923,0.3731307692307692,1.0,0.0,0.0,0.0,35.57,0.1363705369693562,Too early to judge,"only 731 impressions (needs 7,000)"
+Game Network,Game iOS B,Concept 24,2179.1666666666665,2017.0,26.94320804484009,34.43833333333333,14,1.278182363288719,12.363996043521267,0.925583173996176,28.0,28.0,0.0,22.0,7.0,12.0,1.0,781.0,5.228899999999999,0.3181818181818182,0.08333333333333333,27.892857142857142,0.18674642857142856,1.0,0.0,1.9432080448400924,2.558333333333333,31.88,0.1640181932245922,Too early to judge,"only 2,179 impressions (needs 7,000)"
+Game Network,Game iOS B,Concept 222,1448.1666666666667,1363.6666666666667,18.5,26.553333333333335,14,1.4353153153153153,12.774772701116353,0.9416503625273334,19.0,19.0,0.0,15.0,3.0,10.0,1.0,528.0,3.6993,0.2,0.1,27.789473684210527,0.1947,1.0,0.0,1.5,2.183333333333333,24.37,0.15179729175215428,Too early to judge,"only 1,448 impressions (needs 7,000)"
+Game Network,Game iOS B,Concept 136,720.0,681.0,11.0,9.86,8,0.8963636363636364,15.277777777777779,0.9458333333333333,8.0,8.0,0.0,8.0,0.0,7.0,1.0,271.0,1.3585,0.0,0.14285714285714285,33.875,0.1698125,1.0,0.0,0.0,0.0,9.86,0.13777890466531442,Too early to judge,"only 720 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 239,96.5,12.0,4.166666666666667,9.226666666666667,14,2.2144,43.17789291882556,0.12435233160621761,,,,,,,,,,,,,,,,0.16666666666666666,0.7966666666666667,8.43,,Too early to judge,"only 96 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 35,69.5,8.833333333333334,2.1666666666666665,7.32,14,3.3784615384615386,31.175059952038367,0.12709832134292567,,,,,,,,,,,,,,,,0.16666666666666666,0.77,6.55,,Too early to judge,"only 69 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 58,29.0,5.0,1.0,7.251666666666666,13,7.251666666666666,34.48275862068966,0.1724137931034483,,,,,,,,,,,,,,,,0.0,0.08166666666666667,7.17,,Too early to judge,"only 29 impressions (needs 7,000)"
+Social Network,Social iOS C,Concept 177,321.0,29.0,2.0,5.87,1,2.935,6.230529595015576,0.09034267912772585,4.0,4.0,0.0,4.0,2.0,4.0,0.0,104.0,1.1944,0.5,0.0,26.0,0.2986,1.0,0.0,0.0,0.0,5.87,0.2034752981260647,Too early to judge,"only 321 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 184,65.0,0.0,2.0,4.02,1,2.01,30.76923076923077,0.0,,,,,,,,,,,,,,,,0.0,0.0,4.02,,Too early to judge,"only 65 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 276,134.33333333333334,0.0,1.0,4.006666666666667,14,4.006666666666667,7.444168734491314,0.0,,,,,,,,,,,,,,,,0.0,0.2966666666666667,3.71,,Too early to judge,"only 134 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 285,55.0,0.0,1.0,3.96,7,3.96,18.181818181818183,0.0,,,,,,,,,,,,,,,,0.0,0.0,3.96,,Too early to judge,"only 55 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 148,52.0,0.0,0.0,3.8516666666666666,14,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.5316666666666667,3.3200000000000003,,Too early to judge,"only 52 impressions (needs 7,000)"
+Social Network,Social iOS C,Concept 05,164.0,25.0,2.0,3.4,1,1.7,12.195121951219512,0.1524390243902439,2.0,2.0,0.0,2.0,1.0,1.0,0.0,36.0,0.5628,0.5,0.0,18.0,0.2814,1.0,0.0,0.0,0.0,3.4,0.16552941176470587,Too early to judge,"only 164 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 283,82.0,2.0,1.0,2.78,8,2.78,12.195121951219512,0.024390243902439025,,,,,,,,,,,,,,,,0.0,0.0,2.78,,Too early to judge,"only 82 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 45,147.33333333333334,2.3333333333333335,0.0,2.54,14,,0.0,0.01583710407239819,,,,,,,,,,,,,,,,0.0,0.34,2.2,,Too early to judge,"only 147 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 277,65.2,0.0,2.2269767441860466,2.394,11,1.075,34.15608503352832,0.0,,,,,,,,,,,,,,,,0.22697674418604652,0.244,2.15,,Too early to judge,"only 65 impressions (needs 7,000)"
+Game Network,Game Android E,Concept 255,74.0,63.0,1.0,2.3,8,2.3,13.513513513513514,0.8513513513513513,,,,,,,,,,,,,,,,0.0,0.0,2.3,,Too early to judge,"only 74 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 267,96.0,3.5,0.0,2.2483333333333335,14,,0.0,0.036458333333333336,,,,,,,,,,,,,,,,0.0,0.18833333333333335,2.06,,Too early to judge,"only 96 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 73,40.833333333333336,4.5,1.0745614035087718,2.0783333333333336,13,1.9341224489795923,26.315789473684205,0.11020408163265305,,,,,,,,,,,,,,,,0.07456140350877194,0.20833333333333334,1.87,,Too early to judge,"only 40 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 149,147.33333333333334,5.5,0.0,1.4016666666666666,14,,0.0,0.03733031674208145,,,,,,,,,,,,,,,,0.0,0.13166666666666668,1.27,,Too early to judge,"only 147 impressions (needs 7,000)"
+Social Network,Social iOS C,Concept 238,40.0,5.0,0.0,0.78,1,,0.0,0.125,1.0,1.0,0.0,1.0,0.0,1.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,0.0,0.0,0.78,0.0,Too early to judge,"only 40 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 66,3.0,0.0,0.0,0.45,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.45,,Too early to judge,"only 3 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 252,7.0,0.0,0.0,0.34,6,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.34,,Too early to judge,"only 7 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 36,8.0,0.0,0.0,0.28,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.28,,Too early to judge,"only 8 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 266,12.4,0.0,0.0,0.256,9,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.016,0.24,,Too early to judge,"only 12 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 240,1.0,0.0,0.0,0.23,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.23,,Too early to judge,"only 1 impressions (needs 7,000)"
+Game Network,Game Android E,Concept 257,34.0,25.0,0.0,0.19,8,,0.0,0.7352941176470589,,,,,,,,,,,,,,,,0.0,0.0,0.19,,Too early to judge,"only 34 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 249,4.0,0.0,0.0,0.17,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.17,,Too early to judge,"only 4 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 202,3.0,0.0,0.0,0.17,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.17,,Too early to judge,"only 3 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 248,13.0,0.0,0.0,0.16,6,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.16,,Too early to judge,"only 13 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 246,11.0,0.0,0.0,0.15000000000000002,6,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.15000000000000002,,Too early to judge,"only 11 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 292,6.0,0.0,0.0,0.11,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.11,,Too early to judge,"only 6 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 280,14.0,0.0,0.0,0.10666666666666667,8,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.016666666666666666,0.09,,Too early to judge,"only 14 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 281,20.0,0.0,0.0,0.1,8,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.1,,Too early to judge,"only 20 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 190,8.0,0.0,0.0,0.09,7,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.09,,Too early to judge,"only 8 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 288,9.75,1.25,0.0,0.075,6,,0.0,0.1282051282051282,,,,,,,,,,,,,,,,0.0,0.015,0.06,,Too early to judge,"only 9 impressions (needs 7,000)"
+Social Network,Social iOS C,Concept 245,4.0,0.0,0.0,0.07,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.07,,Too early to judge,"only 4 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 279,10.333333333333334,0.0,0.0,0.06333333333333334,7,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0033333333333333335,0.060000000000000005,,Too early to judge,"only 10 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 261,4.0,0.0,0.0,0.04,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.04,,Too early to judge,"only 4 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 185,8.0,0.0,0.0,0.04,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.04,,Too early to judge,"only 8 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 193,9.0,0.0,0.0,0.04,7,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.04,,Too early to judge,"only 9 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 269,12.0,0.0,0.0,0.04,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.04,,Too early to judge,"only 12 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 282,17.8,0.0,0.0,0.032,12,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.002,0.03,,Too early to judge,"only 17 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 250,8.0,0.0,0.0,0.030000000000000002,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.030000000000000002,,Too early to judge,"only 8 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 47,6.0,0.0,0.0,0.03,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.03,,Too early to judge,"only 6 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 275,8.0,0.0,0.0,0.02,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.02,,Too early to judge,"only 8 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 270,11.0,0.0,0.0,0.02,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.02,,Too early to judge,"only 11 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 251,8.0,0.0,0.0,0.02,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.02,,Too early to judge,"only 8 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 198,2.0,0.0,0.0,0.01,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.01,,Too early to judge,"only 2 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 180,3.0,0.0,0.0,0.01,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.01,,Too early to judge,"only 3 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 284,4.0,0.0,0.0,0.01,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.01,,Too early to judge,"only 4 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 50,1.0,0.0,0.0,0.01,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.01,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 130,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 135,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 179,3.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 3 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 178,2.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 2 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 172,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 169,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 196,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 229,7.0,0.0,0.0,0.0,6,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 7 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 188,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 192,6.0,0.0,0.0,0.0,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 6 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 272,13.0,0.0,0.0,0.0,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 13 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 271,18.0,0.0,0.0,0.0,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 18 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 263,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 268,5.0,0.0,0.0,0.0,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 5 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 260,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 262,2.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 2 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 243,2.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 2 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 247,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 293,3.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 3 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 274,5.0,0.0,0.0,0.0,5,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 5 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 273,11.0,0.0,0.0,0.0,3,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 11 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 278,4.0,0.0,0.0,0.0,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 4 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 49,2.0,0.0,0.0,0.0,2,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 2 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 44,1.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 1 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 64,4.0,0.0,0.0,0.0,4,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 4 impressions (needs 7,000)"
+Search Network,Search Android A,Concept 65,2.0,0.0,0.0,0.0,1,,0.0,0.0,,,,,,,,,,,,,,,,0.0,0.0,0.0,,Too early to judge,"only 2 impressions (needs 7,000)"

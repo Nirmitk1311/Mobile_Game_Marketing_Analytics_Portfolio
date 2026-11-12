@@ -4,10 +4,10 @@
   "tracked_players": 1009,
   "tracking_rate": 0.8550847457627119,
   "spend_usd": 2565.8900000000003,
-  "ad_revenue_usd": 339.8927,
+  "ad_revenue_usd": 342.6251,
   "iap_revenue_usd": 59.89,
-  "total_revenue_usd": 399.7827,
-  "roas": 0.15580664019112275,
+  "total_revenue_usd": 402.5151,
+  "roas": 0.15687153385375055,
   "d1_eligible": 1180,
   "d1_returned": 305,
   "d1_retention": 0.2584745762711864,
@@ -17,7 +17,7 @@
   "d7_eligible": 1180,
   "d7_returned": 111,
   "d7_retention": 0.0940677966101695,
-  "d14_eligible": 1005,
-  "d14_returned": 66,
-  "d14_retention": 0.06567164179104477
+  "d14_eligible": 1017,
+  "d14_returned": 67,
+  "d14_retention": 0.06588003933136677
 }
