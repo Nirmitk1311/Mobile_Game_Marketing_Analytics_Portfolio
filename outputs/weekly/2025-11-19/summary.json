@@ -21,14 +21,14 @@
     "installs": 0,
     "spend_usd": 0.99
   },
-  "players": 368,
-  "tracking_coverage": 0.970108695652174,
+  "players": 406,
+  "tracking_coverage": 0.9679802955665024,
   "flagged_share": 0.0,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
     "source": "Game Network",
     "platform": "Android",
-    "tracking_coverage": 0.9545454545454546
+    "tracking_coverage": 0.9583333333333334
   },
   "paused_resumed_excluded": 20,
   "d30_roas": {
