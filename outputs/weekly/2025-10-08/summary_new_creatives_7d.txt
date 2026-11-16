@@ -1,0 +1,1 @@
+This report tests the cost of the creatives newly activated between 2025-10-02 and 2025-10-08: 32 new creatives delivered 13,819 impressions and 263 installs for $296. The test week is complete. Decisions: extend 1 week for 32 creatives. 8 paused-and-resumed creatives were left out because they are not new.

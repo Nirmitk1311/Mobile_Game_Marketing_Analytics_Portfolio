@@ -55,3 +55,4 @@ Two patterns from the live data are kept in the synthetic months:
 ## Limitations
 
 The data is intentionally simplified. It does not model privacy-framework postbacks, probabilistic attribution, currency conversion, delayed platform reporting or every production event family. Fraud appears only as a generic per-player flag (`quality_flag`) in the daily-refreshed months. Results are demonstrations of analysis design, not real commercial findings.
+- **Report summaries:** the 14-day creative quality review and the 7-day new-creative cost test answer different questions, so each gets its **own** plain-language summary (`summary_creative_quality_14d.txt`, `summary_new_creatives_7d.txt`) instead of one shared text: prose with the numbers in sentences, no tables.

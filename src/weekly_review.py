@@ -28,6 +28,8 @@ every campaign keeps one name, so the name stands for the ID.
   complete days only (spend_data_through).
 - D30 ROAS: revenue in each player's first 30 days / spend for the latest 14 install days that are 30+ days old
   (an older group of installs than the 14-day window), per campaign (d30_roas.csv); empty until such days exist.
+- report summaries: each report has its own plain-language summary (summary_creative_quality_14d.txt and
+  summary_new_creatives_7d.txt), because the two reports answer different questions; prose, no tables.
 - traffic quality (14 days): by network and platform, the share of acquired players that sent any in-game event
   (tracking coverage) and the share flagged as likely fraud. Flagged players stay in every metric; they are counted
   and listed separately, never removed.
@@ -282,6 +284,43 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     return {"quality": quality, "new": new, "traffic": traffic, "summary": summary, "resumed": resumed}
 
 
+def _count_text(n, word):
+    return f"{n:,} {word}" + ("" if n == 1 else "s")
+
+
+def report_summaries(res) -> dict[str, str]:
+    """Each report gets its OWN plain-language summary, because the two reports answer different questions (real
+    project rule 2026-11-12): the 14-day review judges the quality of the creatives already running, the 7-day test
+    judges the cost of the newly activated ones. Prose with numbers in sentences, no tables."""
+    s, q, n = res["summary"], res["quality"], res["new"]
+    win_q, win_n = s["quality_window"], s["new_creative_window"]
+    state = "complete" if s["complete"] else f"still running (data through {s['data_through']})"
+    qd = q["decision"].replace("", np.nan).dropna().value_counts() if len(q) and "decision" in q else pd.Series(dtype=int)
+    q_text = (f"This report checks the quality of the creatives that ran between {win_q[0]} and {win_q[1]}: "
+              f"{_count_text(int(len(q)), 'creative')} delivered {int(q['impressions'].sum()) if len(q) else 0:,} impressions "
+              f"and {int(q['installs'].sum()) if len(q) else 0:,} installs for ${float(q['spend_usd'].sum()) if len(q) else 0:,.0f}. "
+              f"The window is {state}. ")
+    if len(qd):
+        q_text += "Decisions: " + ", ".join(f"{k.lower()} for {_count_text(int(v), 'creative')}" for k, v in qd.items()) + ". "
+    elif not s["complete"]:
+        q_text += "Decisions are made only when the window is complete. "
+    if s.get("tracking_coverage") is not None:
+        q_text += (f"{s['tracking_coverage']:.0%} of the {s['players']:,} acquired players sent in-game events and "
+                   f"{s['flagged_share']:.1%} were flagged as likely fraud.")
+    nd = n["decision"].replace("", np.nan).dropna().value_counts() if len(n) and "decision" in n else pd.Series(dtype=int)
+    n_text = (f"This report tests the cost of the creatives newly activated between {win_n[0]} and {win_n[1]}: "
+              f"{_count_text(s['new_creatives'], 'new creative')} delivered {int(n['impressions'].sum()) if len(n) else 0:,} "
+              f"impressions and {int(n['installs'].sum()) if len(n) else 0:,} installs for "
+              f"${float(n['spend_usd'].sum()) if len(n) else 0:,.0f}. The test week is {state}. ")
+    if len(nd):
+        n_text += "Decisions: " + ", ".join(f"{k.lower()} for {_count_text(int(v), 'creative')}" for k, v in nd.items()) + ". "
+    elif not s["complete"]:
+        n_text += "Keep or deactivate decisions come only when the 7 days are complete. "
+    if s.get("paused_resumed_excluded"):
+        n_text += f"{_count_text(s['paused_resumed_excluded'], 'paused-and-resumed creative')} were left out because they are not new."
+    return {"creative_quality_14d": q_text.strip(), "new_creatives_7d": n_text.strip()}
+
+
 def paused_resumed(c14: pd.DataFrame, r2_start: date, last: date, keys: list[str]) -> pd.DataFrame:
     """Creatives with impressions in the same campaign before the 7 days, at least one day without impressions,
     and impressions again inside the 7 days. Not new; listed separately."""
@@ -333,6 +372,8 @@ def main() -> None:
         res["new"].to_csv(d / "new_creatives_7d.csv", index=False)
         res["traffic"].to_csv(d / "traffic_quality.csv", index=False)
         res["resumed"].to_csv(d / "paused_resumed_7d.csv", index=False)
+        for name, text in report_summaries(res).items():
+            (d / f"summary_{name}.txt").write_text(text + "\n", encoding="utf-8")
         (d / "summary.json").write_text(json.dumps(res["summary"], indent=2, default=str), encoding="utf-8")
         results.append(res["summary"])
     print(json.dumps(results, indent=2, default=str))

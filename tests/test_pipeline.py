@@ -116,6 +116,16 @@ class WeeklyReviewTests(unittest.TestCase):
             if not summary["complete"] and len(new):
                 self.assertTrue((new["decision"] == "").all())
 
+    def test_each_report_has_its_own_summary(self):
+        for week in WEEKS:
+            q = (week / "summary_creative_quality_14d.txt").read_text(encoding="utf-8")
+            n = (week / "summary_new_creatives_7d.txt").read_text(encoding="utf-8")
+            self.assertNotEqual(q, n)
+            self.assertIn("quality", q)
+            self.assertIn("newly activated", n)
+            for text in (q, n):
+                self.assertNotIn("|", text)   # prose, no tables
+
     def test_no_quality_decision_under_min_impressions(self):
         for week in WEEKS:
             q = pd.read_csv(week / "creative_quality_14d.csv", keep_default_na=False)
