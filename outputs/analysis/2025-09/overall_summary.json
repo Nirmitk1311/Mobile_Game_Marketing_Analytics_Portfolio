@@ -9,15 +9,15 @@
   "total_revenue_usd": 1207.0844,
   "roas": 0.19898919895550338,
   "d1_eligible": 1734,
-  "d1_returned": 658,
-  "d1_retention": 0.37946943483275664,
+  "d1_returned": 431,
+  "d1_retention": 0.248558246828143,
   "d3_eligible": 1629,
-  "d3_returned": 330,
-  "d3_retention": 0.20257826887661143,
+  "d3_returned": 292,
+  "d3_retention": 0.17925107427869857,
   "d7_eligible": 1431,
-  "d7_returned": 148,
-  "d7_retention": 0.103424178895877,
+  "d7_returned": 137,
+  "d7_retention": 0.0957372466806429,
   "d14_eligible": 1038,
-  "d14_returned": 56,
-  "d14_retention": 0.05394990366088632
+  "d14_returned": 62,
+  "d14_retention": 0.05973025048169557
 }

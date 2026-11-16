@@ -21,7 +21,7 @@ The pipeline:
 
 ## Cohort rules
 
-Retention uses `session_start` on the exact calendar day after installation. A player enters a day-specific denominator only when the reporting month contains enough observation time for that player to mature to the requested day. For a month that is still refreshing daily, a player counts for Day N only after Day N has been fully observed.
+Retention follows Mixpanel's rule: 24-hour windows from the exact install time, and a player is retained on Day N if they did any event in that window (Singular's dashboard counts calendar days instead, so it reports higher numbers, especially for Day 1). A player enters a day-specific denominator only when the reporting month contains enough observation time for that player to mature to the requested day. For a month that is still refreshing daily, a player counts for Day N only after Day N has been fully observed.
 
 ## Campaign analysis
 

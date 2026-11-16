@@ -160,3 +160,23 @@ class WeeklyReviewTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RetentionRuleTests(unittest.TestCase):
+    """Retention = Mixpanel rule: 24-hour windows from install, any event counts (real-project rule 2026-11-16)."""
+
+    def test_24h_window_any_event(self):
+        import sys
+        sys.path.insert(0, str(ROOT / "src"))
+        from analyze_marketing import _player_metrics
+        inst = pd.Timestamp("2026-11-05 23:00")
+        players = pd.DataFrame({"device_id": ["a", "b"], "install_timestamp": [inst, inst]})
+        rows = [("a", inst + pd.Timedelta(hours=10), "level_completed"),   # next calendar day but < 24 h -> Day 0
+                ("b", inst + pd.Timedelta(hours=30), "ad_impression"),     # 24-48 h, not a session_start -> Day 1
+                ("b", inst + pd.Timedelta(days=20), "session_start")]      # later data, so Day 1 is fully observed
+        events = pd.DataFrame([{"device_id": d, "event_timestamp": t, "event_name": e, "revenue_usd": 0.0,
+                                "install_timestamp": inst} for d, t, e in rows])
+        events["day_since_install"] = ((events["event_timestamp"] - events["install_timestamp"]) // pd.Timedelta(days=1)).astype(int)
+        m = _player_metrics(players, events).set_index("device_id")
+        self.assertEqual(int(m.loc["a", "d1_returned"]), 0)
+        self.assertEqual(int(m.loc["b", "d1_returned"]), 1)

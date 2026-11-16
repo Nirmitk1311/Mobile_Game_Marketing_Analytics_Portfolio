@@ -27,9 +27,11 @@ def analyze_month(month: str, data_dir: Path, output_dir: Path) -> dict:
     clean_events = clean_events.drop_duplicates("event_id")
     preinstall_events = int((clean_events["event_timestamp"] < clean_events["install_timestamp"]).sum())
     clean_events = clean_events.loc[clean_events["event_timestamp"] >= clean_events["install_timestamp"]].copy()
+    # Retention rule (Mixpanel's): 24-hour windows from the exact install time. Day N = N*24h .. (N+1)*24h after
+    # install. (Singular's dashboard counts calendar days instead, so it shows higher numbers, especially Day 1.)
     clean_events["day_since_install"] = (
-        clean_events["event_timestamp"].dt.normalize() - clean_events["install_timestamp"].dt.normalize()
-    ).dt.days
+        (clean_events["event_timestamp"] - clean_events["install_timestamp"]) // pd.Timedelta(days=1)
+    ).astype(int)
 
     player_metrics = _player_metrics(clean_players, clean_events)
     delivery_summary = delivery.groupby(
@@ -136,7 +138,8 @@ def _player_metrics(players: pd.DataFrame, events: pd.DataFrame) -> pd.DataFrame
         base[col] = base[col].fillna(0)
     base["total_revenue_usd"] = base["ad_revenue_usd"] + base["iap_revenue_usd"]
     month_end = base["install_timestamp"].dt.to_period("M").dt.end_time.dt.normalize()
-    session_days = events.loc[events["event_name"] == "session_start"].groupby("device_id")["day_since_install"].agg(set)
+    # A player is retained on Day N if they did ANY event in that 24-hour window (Mixpanel rule).
+    session_days = events.groupby("device_id")["day_since_install"].agg(set)
     observed_until = events["event_timestamp"].max() if len(events) else None
     in_progress = observed_until is not None and observed_until < month_end.max() + pd.Timedelta(days=14)
     for day in RETENTION_DAYS:
