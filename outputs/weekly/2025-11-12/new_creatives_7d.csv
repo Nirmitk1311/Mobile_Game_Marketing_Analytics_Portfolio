@@ -1,7 +1,7 @@
 source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,est_installs,est_spend_usd,campaign_cpi_benchmark,status,decision,decision_detail
-Game Network,Game iOS B,Concept 309,2953,2464,43,36.150000000000006,7,0.8406976744186048,14.561462919065358,0.8344056891296986,2025-11-06,0,0,1.2012903225806453,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS B,Concept 310,1245,1205,7,11.2,7,1.5999999999999999,5.622489959839357,0.9678714859437751,2025-11-06,0,0,1.2012903225806453,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS A,Concept 307,1242,1046,35,62.2,7,1.7771428571428571,28.18035426731079,0.8421900161030595,2025-11-06,0,0,1.9321875000000002,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS B,Concept 309,2953,2464,43,36.150000000000006,7,0.8406976744186048,14.561462919065358,0.8344056891296986,2025-11-06,0,0,1.2016129032258065,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS B,Concept 310,1245,1205,7,11.2,7,1.5999999999999999,5.622489959839357,0.9678714859437751,2025-11-06,0,0,1.2016129032258065,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS A,Concept 307,1242,1046,35,62.21,7,1.7774285714285714,28.18035426731079,0.8421900161030595,2025-11-06,0,0,1.9321875000000002,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
 Game Network,Game Android E,Concept 313,582,451,13,28.470000000000002,7,2.1900000000000004,22.33676975945017,0.7749140893470791,2025-11-06,0,0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
 Game Network,Game iOS A,Concept 308,338,334,3,5.2,7,1.7333333333333334,8.875739644970414,0.9881656804733728,2025-11-06,0,0,1.9321875000000002,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
 Game Network,Game Android E,Concept 311,147,109,2,3.3,7,1.65,13.605442176870747,0.7414965986394558,2025-11-06,0,0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
