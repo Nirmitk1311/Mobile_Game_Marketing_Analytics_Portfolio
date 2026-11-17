@@ -1,9 +1,9 @@
 source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,est_installs,est_spend_usd,campaign_cpi_benchmark,status,decision,decision_detail
 Game Network,Game iOS B,Concept 309,2953,2464,43,36.1,7,0.8395348837209302,14.561462919065358,0.8344056891296986,2025-11-06,0,0,1.2006451612903226,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
 Game Network,Game iOS B,Concept 310,1245,1205,7,11.19,7,1.5985714285714285,5.622489959839357,0.9678714859437751,2025-11-06,0,0,1.2006451612903226,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS A,Concept 307,1242,1046,35,62.129999999999995,7,1.775142857142857,28.18035426731079,0.8421900161030595,2025-11-06,0,0,1.9296875,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game Android E,Concept 313,582,451,13,28.450000000000006,7,2.188461538461539,22.33676975945017,0.7749140893470791,2025-11-06,0,0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS A,Concept 308,338,334,3,5.19,7,1.7300000000000002,8.875739644970414,0.9881656804733728,2025-11-06,0,0,1.9296875,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS A,Concept 307,1242,1046,35,62.13,7,1.7751428571428571,28.18035426731079,0.8421900161030595,2025-11-06,0,0,1.9296875,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game Android E,Concept 313,582,451,13,28.45,7,2.1884615384615382,22.33676975945017,0.7749140893470791,2025-11-06,0,0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS A,Concept 308,338,334,3,5.1899999999999995,7,1.7299999999999998,8.875739644970414,0.9881656804733728,2025-11-06,0,0,1.9296875,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
 Game Network,Game Android E,Concept 311,147,109,2,3.29,7,1.645,13.605442176870747,0.7414965986394558,2025-11-06,0,0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
 Game Network,Game Android E,Concept 312,25,18,0,2.15,7,,0.0,0.72,2025-11-06,0,0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
 Search Network,Search Android A,Concept 301,1,0,0,0.15,1,,0.0,0.0,2025-11-08,0,0,,final,Extend 1 week,"needs 50 installs and 5,000 impressions"

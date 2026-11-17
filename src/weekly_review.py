@@ -22,8 +22,9 @@ every campaign keeps one name, so the name stands for the ID.
   Keep/deactivate decisions are written only when the 7 days are complete; before that the row shows its progress.
 - incomplete last day: networks report a day's spend and impressions about one day late, and the latest day is still
   running in the players' time zone. Its full-day impressions, clicks, installs and spend are ESTIMATED per creative from
-  its own average per day this week, and included in delivery, CPI and every decision (est_* columns show the estimated
-  part). The estimate never boosts a creative: its CPI is never lower and its install rate never higher than the
+  its own average per day this week and shown ONLY in its own columns (est_installs / est_spend_usd, "not included"):
+  delivery, CPI, the minimum-data rules and every decision use the original reported (complete-day) data. The estimate
+  never boosts a creative: its CPI is never lower and its install rate never higher than the
   creative's real days. Player quality and ROAS use
   complete days only (spend_data_through).
 - D30 ROAS: revenue in each player's first 30 days / spend for the latest 14 install days that are 30+ days old
@@ -205,7 +206,7 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     keys = ["source", "campaign", "creative"]
     actual14 = creative[(creative["date"] >= ts(r1_start)) & (creative["date"] <= ts(last))]
     est = estimate_rows(creative, keys, last, min(end, through), r2_start, r1_start)   # incomplete day(s), estimated in full
-    c14 = pd.concat([actual14, est], ignore_index=True)
+    c14 = actual14.copy()   # original data only: the estimate is shown in its own columns, never added (rule 2026-11-17)
     est_sum = (est.groupby(keys, as_index=False)[["installs", "spend_usd"]].sum()
                .rename(columns={"installs": "est_installs", "spend_usd": "est_spend_usd"}))
     act_spend = actual14.groupby(keys, as_index=False)["spend_usd"].sum().rename(columns={"spend_usd": "actual_spend_usd"})

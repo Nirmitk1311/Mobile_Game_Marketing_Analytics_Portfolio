@@ -133,7 +133,7 @@ class WeeklyReviewTests(unittest.TestCase):
                 low = q[(q["impressions"].astype(float) < 7_000) & (q["decision"] != "")]
                 self.assertTrue((low["decision"] == "Too early to judge").all())
 
-    def test_incomplete_last_day_is_estimated_and_labelled(self):
+    def test_incomplete_last_day_is_estimated_separately(self):
         for week in WEEKS:
             summary = json.loads((week / "summary.json").read_text(encoding="utf-8"))
             if summary["data_through"] <= summary["week_end"]:
@@ -143,12 +143,9 @@ class WeeklyReviewTests(unittest.TestCase):
                 self.assertEqual(summary["estimated_installs"], 0)
             q = pd.read_csv(week / "creative_quality_14d.csv")
             if len(q):
-                self.assertTrue((q["est_installs"] <= q["installs"] + 1e-9).all())
-                self.assertTrue((q["actual_spend_usd"] <= q["spend_usd"] + 1e-6).all())
-                # no boost: the estimate never lowers a creative's CPI below its real (complete-day) CPI
-                real = q[(q["installs"] - q["est_installs"] > 0) & (q["actual_spend_usd"] > 0)]
-                real_cpi = real["actual_spend_usd"] / (real["installs"] - real["est_installs"])
-                self.assertTrue((real["cpi_usd"] >= real_cpi - 1e-6).all(), f"{week.name}: estimate lowered a CPI")
+                # the estimate is NOT included: spend (and so CPI) is the original complete-day data
+                self.assertTrue(((q["spend_usd"] - q["actual_spend_usd"]).abs() < 1e-6).all(), f"{week.name}: estimate added to spend")
+                self.assertTrue((q["est_installs"] >= 0).all())
 
     def test_d30_roas_is_revenue_over_spend(self):
         for week in WEEKS:
