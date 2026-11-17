@@ -22,7 +22,8 @@ every campaign keeps one name, so the name stands for the ID.
   Keep/deactivate decisions are written only when the 7 days are complete; before that the row shows its progress.
 - incomplete last day: networks report a day's spend and impressions about one day late, and the latest day is still
   running in the players' time zone. Its full-day impressions, clicks, installs and spend are ESTIMATED per creative from
-  its own average per day this week and shown ONLY in its own columns (est_installs / est_spend_usd, "not included"):
+  its own average per day this week and shown ONLY in its own columns (est_installs / est_spend_usd, "not included"; self-learning: installs received so far / usual share
+  received by the export time, mixed with the own average):
   delivery, CPI, the minimum-data rules and every decision use the original reported (complete-day) data. The estimate
   never boosts a creative: its CPI is never lower and its install rate never higher than the
   creative's real days. Player quality and ROAS use
@@ -56,6 +57,8 @@ QUALITY_MIN_IMPRESSIONS = 7_000  # 14-day review (7,000 from 2026-10-29): no dec
 QUALITY_MIN_IPM = 3             # ... deactivate below this many installs per 1,000 impressions
 D30_MIN_AGE = 30                # D30 ROAS only for install days whose players are at least 30 days old ...
 D30_INSTALL_DAYS = 14           # ... using the latest 14 such install days
+NOWCAST_SHARE = 0.60            # share of a day's installs already received at the 13:00 export (learned in production)
+NOWCAST_WEIGHT = 0.75           # weight of the received-so-far nowcast vs the own average (learned in production)
 SPEND_LAG_DAYS = 1              # the latest day has installs but no reported spend yet: it is estimated (see estimate_rows)
 GHOST_DISPUTE_SHARE = 0.40      # 40%+ installs without any in-game telemetry -> billing dispute with the network
 MIN_DISPUTE_PLAYERS = 20
@@ -170,8 +173,8 @@ def estimate_rows(creative: pd.DataFrame, keys: list[str], last: date, upto: dat
                   window_start: date) -> pd.DataFrame:
     """Full-day estimate for the days after `last` (up to `upto`), per key still live on `last` (or already delivering):
     its own average per day with impressions this week (week_start..last; the 7 days up to `last` when the week has no
-    complete day). No boost: partial installs reported so far are not used, and the estimated day's CPI is never lower
-    and its installs per 1,000 impressions never higher than the key's own complete days in the window."""
+    complete day), nowcast from the installs received so far. No boost: the estimated day's CPI and installs per 1,000
+    impressions equal the key's own complete days in the window."""
     cols = ["impressions", "clicks", "installs", "spend_usd"]
     ts = pd.Timestamp
     days = pd.date_range(ts(last) + pd.Timedelta(days=1), ts(upto))
@@ -188,12 +191,19 @@ def estimate_rows(creative: pd.DataFrame, keys: list[str], last: date, upto: dat
     avg = avg_w.combine_first(avg_r).reindex(live).dropna(how="all").fillna(0.0)
     real = creative[(creative["date"] >= ts(window_start)) & (creative["date"] <= ts(last))].groupby(keys)[cols].sum()
     real = real.reindex(avg.index).fillna(0.0)
-    cap_cpi = np.where((real["installs"] > 0) & (real["spend_usd"] > 0),
-                       avg["spend_usd"] * real["installs"] / real["spend_usd"].where(real["spend_usd"] > 0, 1), np.inf)
-    cap_ipm = np.where(real["impressions"] > 0,
-                       avg["impressions"] * real["installs"] / real["impressions"].where(real["impressions"] > 0, 1), np.inf)
-    avg["installs"] = np.minimum(avg["installs"], np.minimum(cap_cpi, cap_ipm))
+    # Self-learning nowcast (rule 2026-11-17): installs received so far / the share of a day's installs that usually
+    # arrives by the export time, mixed with the key's own average (weights and share are re-learned from past
+    # estimate errors in the production pipeline; the start-up values are used here). Spend, impressions and clicks
+    # follow from the key's own real CPI / rates, so the estimate is never better than its real days.
+    partial = now.reindex(avg.index).fillna(0.0)["installs"]
+    avg_inst = avg["installs"] * len(days)
+    nowcast = partial / NOWCAST_SHARE
+    ins = np.maximum(partial, np.where(partial > 0, NOWCAST_WEIGHT * nowcast + (1 - NOWCAST_WEIGHT) * avg_inst, avg_inst))
     est = avg * len(days)
+    for col in ("impressions", "clicks", "spend_usd"):
+        rate = real[col] / real["installs"].where(real["installs"] > 0, np.nan)
+        est[col] = np.where(real["installs"] > 0, ins * rate.fillna(0.0), est[col])
+    est["installs"] = ins
     return est.reset_index().assign(date=days[-1])
 
 
