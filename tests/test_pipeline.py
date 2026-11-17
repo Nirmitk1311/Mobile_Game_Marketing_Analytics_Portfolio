@@ -147,6 +147,14 @@ class WeeklyReviewTests(unittest.TestCase):
                 self.assertTrue(((q["spend_usd"] - q["actual_spend_usd"]).abs() < 1e-6).all(), f"{week.name}: estimate added to spend")
                 self.assertTrue((q["est_installs"] >= 0).all())
 
+    def test_d7_roas_uses_week_old_players_only(self):
+        for week in WEEKS:
+            q = pd.read_csv(week / "creative_quality_14d.csv")
+            if len(q) and "mature_spend_usd" in q:
+                self.assertTrue((q["mature_spend_usd"] <= q["actual_spend_usd"] + 1e-6).all())
+                ok = q[q["mature_spend_usd"] > 0]
+                self.assertTrue(((ok["roas"] - ok["mature_revenue_usd"] / ok["mature_spend_usd"]).abs() < 1e-9).all())
+
     def test_d30_roas_is_revenue_over_spend(self):
         for week in WEEKS:
             d = pd.read_csv(week / "d30_roas.csv")

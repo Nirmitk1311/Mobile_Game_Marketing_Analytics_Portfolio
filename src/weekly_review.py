@@ -249,10 +249,18 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     quality = (quality.merge(est_sum, on=keys, how="left").merge(act_spend, on=keys, how="left")
                .fillna({"est_installs": 0, "est_spend_usd": 0, "actual_spend_usd": 0}))
     quality = quality.sort_values("spend_usd", ascending=False)
-    # creative ROAS = player revenue / ad spend of the same (complete) days; the estimate has no revenue yet
-    quality["roas"] = _safe(quality["total_revenue_usd"], quality["actual_spend_usd"])
-    avg_roas = (quality["total_revenue_usd"].sum() / quality["actual_spend_usd"].sum()
-                if quality["actual_spend_usd"].sum() else np.nan)
+    # D7 ROAS (rule 2026-11-17, user-maturity based): only players who have completed 7 days (install day <= data day - 8)
+    # and the ad spend of those same install days; younger installs do not have their full week of revenue yet.
+    mature_last = min(last, through - timedelta(days=8))
+    pm = p14[p14["install_timestamp"] < ts(mature_last + timedelta(days=1))]
+    rev_m = pm.groupby(keys, as_index=False)["total_revenue_usd"].sum().rename(columns={"total_revenue_usd": "mature_revenue_usd"})
+    sp_m = (actual14[actual14["date"] <= ts(mature_last)].groupby(keys, as_index=False)["spend_usd"].sum()
+            .rename(columns={"spend_usd": "mature_spend_usd"}))
+    quality = quality.merge(rev_m, on=keys, how="left").merge(sp_m, on=keys, how="left").fillna(
+        {"mature_revenue_usd": 0.0, "mature_spend_usd": 0.0})
+    quality["roas"] = _safe(quality["mature_revenue_usd"], quality["mature_spend_usd"])
+    avg_roas = (quality["mature_revenue_usd"].sum() / quality["mature_spend_usd"].sum()
+                if quality["mature_spend_usd"].sum() else np.nan)
     quality["decision"], quality["decision_detail"] = (zip(*[decide_quality(r, avg_roas) if complete else ("", "")
                                                             for _, r in quality.iterrows()]) if len(quality) else ([], []))
     resumed = paused_resumed(actual14, r2_start, last, keys)
