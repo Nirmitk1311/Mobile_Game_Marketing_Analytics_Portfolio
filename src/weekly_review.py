@@ -169,8 +169,42 @@ def d30_roas(campaign_daily: pd.DataFrame, players: pd.DataFrame, events: pd.Dat
         "d30_roas": float(tot["revenue_30d_usd"] / tot["spend_usd"]) if tot["spend_usd"] else None}
 
 
+def paused_creatives(creative: pd.DataFrame, keys: list[str], day: date) -> dict:
+    """Rule 2026-11-18: a creative is 'no delivery today - paused?' when its campaign delivers on `day` (the export
+    day) but the creative has no delivery that day, after delivering earlier. Returns {key: last delivery date}."""
+    ts = pd.Timestamp(day)
+    act = creative[(creative[["impressions", "clicks", "installs"]] > 0).any(axis=1) & (creative["date"] <= ts)]
+    today = act[act["date"] == ts]
+    camps = set(map(tuple, today[keys[:-1]].drop_duplicates().values))
+    crea_today = set(map(tuple, today[keys].drop_duplicates().values))
+    last = act[act["date"] < ts].groupby(keys)["date"].max()
+    return {k: d.date() for k, d in last.items() if k not in crea_today and k[:-1] in camps}
+
+
+def ended_verdict(row, camp) -> tuple[str, str]:
+    """Rule 2026-11-18: verdict on a pause that lasted until the report day. WRONG decision when the creative was doing
+    at least as well as its campaign on D7 ROAS (already includes the cost) and D1 retention, where each has enough data
+    (>= 10 USD week-old spend / >= 20 day-old players); CPI only when there is no D7 ROAS. Too little data -> GOOD."""
+    good, weak = [], []
+    roas_ok = pd.notna(row["roas"]) and pd.notna(camp.get("roas")) and row["mature_spend_usd"] >= 10
+    d1_ok = pd.notna(row["d1_retention"]) and pd.notna(camp.get("d1_retention")) and row["d1_eligible"] >= 20
+    if roas_ok:
+        (good if row["roas"] >= camp["roas"] else weak).append(f"D7 ROAS {row['roas']:.0%} vs campaign {camp['roas']:.0%}")
+    if d1_ok:
+        (good if row["d1_retention"] >= camp["d1_retention"] else weak).append(
+            f"D1 retention {row['d1_retention']:.0%} vs campaign {camp['d1_retention']:.0%}")
+    cpi_ok = pd.notna(row["cpi_usd"]) and pd.notna(camp.get("cpi_usd"))
+    if not roas_ok and cpi_ok:
+        (good if row["cpi_usd"] <= camp["cpi_usd"] else weak).append(f"CPI {row['cpi_usd']:.2f} vs campaign {camp['cpi_usd']:.2f}")
+    if not (roas_ok or (d1_ok and cpi_ok)):
+        return "Good decision", "too little data to show it was a strong creative"
+    if not weak:
+        return "Wrong decision", "it was doing very well: " + "; ".join(good)
+    return "Good decision", "it was not doing very well: " + "; ".join(weak)
+
+
 def estimate_rows(creative: pd.DataFrame, keys: list[str], last: date, upto: date, week_start: date,
-                  window_start: date) -> pd.DataFrame:
+                  window_start: date, skip=()) -> pd.DataFrame:
     """Full-day estimate for the days after `last` (up to `upto`), per key still live on `last` (or already delivering):
     its own average per day with impressions this week (week_start..last; the 7 days up to `last` when the week has no
     complete day), nowcast from the installs received so far. No boost: the estimated day's CPI and installs per 1,000
@@ -188,6 +222,7 @@ def estimate_rows(creative: pd.DataFrame, keys: list[str], last: date, upto: dat
     now = creative[creative["date"].isin(days)].groupby(keys)[cols].sum()
     live = sorted(set(done[done["date"] == ts(last)].set_index(keys).index)
                   | set(now[(now["impressions"] > 0) | (now["installs"] > 0)].index))
+    live = [k for k in live if k not in skip]   # rule 2026-11-18: paused today -> no estimate
     avg = avg_w.combine_first(avg_r).reindex(live).dropna(how="all").fillna(0.0)
     real = creative[(creative["date"] >= ts(window_start)) & (creative["date"] <= ts(last))].groupby(keys)[cols].sum()
     real = real.reindex(avg.index).fillna(0.0)
@@ -215,7 +250,9 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
     p14 = players[(players["install_timestamp"] >= ts(r1_start)) & (players["install_timestamp"] < ts(last + timedelta(days=1)))]
     keys = ["source", "campaign", "creative"]
     actual14 = creative[(creative["date"] >= ts(r1_start)) & (creative["date"] <= ts(last))]
-    est = estimate_rows(creative, keys, last, min(end, through), r2_start, r1_start)   # incomplete day(s), estimated in full
+    export_day = min(end, through)
+    paused = paused_creatives(creative, keys, export_day)            # rule 2026-11-18
+    est = estimate_rows(creative, keys, last, export_day, r2_start, r1_start, skip=paused)   # incomplete day(s), estimated in full
     c14 = actual14.copy()   # original data only: the estimate is shown in its own columns, never added (rule 2026-11-17)
     est_sum = (est.groupby(keys, as_index=False)[["installs", "spend_usd"]].sum()
                .rename(columns={"installs": "est_installs", "spend_usd": "est_spend_usd"}))
@@ -263,6 +300,26 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
                 if quality["mature_spend_usd"].sum() else np.nan)
     quality["decision"], quality["decision_detail"] = (zip(*[decide_quality(r, avg_roas) if complete else ("", "")
                                                             for _, r in quality.iterrows()]) if len(quality) else ([], []))
+    # rule 2026-11-18: paused creatives say so instead of a decision; on the report day (week complete) a pause that
+    # started since the previous report gets a verdict: wrong decision if the creative was doing very well.
+    qk = list(zip(*[quality[k] for k in keys])) if len(quality) else []
+    quality["last_delivery_date"] = [paused.get(k) for k in qk]
+    stopped = quality["last_delivery_date"].notna()
+    quality.loc[stopped, "decision"] = "No delivery today - paused?"
+    camp = quality.groupby(["source", "campaign"]).agg(mature_revenue_usd=("mature_revenue_usd", "sum"), mature_spend_usd=("mature_spend_usd", "sum"),
+                                                        spend_usd=("spend_usd", "sum"), installs=("installs", "sum"),
+                                                        d1_returned=("d1_returned", "sum"), d1_eligible=("d1_eligible", "sum"))
+    camp["roas"] = _safe(camp["mature_revenue_usd"], camp["mature_spend_usd"])
+    camp["cpi_usd"] = _safe(camp["spend_usd"], camp["installs"])
+    camp["d1_retention"] = _safe(camp["d1_returned"], camp["d1_eligible"])
+    prev_report = end - timedelta(days=7)
+    ended = quality[stopped].copy() if (len(quality) and complete) else quality.iloc[0:0].copy()
+    ended = ended[[d >= prev_report for d in ended["last_delivery_date"]]] if len(ended) else ended
+    if len(ended):
+        ended["verdict"], ended["verdict_detail"] = zip(*[ended_verdict(r, camp.loc[(r["source"], r["campaign"])].to_dict())
+                                                          for _, r in ended.iterrows()])
+    else:
+        ended = ended.assign(verdict=pd.Series(dtype=str), verdict_detail=pd.Series(dtype=str))
     resumed = paused_resumed(actual14, r2_start, last, keys)
     others = delivery(c7.merge(new_ids[["source", "creative"]], how="left", indicator=True).query("_merge == 'left_only'"),
                       ["source", "campaign"])
@@ -300,7 +357,10 @@ def review_week(end: date, through: date, creative, players, first) -> dict:
                                      .to_dict("records") or [None])[0],
     }
     summary["paused_resumed_excluded"] = int(len(resumed))
-    return {"quality": quality, "new": new, "traffic": traffic, "summary": summary, "resumed": resumed}
+    summary["paused_today"] = int(stopped.sum()) if len(quality) else 0
+    summary["ended_creatives"] = int(len(ended))
+    summary["ended_wrong_decisions"] = int((ended["verdict"] == "Wrong decision").sum()) if len(ended) else 0
+    return {"quality": quality, "new": new, "traffic": traffic, "summary": summary, "resumed": resumed, "ended": ended}
 
 
 def _count_text(n, word):
@@ -391,6 +451,7 @@ def main() -> None:
         res["new"].to_csv(d / "new_creatives_7d.csv", index=False)
         res["traffic"].to_csv(d / "traffic_quality.csv", index=False)
         res["resumed"].to_csv(d / "paused_resumed_7d.csv", index=False)
+        res["ended"].to_csv(d / "ended_creatives.csv", index=False)
         for name, text in report_summaries(res).items():
             (d / f"summary_{name}.txt").write_text(text + "\n", encoding="utf-8")
         (d / "summary.json").write_text(json.dumps(res["summary"], indent=2, default=str), encoding="utf-8")

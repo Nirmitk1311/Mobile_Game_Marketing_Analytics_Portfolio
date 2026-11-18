@@ -31,6 +31,9 @@
     "tracking_coverage": 0.9696969696969697
   },
   "paused_resumed_excluded": 23,
+  "paused_today": 0,
+  "ended_creatives": 0,
+  "ended_wrong_decisions": 0,
   "d30_roas": {
     "window": [
       "2025-10-06",

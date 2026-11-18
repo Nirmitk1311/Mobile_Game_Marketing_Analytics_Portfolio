@@ -47,6 +47,7 @@ Creative reporting uses the creative assigned to each synthetic acquisition. It 
   - fewer than 50 installs or 5,000 impressions: extend by one week;
   - CPI more than 30% above the campaign's other creatives (with at least 10 installs behind that benchmark): deactivate;
   - otherwise: keep.
+- **Paused creatives and ended creatives:** a creative whose campaign delivers on the export day but which itself has no delivery that day (after delivering earlier) is marked "No delivery today - paused?" instead of a decision, and gets no export-day estimate. If it still has no delivery on the report day, it is listed in `ended_creatives.csv` (only pauses since the previous report) with a verdict on the pause: **wrong decision** when it was doing at least as well as its own campaign on D7 ROAS and D1 retention (where each has enough data; D7 ROAS already includes the cost, so CPI is used only without D7 ROAS), otherwise **good decision** (also when there was too little data to show it was strong).
 - **Traffic quality (14 days):** for each network and platform, the share of acquired players that sent any in-game event (**tracking coverage**) and the share flagged as **likely fraud**. Flagged players stay in every metric; they are counted and listed separately, never removed.
 
 Two patterns from the live data are kept in the synthetic months:

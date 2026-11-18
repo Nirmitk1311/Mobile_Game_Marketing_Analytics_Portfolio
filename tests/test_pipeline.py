@@ -131,7 +131,8 @@ class WeeklyReviewTests(unittest.TestCase):
             q = pd.read_csv(week / "creative_quality_14d.csv", keep_default_na=False)
             if len(q) and "decision" in q:
                 low = q[(q["impressions"].astype(float) < 7_000) & (q["decision"] != "")]
-                self.assertTrue((low["decision"] == "Too early to judge").all())
+                # rule 2026-11-18: a paused creative shows "paused?" instead of a decision
+                self.assertTrue(low["decision"].isin(["Too early to judge", "No delivery today - paused?"]).all())
 
     def test_incomplete_last_day_is_estimated_separately(self):
         for week in WEEKS:
@@ -146,6 +147,20 @@ class WeeklyReviewTests(unittest.TestCase):
                 # the estimate is NOT included: spend (and so CPI) is the original complete-day data
                 self.assertTrue(((q["spend_usd"] - q["actual_spend_usd"]).abs() < 1e-6).all(), f"{week.name}: estimate added to spend")
                 self.assertTrue((q["est_installs"] >= 0).all())
+
+    def test_paused_creatives_get_no_estimate_and_a_verdict(self):
+        # rule 2026-11-18: no delivery on the export day while the campaign delivers -> "paused?", no estimate;
+        # on a complete week the pause gets a verdict (wrong only when D7 ROAS / D1 were at least the campaign's)
+        for week in WEEKS:
+            q = pd.read_csv(week / "creative_quality_14d.csv", keep_default_na=False)
+            if len(q) and "last_delivery_date" in q:
+                p = q[q["last_delivery_date"] != ""]
+                self.assertTrue((p["decision"] == "No delivery today - paused?").all(), week.name)
+                self.assertTrue((p["est_installs"].astype(float) == 0).all(), f"{week.name}: estimate for a paused creative")
+            f = week / "ended_creatives.csv"
+            if f.exists() and f.stat().st_size > 1:
+                e = pd.read_csv(f)
+                self.assertTrue(e.empty or e["verdict"].isin(["Wrong decision", "Good decision"]).all(), week.name)
 
     def test_d7_roas_uses_week_old_players_only(self):
         for week in WEEKS:

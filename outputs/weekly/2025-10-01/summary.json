@@ -27,6 +27,9 @@
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": null,
   "paused_resumed_excluded": 0,
+  "paused_today": 0,
+  "ended_creatives": 0,
+  "ended_wrong_decisions": 0,
   "d30_roas": {
     "window": null,
     "note": "no install day is 30 days old yet"

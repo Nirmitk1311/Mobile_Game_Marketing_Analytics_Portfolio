@@ -38,6 +38,9 @@
     "tracking_coverage": 0.4072398190045249
   },
   "paused_resumed_excluded": 30,
+  "paused_today": 42,
+  "ended_creatives": 23,
+  "ended_wrong_decisions": 0,
   "d30_roas": {
     "window": null,
     "note": "no install day is 30 days old yet"
