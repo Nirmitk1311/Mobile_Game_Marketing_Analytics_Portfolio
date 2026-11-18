@@ -1,3 +1,9 @@
 source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,est_installs,est_spend_usd,campaign_cpi_benchmark,status,decision,decision_detail
-Game Network,Game iOS B,Concept 326,5270,4906,81,68.08,4,0.8404938271604938,15.370018975332068,0.9309297912713472,2025-11-13,20.25,17.02,1.014871794871795,in progress (day 5 of 7),,
-Game Network,Game iOS A,Concept 325,211,188,2,8.53,3,4.265,9.47867298578199,0.8909952606635071,2025-11-14,0.6666666666666666,2.843333333333333,1.6473643410852712,in progress (day 5 of 7),,
+Game Network,Game iOS B,Concept 326,8036,7252,116,99.65,5,0.8590517241379311,14.43504230960677,0.9024390243902439,2025-11-13,23.2,19.93,0.9790476190476189,in progress (day 6 of 7),,
+Game Network,Game iOS A,Concept 325,236,207,2,9.08,4,4.54,8.474576271186441,0.8771186440677966,2025-11-14,0.5,2.27,1.7340804597701152,in progress (day 6 of 7),,
+Game Network,Game iOS B,Concept 337,170,140,1,0.6,1,0.6,5.882352941176471,0.8235294117647058,2025-11-17,1.0,0.6,0.9790476190476189,in progress (day 6 of 7),,
+Game Network,Game iOS B,Concept 336,116,106,0,0.42,1,,0.0,0.9137931034482759,2025-11-17,0.0,0.42,0.9790476190476189,in progress (day 6 of 7),,
+Game Network,Game iOS A,Concept 335,22,16,0,0.93,1,,0.0,0.7272727272727273,2025-11-17,0.0,0.93,1.7340804597701152,in progress (day 6 of 7),,
+Game Network,Game iOS A,Concept 334,7,7,0,0.0,1,,0.0,1.0,2025-11-17,0.0,0.0,1.7340804597701152,in progress (day 6 of 7),,
+Game Network,Game Android E,Concept 338,3,1,0,0.88,1,,0.0,0.3333333333333333,2025-11-17,0.0,0.88,2.7170588235294115,in progress (day 6 of 7),,
+Search Network,Search Android A,Concept 333,1,0,0,0.0,1,,0.0,0.0,2025-11-17,0.0,0.0,2.088125,in progress (day 6 of 7),,
