@@ -8,27 +8,27 @@
     "2025-11-13",
     "2025-11-19"
   ],
-  "data_through": "2025-11-18",
-  "spend_data_through": "2025-11-17",
-  "estimated_installs": 75,
-  "estimated_spend_usd": 109.45,
-  "complete": false,
+  "data_through": "2025-11-19",
+  "spend_data_through": "2025-11-18",
+  "estimated_installs": 74,
+  "estimated_spend_usd": 101.1,
+  "complete": true,
   "creatives_in_quality_window": 71,
-  "new_creatives": 8,
+  "new_creatives": 11,
   "unnamed_new_assets": {
-    "count": 13,
-    "impressions": 52,
+    "count": 23,
+    "impressions": 121,
     "installs": 0,
-    "spend_usd": 1.06
+    "spend_usd": 1.44
   },
-  "players": 599,
-  "tracking_coverage": 0.9766277128547579,
+  "players": 706,
+  "tracking_coverage": 0.9730878186968839,
   "flagged_share": 0.0,
   "ghost_install_disputes": [],
   "lowest_tracking_coverage": {
-    "source": "Game Network",
+    "source": "Search Network",
     "platform": "Android",
-    "tracking_coverage": 0.9696969696969697
+    "tracking_coverage": 0.9702970297029703
   },
   "paused_resumed_excluded": 23,
   "paused_today": 0,
@@ -36,10 +36,10 @@
   "ended_wrong_decisions": 0,
   "d30_roas": {
     "window": [
-      "2025-10-06",
-      "2025-10-19"
+      "2025-10-07",
+      "2025-10-20"
     ],
-    "d7_roas": 0.14885895970277224,
-    "d30_roas": 0.1540822774761043
+    "d7_roas": 0.15664024798927614,
+    "d30_roas": 0.16182623994638068
   }
 }

@@ -1,9 +1,12 @@
 source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,est_installs,est_spend_usd,campaign_cpi_benchmark,status,decision,decision_detail
-Game Network,Game iOS B,Concept 326,8137,7335,116,100.53,5,0.8666379310344827,14.255868256114047,0.9014378763672115,2025-11-13,23.2,20.105999999999998,0.9804761904761905,in progress (day 6 of 7),,
-Game Network,Game iOS A,Concept 325,237,207,2,9.08,4,4.54,8.438818565400844,0.8734177215189873,2025-11-14,0.5,2.27,1.7384000000000002,in progress (day 6 of 7),,
-Game Network,Game iOS B,Concept 337,217,176,1,0.6,1,0.6,4.608294930875576,0.8110599078341014,2025-11-17,1.0,0.6,0.9804761904761905,in progress (day 6 of 7),,
-Game Network,Game iOS B,Concept 336,125,114,0,0.42,1,,0.0,0.912,2025-11-17,0.0,0.42,0.9804761904761905,in progress (day 6 of 7),,
-Game Network,Game iOS A,Concept 335,29,22,0,0.93,1,,0.0,0.7586206896551724,2025-11-17,0.0,0.93,1.7384000000000002,in progress (day 6 of 7),,
-Game Network,Game iOS A,Concept 334,8,8,0,0.0,1,,0.0,1.0,2025-11-17,0.0,0.0,1.7384000000000002,in progress (day 6 of 7),,
-Game Network,Game Android E,Concept 338,3,1,0,0.88,1,,0.0,0.3333333333333333,2025-11-17,0.0,0.88,2.7170588235294115,in progress (day 6 of 7),,
-Search Network,Search Android A,Concept 333,1,0,0,0.0,1,,0.0,0.0,2025-11-17,0.0,0.0,2.0875,in progress (day 6 of 7),,
+Game Network,Game iOS B,Concept 326,11092,10116,157,131.11,6,0.835095541401274,14.154345474215651,0.9120086548864046,2025-11-13,26.166666666666668,21.85166666666667,0.9702127659574469,final,Keep,CPI 0.84 vs campaign benchmark 0.97
+Game Network,Game iOS A,Concept 325,266,227,3,9.98,5,3.3266666666666667,11.278195488721805,0.8533834586466166,2025-11-14,0.6,1.996,1.755940594059406,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS B,Concept 337,543,454,2,1.19,2,0.595,3.6832412523020257,0.8360957642725598,2025-11-17,1.0,0.595,0.9702127659574469,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS B,Concept 336,535,500,4,4.84,2,1.21,7.4766355140186915,0.9345794392523364,2025-11-17,2.0,2.42,0.9702127659574469,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS A,Concept 335,112,94,1,2.02,2,2.02,8.928571428571429,0.8392857142857143,2025-11-17,0.5,1.01,1.755940594059406,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS A,Concept 334,50,47,0,0.0,2,,0.0,0.94,2025-11-17,0.0,0.0,1.755940594059406,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game Android E,Concept 338,19,15,1,2.78,2,2.78,52.63157894736842,0.7894736842105263,2025-11-17,0.5,1.39,2.6533333333333333,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Search Network,Search Android A,Concept 333,1,0,0,0.0,1,,0.0,0.0,2025-11-17,0.0,0.0,2.024,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game Android E,Concept 349,1,1,0,0.0,1,,0.0,1.0,2025-11-18,0.0,0.0,2.6533333333333333,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game Android E,Concept 350,1,1,0,0.0,1,,0.0,1.0,2025-11-18,0.0,0.0,2.6533333333333333,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Search Network,Search Android A,Concept 329,1,0,0,0.01,1,,0.0,0.0,2025-11-18,0.0,0.01,2.024,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
