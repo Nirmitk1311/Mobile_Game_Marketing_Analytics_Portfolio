@@ -1,18 +1,18 @@
 source,campaign,acquired_players,d1_eligible,d1_retention,d3_eligible,d3_retention,d7_eligible,d7_retention,d14_eligible,d14_retention
 Game Network,Playable Broad,683,661,0.2678,614,0.2052,526,0.0894,364,0.0659
-Game Network,Game iOS B,611,518,0.2761,442,0.19,352,0.071,223,0.0448
-Game Network,Game iOS A,575,539,0.2727,462,0.1926,348,0.0776,224,0.058
+Game Network,Game iOS B,615,520,0.2769,444,0.1914,352,0.071,226,0.0442
+Game Network,Game iOS A,575,540,0.2722,464,0.1918,348,0.0776,224,0.058
 Social Network,Social Gameplay,565,544,0.1765,508,0.1398,430,0.0767,291,0.055
 Game Network,Playable Premium,543,515,0.3087,477,0.2096,427,0.1288,290,0.069
 Store Search,Store Intent,472,464,0.3103,431,0.1995,373,0.1126,280,0.0607
 Search Network,Search Value Global,370,355,0.1803,332,0.1084,290,0.0517,184,0.0217
 Search Network,Search Value North,348,339,0.2212,314,0.1847,277,0.0722,193,0.0725
-Search Network,Search Android A,279,260,0.2731,241,0.2033,210,0.0905,131,0.0611
+Search Network,Search Android A,280,260,0.2731,242,0.2025,210,0.0905,131,0.0611
 Game Network,Game Android C,199,199,0.0452,199,0.0101,199,0.005,199,0.005
 Social Network,Social iOS C,180,180,0.2222,180,0.1444,180,0.0444,161,0.0186
 Discovery Network,Discovery Rewarded,167,167,0.1078,167,0.0719,167,0.0359,162,0.0247
 Social Network,Social Lifestyle,165,165,0.1515,165,0.097,165,0.0606,162,0.0123
-Game Network,Game Android E,124,121,0.2314,114,0.2281,97,0.0206,75,0.0667
+Game Network,Game Android E,124,121,0.2314,114,0.2281,97,0.0206,76,0.0658
 Search Network,Search Android E,103,103,0.165,103,0.0874,103,0.0485,103,0.0291
 Store Search,Store iOS A,18,18,0.2222,18,0.1667,18,0.0556,18,0.0556
 Search Network,Search Android B,8,8,0.25,8,0.25,8,0.125,8,0.25
