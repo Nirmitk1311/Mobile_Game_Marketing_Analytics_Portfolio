@@ -1,12 +1,12 @@
 source,campaign,creative,impressions,clicks,installs,spend_usd,days_live,cpi_usd,ipm,ctr,first_impression_date,est_installs,est_spend_usd,campaign_cpi_benchmark,status,decision,decision_detail
-Game Network,Game iOS B,Concept 326,11092,10116,157,131.11,6,0.835095541401274,14.154345474215651,0.9120086548864046,2025-11-13,26.166666666666668,21.85166666666667,0.9702127659574469,final,Keep,CPI 0.84 vs campaign benchmark 0.97
-Game Network,Game iOS A,Concept 325,266,227,3,9.98,5,3.3266666666666667,11.278195488721805,0.8533834586466166,2025-11-14,0.6,1.996,1.755940594059406,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS B,Concept 337,543,454,2,1.19,2,0.595,3.6832412523020257,0.8360957642725598,2025-11-17,1.0,0.595,0.9702127659574469,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS B,Concept 336,535,500,4,4.84,2,1.21,7.4766355140186915,0.9345794392523364,2025-11-17,2.0,2.42,0.9702127659574469,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS A,Concept 335,112,94,1,2.02,2,2.02,8.928571428571429,0.8392857142857143,2025-11-17,0.5,1.01,1.755940594059406,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game iOS A,Concept 334,50,47,0,0.0,2,,0.0,0.94,2025-11-17,0.0,0.0,1.755940594059406,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game Android E,Concept 338,19,15,1,2.78,2,2.78,52.63157894736842,0.7894736842105263,2025-11-17,0.5,1.39,2.6533333333333333,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Search Network,Search Android A,Concept 333,1,0,0,0.0,1,,0.0,0.0,2025-11-17,0.0,0.0,2.024,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game Android E,Concept 349,1,1,0,0.0,1,,0.0,1.0,2025-11-18,0.0,0.0,2.6533333333333333,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Game Network,Game Android E,Concept 350,1,1,0,0.0,1,,0.0,1.0,2025-11-18,0.0,0.0,2.6533333333333333,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
-Search Network,Search Android A,Concept 329,1,0,0,0.01,1,,0.0,0.0,2025-11-18,0.0,0.01,2.024,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS B,Concept 326,13549,12477,198,165.13,7,0.833989898989899,14.613624621743302,0.920879769724703,2025-11-13,0,0,0.9604081632653062,final,Keep,CPI 0.83 vs campaign benchmark 0.96
+Game Network,Game iOS A,Concept 325,342,288,4,14.04,6,3.51,11.695906432748538,0.8421052631578947,2025-11-14,0,0,1.7889732142857144,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS B,Concept 336,987,906,10,8.98,3,0.898,10.131712259371835,0.9179331306990881,2025-11-17,0,0,0.9604081632653062,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS B,Concept 337,734,617,4,1.92,3,0.48,5.449591280653951,0.840599455040872,2025-11-17,0,0,0.9604081632653062,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS A,Concept 335,199,176,2,4.300000000000001,3,2.1500000000000004,10.050251256281408,0.8844221105527639,2025-11-17,0,0,1.7889732142857144,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game iOS A,Concept 334,73,70,0,0.0,3,,0.0,0.958904109589041,2025-11-17,0,0,1.7889732142857144,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game Android E,Concept 338,27,19,1,2.78,3,2.78,37.03703703703704,0.7037037037037037,2025-11-17,0,0,2.682,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Search Network,Search Android A,Concept 333,1,0,0,0.0,1,,0.0,0.0,2025-11-17,0,0,1.965,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game Android E,Concept 349,4,4,0,0.97,2,,0.0,1.0,2025-11-18,0,0,2.682,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Game Network,Game Android E,Concept 350,3,2,0,0.0,2,,0.0,0.6666666666666666,2025-11-18,0,0,2.682,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
+Search Network,Search Android A,Concept 329,1,0,0,0.01,1,,0.0,0.0,2025-11-18,0,0,1.965,final,Extend 1 week,"needs 50 installs and 5,000 impressions"
