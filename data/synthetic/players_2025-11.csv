@@ -1215,3 +1215,5 @@ month,device_id,person_id,install_timestamp,source,campaign,creative,platform,re
 2025-11,SYN-202511-DF4B9F8A9A13E,SYN-202511-PF4B9F8A9A13E,2025-11-24T05:07:23,Game Network,Game iOS B,Concept 24,iOS,Western Europe,False,active,True,
 2025-11,SYN-202511-D855988D850FA,SYN-202511-P855988D850FA,2025-11-24T06:16:17,Search Network,Search Android A,Campaign-level,Android,Test Market,True,active,True,
 2025-11,SYN-202511-D904243C9D583,SYN-202511-P904243C9D583,2025-11-24T06:54:20,Game Network,Game Android E,Concept 349,Android,Western Europe,False,active,True,
+2025-11,SYN-202511-DD1A34C9D3128,SYN-202511-PD1A34C9D3128,2025-11-24T08:27:32,Game Network,Game iOS A,Concept 307,iOS,APAC,False,active,True,
+2025-11,SYN-202511-D5372D0F39C34,SYN-202511-P5372D0F39C34,2025-11-24T09:28:12,Game Network,Game iOS B,Concept 336,iOS,APAC,False,active,True,
